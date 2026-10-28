@@ -311,3 +311,12 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
   .wa-float { padding: 0.85rem; }
   .wa-float svg { width: 1.7rem; height: 1.7rem; }
 }
+
+/* FAQ: questions people search for, opened on tap */
+.faq-wrap { max-width: 48rem; }
+.faq details { border-bottom: 2px dotted var(--line); }
+.faq summary { cursor: pointer; list-style: none; font-family: var(--display); font-weight: 700; font-size: var(--step-1); padding: 1rem 2.5rem 1rem 0; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0.4rem; top: 0.7rem; font-size: 1.8rem; line-height: 1; color: var(--ember-deep); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 1.1rem; color: var(--muted); max-width: 40rem; }

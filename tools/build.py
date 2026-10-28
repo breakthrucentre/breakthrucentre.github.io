@@ -187,7 +187,7 @@ ORG_LD = {
 
 def page(path, title, desc, body, og_image="heritage-day-flag-wide", extra_ld=None, body_class=""):
     url = BASE_URL + ("" if path == "index.html" else path)
-    ld = [ORG_LD] + ([extra_ld] if extra_ld else [])
+    ld = [ORG_LD] + (extra_ld if isinstance(extra_ld, list) else [extra_ld] if extra_ld else [])
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
     bc = f' class="{body_class}"' if body_class else ""
     doc = f"""<!doctype html>
@@ -236,6 +236,17 @@ def page_head(h1, lead, imgs, extra=""):
 </div></section>"""
 
 
+def faq(title, items):
+    """Questions people actually type into Google, answered plainly. Returns (html, schema)."""
+    qs = "".join(f"<details><summary>{e(q)}</summary><p>{a}</p></details>" for q, a in items)
+    import re as _re
+    schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": _re.sub("<[^>]+>", "", a)}}
+        for q, a in items]}
+    return (f'<section class="section"><div class="wrap faq-wrap"><h2>{e(title)}</h2>'
+            f'<div class="faq">{qs}</div></div></section>'), schema
+
+
 def cta(title, text, label="WhatsApp {p}", msg=None):
     label = label.format(p=PHONE_DISPLAY)
     return f"""<section class="cta-band"><div class="wrap">
@@ -248,11 +259,18 @@ def cta(title, text, label="WhatsApp {p}", msg=None):
 pages = []
 
 # ---------- Home
+HOME_FAQ = faq("Questions people ask us", [
+    ("Where is Breakthrough Centre?", f"We're at {ADDRESS}, in Groutville between KwaDukuza (Stanger) and Ballito on the KwaZulu-Natal North Coast. <a href=\"contact.html\">Get directions</a>."),
+    ("From what age does the Academy take children?", "Breakthrough Centre Academy welcomes children from the age of two. <a href=\"academy.html\">See what they learn</a>."),
+    ("How do I find out about a place for my child?", f"Send a WhatsApp to {PHONE_DISPLAY} and we'll tell you about places and registration."),
+    ("When does Kidz Club meet?", "Every Sunday from 8 to 10am at the centre. All children in the community are welcome."),
+    ("Is Breakthrough Centre a registered non-profit?", "Yes. We're a registered non-profit organisation, number 081-061-NPO, and we've served Etete since 1990."),
+])
 home = f"""
 <section class="hero"><div class="wrap">
 <div class="hero-text">
-<h1>Community centre and preschool in Groutville, KwaDukuza</h1>
-<p class="lead">Breakthrough Centre has helped children, young people and families in Etete rise above hard circumstances since 1990, through our Academy, Kidz Club, social development and practical care.</p>
+<h1>A preschool and community centre for Groutville and KwaDukuza</h1>
+<p class="lead">Since 1990 we've been a safe, hopeful place for the children and families of Etete. Little ones learn to read and count at our Academy, children come together every Sunday at Kidz Club, and families across KwaDukuza and the North Coast find a helping hand when they need it.</p>
 <div class="btn-row"><a class="btn btn-whatsapp" href="{wa()}" rel="noopener">{WA_ICON}WhatsApp {PHONE_DISPLAY}</a><a class="btn btn-ghost" href="about.html">Our story</a></div>
 </div>
 <div class="burst-wrap">{home_burst()}</div>
@@ -260,9 +278,9 @@ home = f"""
 
 <section class="section tint"><div class="wrap split">
 <div>
-<h2>From a children's club to a community centre</h2>
-<p>What began on 10 October 1990 as a children's club in borrowed space at a local school has grown into a full community centre and an early childhood development centre, Breakthrough Centre Academy, where children from age two learn to read, count and speak with confidence.</p>
-<p>We are a registered non-profit organisation (081-061-NPO) near KwaDukuza and Ballito, serving families across the iLembe District. Our aim is simple: to empower, equip and inspire people to fulfil their God-given potential.</p>
+<h2>It started with a children's club</h2>
+<p>On 10 October 1990 a handful of children met in a borrowed classroom in Etete. That club never stopped. It moved into a small house, then a tent, and today it's a full community centre with its own preschool, Breakthrough Centre Academy, where children from the age of two learn to read, count and speak up with confidence.</p>
+<p>We're a registered non-profit organisation (081-061-NPO) in Groutville, between KwaDukuza (Stanger) and Ballito, and we serve families right across the iLembe District. What drives us hasn't changed in 36 years: helping people of every age reach their God-given potential.</p>
 <p><a href="about.html">Read our story</a></p>
 </div>
 {photo("graduation-class", "Breakthrough Centre Academy graduates in caps and gowns with their teachers, Groutville")}
@@ -285,43 +303,43 @@ home = f"""
 </div></div></section>
 
 <section class="section olive"><div class="wrap">
-<div class="section-head"><h2>What we do</h2><p class="lead">Education, care and community development under one roof, for every age.</p></div>
+<div class="section-head"><h2>How we can help you</h2><p class="lead">A preschool, a Sunday club, community projects, weddings, training and a listening ear, all at one address in Etete.</p></div>
 <div class="services">
 <article class="service"><div class="photo">{pic("preschool-classroom", "Learners at their tables in a Breakthrough Centre Academy classroom", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="academy.html">Breakthrough Centre Academy</a></h3><p>Quality early childhood education since 2005: Maths, Science, Languages, Life Skills and our "I can read" programme.</p></article>
+<h3><a href="academy.html">Preschool: Breakthrough Centre Academy</a></h3><p>An ECD centre in Groutville since 2005. Your child learns Maths, Science, Languages and Life Skills, and starts reading with our "I can read" programme.</p></article>
 <article class="service"><div class="photo">{pic("kidz-club-juice", "A volunteer pouring juice for children at Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="kidz-club.html">Kidz Club</a></h3><p>Every Sunday from 8 to 10am: fun, care and encouragement. Home of Larry the puppet.</p></article>
+<h3><a href="kidz-club.html">Sunday Kidz Club</a></h3><p>Every Sunday from 8 to 10am. Games, stories, care and a lot of encouragement, with Larry the puppet never far away.</p></article>
 <article class="service"><div class="photo">{pic("community-outreach-crowd", "Hundreds of children at a Breakthrough Centre outreach", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="community.html">Social development</a></h3><p>Inter-school contests, our annual Child Protection event, Jumpstart work readiness, food hampers and hot meals.</p></article>
+<h3><a href="community.html">Community projects</a></h3><p>School contests, our yearly Child Protection event, Jumpstart work readiness for young people, food hampers and hot meals.</p></article>
 <article class="service"><div class="photo">{pic("wedding-beach-setup", "A beach wedding set up on the Dolphin Coast", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="weddings.html">Marriage officer</a></h3><p>Heartfelt, personal wedding ceremonies, traditional or non-traditional, and registration with Home Affairs.</p></article>
+<h3><a href="weddings.html">Weddings and marriage officer</a></h3><p>A personal ceremony on the beach, in a hall or wherever you choose, and we register your marriage with Home Affairs.</p></article>
 <article class="service"><div class="photo">{pic("computer-class", "Young people learning computer skills at Breakthrough Centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="training.html">Training and development</a></h3><p>Workshops, leadership and mentoring that help people thrive at school, at work and in the community.</p></article>
+<h3><a href="training.html">Workshops and training</a></h3><p>Practical workshops, leadership and mentoring for parents, teachers, young people and community groups.</p></article>
 <article class="service"><div class="photo">{pic("children-praying", "Children praying together at Breakthrough Centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="prayer.html">Prayer and counselling</a></h3><p>A safe, caring space for spiritual growth and emotional healing, walking with people through life's challenges.</p></article>
+<h3><a href="prayer.html">Prayer and counselling</a></h3><p>Going through something hard? Talk to someone who will listen, pray with you and walk with you.</p></article>
 </div></div></section>
 
 <section class="section night"><div class="wrap split">
 <div><p class="motto">How do you change the world?</p>
-<p>By touching one little life at a time. Volunteer, partner with us, give or come and visit: there's a place for you at Breakthrough Centre.</p>
+<p>By touching one little life at a time. Give an hour, share a skill, partner with us or simply come and visit. There's a place for you here.</p>
 <div class="btn-row"><a class="btn btn-whatsapp" href="{wa('Hi Breakthrough Centre, I would like to get involved.')}" rel="noopener">{WA_ICON}WhatsApp us</a><a class="btn btn-ghost" style="color:#fff;border-color:#fff" href="get-involved.html">Ways to help</a></div></div>
 {photo("heritage-day-flag", "Academy learners in traditional dress around a South African flag on Heritage Day", "wide")}
 </div></section>
 """
 pages.append(("index.html", page("index.html",
-    "Breakthrough Centre | Community centre and preschool in Groutville, KwaDukuza",
-    "Breakthrough Centre is a non-profit community centre and ECD preschool in Etete, Groutville near KwaDukuza and Ballito. Academy, Sunday Kidz Club, social development and more since 1990.",
-    home)))
+    "Preschool and Community Centre in Groutville | Breakthrough Centre",
+    "Non-profit preschool and community centre in Groutville, near KwaDukuza (Stanger) and Ballito. Our Academy, Sunday Kidz Club and outreach have served families since 1990.",
+    home + HOME_FAQ[0], extra_ld=HOME_FAQ[1])))
 
 # ---------- About
 about = page_head("Our story",
-    "Breakthrough Centre began on 10 October 1990 as the first community-based project in Etete, Groutville. 36 years later it is a hub of social transformation, with a special focus on children's formative years.",
+    "Breakthrough Centre began on 10 October 1990 as the first community-based project in Etete, Groutville. Thirty-six years on, it's a busy community centre with a special heart for young children.",
     ["heritage-day-circle", "graduation-class", "community-gathering"]) + f"""
 <section class="section"><div class="wrap split top">
 <div class="measure">
 <h2>A positive place to be</h2>
-<p>Our aim was to empower, equip and inspire children, young people and adults to rise above difficult circumstances and fulfil their God-given potential, and to give children and young adults a positive place to be, away from the social ills affecting the community.</p>
-<p>The children's outreach grew steadily. It moved from borrowed space at a local school, to a small house, to a tent, and finally to a fully operational community centre that serves people of every age and background.</p>
+<p>We started with one simple idea: children and young people need a good place to be, away from the problems on the streets around them. Give them that, plus people who believe in them, and they can rise above hard circumstances.</p>
+<p>The children kept coming, so the club kept moving. From a borrowed classroom to a small house, from the house to a tent, and finally into the community centre we have today, open to people of every age and background.</p>
 </div>
 <div>
 <h2>Milestones</h2>
@@ -366,20 +384,27 @@ about = page_head("Our story",
 {photo("graduation-class", "Breakthrough Centre Academy graduation with teachers and learners holding certificates", "wide")}</div>
 </div></div></section>
 """ + cta("Come and see our work", "Visit the centre at 170 Old Main Road, Etete, or send us a message.")
-pages.append(("about.html", page("about.html", "About Breakthrough Centre | Our story since 1990, Etete, Groutville",
-    "The story of Breakthrough Centre in Etete, Groutville: from a children's club in 1990 to a community centre and ECD Academy. Milestones, leadership and awards.", about)))
+pages.append(("about.html", page("about.html", "Our Story: 36 Years in Groutville | Breakthrough Centre",
+    "How a children's club in Etete, Groutville grew into a community centre and preschool. Our story since 1990, our leaders and the awards we've received.", about)))
 
 # ---------- Academy (playful)
+ACADEMY_FAQ = faq("Questions parents ask", [
+    ("What age can my child start?", "We take children from the age of two."),
+    ("What will my child learn?", "A structured programme in Maths, Science, Languages and Life Skills, with our \"I can read\" programme building strong reading from the start. Every learner also takes part in our concert and graduation."),
+    ("Where is the Academy?", f"At Breakthrough Centre, {ADDRESS}, near KwaDukuza (Stanger), Shakaskraal and Ballito. Since 2021 we also run a community-based creche and preschool in Shakaskraal."),
+    ("How do I ask about a place?", f"WhatsApp {PHONE_DISPLAY} and we'll let you know about places and registration."),
+    ("Can parents be involved?", "Yes. We hold parent meetings every term, and parents can attend free workshops on supporting their child's learning."),
+])
 ac_msg = "Hi, I would like to find out about places at Breakthrough Centre Academy."
 academy = page_head("Breakthrough Centre Academy",
-    "A preschool and early childhood development (ECD) centre in Etete, Groutville, serving families from KwaDukuza, Shakaskraal and the Dolphin Coast. Children from age two learn to read, count and speak with confidence.",
+    "Our preschool and early childhood development (ECD) centre in Etete, Groutville. Families from KwaDukuza, Shakaskraal and along the Dolphin Coast trust us with their little ones from the age of two.",
     ["graduate-certificate", "heritage-day-flag", "back-to-school"],
     f'<div class="btn-row"><a class="btn btn-whatsapp" href="{wa(ac_msg)}" rel="noopener">{WA_ICON}Ask about places</a></div>') + f"""
 <section class="section"><div class="wrap split">
 <div class="measure">
 <h2>We don't lower the bar</h2>
-<p>We opened in 2005 in a small house with just 4 learners, and have grown quickly because we refuse to lower our standards: you can't lower the bar and expect excellent results. A strong start here sets children up for life.</p>
-<p>Every child follows a structured programme covering Maths, Science, Languages and Life Skills, and children as young as two are already building their vocabulary and learning the basics of reading and writing. We promote right living based on honour, democracy and respect, and healthy living through good nutrition habits.</p>
+<p>We opened in 2005 in a small house with four learners. We've grown quickly since then for one reason: we refuse to lower our standards. You can't lower the bar and expect excellent results, and the start a child gets here stays with them for life.</p>
+<p>Every child follows a structured programme in Maths, Science, Languages and Life Skills. Even our two-year-olds are building their vocabulary and learning the first steps of reading and writing. Along the way we teach good manners, respect for others and healthy eating habits.</p>
 <p>In 2021 we were also awarded the lease of a brand-new community-based crèche and pre-school in Shakaskraal.</p>
 </div>
 {photo("preschool-classroom", "Learners working at colourful tables in a Breakthrough Centre Academy classroom", "tall")}
@@ -393,7 +418,7 @@ academy = page_head("Breakthrough Centre Academy",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Dressed up for Valentine's Day 2026</h2><p class="lead">Celebrations are part of Academy life, from Heritage Day to the end-of-year function.</p></div>
+<div class="section-head"><h2>Dressed up for Valentine's Day 2026</h2><p class="lead">Our learners love a reason to celebrate, from Heritage Day to the end-of-year function.</p></div>
 <div class="prints">
 <figure class="print">{pic("valentines-boy", "Academy learner in a white shirt on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Ready for the party</figcaption></figure>
 <figure class="print">{pic("valentines-girl", "Academy learner dressed in red on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Dressed up in red</figcaption></figure>
@@ -404,59 +429,59 @@ academy = page_head("Breakthrough Centre Academy",
 
 <section class="section olive"><div class="wrap split">
 <div><h2>Parents as partners</h2>
-<p>Termly parent meetings keep families closely involved. Parents attend free workshops on how to partner with the school to bring out the best in their children, see their children's progress and meet the teachers.</p>
+<p>You're part of the team. Every term we hold parent meetings where you can see your child's progress and get to know the teachers, plus free workshops on how to help your child do their best at home.</p>
 <h2>Time to shine</h2>
-<p>Every Academy learner takes part in our Annual Concert and Graduation, with a strong focus on public speaking, storytelling, dance, drama and singing.</p></div>
+<p>Every learner gets a turn on stage at our Annual Concert and Graduation: speaking, storytelling, dancing, acting and singing in front of a proud crowd.</p></div>
 {photo("graduate-certificate", "Academy graduate in cap and gown with her certificate and trophy", "tall")}
 </div></section>
 """ + cta("Enrol your child", f"We'd love to welcome your family. WhatsApp {PHONE_DISPLAY} to find out about places and registration.", "WhatsApp about places", ac_msg)
 pages.append(("academy.html", page("academy.html",
-    "Breakthrough Centre Academy | Preschool and ECD centre in Groutville, KwaDukuza",
-    "Preschool and early childhood development centre in Etete, Groutville, near KwaDukuza, Shakaskraal and Ballito. Maths, Science, Languages, Life Skills and the I can read programme from age two.",
-    academy, og_image="graduation-class", body_class="playful",
-    extra_ld={"@context": "https://schema.org", "@type": "Preschool", "name": "Breakthrough Centre Academy",
+    "Preschool in Groutville, KwaDukuza | Breakthrough Centre Academy",
+    "Looking for a preschool near KwaDukuza, Shakaskraal or Ballito? Our Groutville Academy helps children from age two read, count and speak with confidence.",
+    academy + ACADEMY_FAQ[0], og_image="graduation-class", body_class="playful",
+    extra_ld=[{"@context": "https://schema.org", "@type": "Preschool", "name": "Breakthrough Centre Academy",
               "url": BASE_URL + "academy.html", "telephone": PHONE_INTL, "foundingDate": "2005",
               "address": ORG_LD["address"], "parentOrganization": {"@id": BASE_URL + "#organization"},
-              "sameAs": [FB_ACADEMY]})))
+              "sameAs": [FB_ACADEMY]}, ACADEMY_FAQ[1]])))
 
 # ---------- Kidz Club (playful)
 kidz = page_head("Kidz Club",
-    "Every Sunday from 8 to 10am, Kidz Club brings fun, care and encouragement to children in Etete, Groutville and the surrounding KwaDukuza area.",
+    "Every Sunday morning from 8 to 10, children from Etete, Groutville and around KwaDukuza come together for fun, friendship and a lot of encouragement.",
     ["kidz-club-costumes", "kidz-club-juice", "kidz-club-meal"]) + f"""
 <section class="section"><div class="wrap split">
 <div><p class="big-time">Sundays<br>8 to 10am</p>
 <p class="lead">At Breakthrough Centre, 170 Old Main Road, Etete. All children in our community are welcome.</p>
-<p>Kidz Club is where Breakthrough Centre began back in 1990: a children's club giving young people a positive place to be.</p></div>
+<p>This is where Breakthrough Centre began in 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre.</p></div>
 {photo("kidz-club-sunday", "Children and young people at Sunday Kidz Club in Groutville", "wide")}
 </div></section>
 
 <section class="section tint"><div class="wrap split">
 <div class="bubble"><h2>Meet Larry!</h2>
-<p>When Covid-19 forced a temporary closure, we kept the fun going with daily educational programmes on Ballito TV. You can still watch the episodes on YouTube as the Laugh Out Larry Show, starring Larry the puppet.</p></div>
+<p>Larry the puppet is Kidz Club's favourite character. When Covid-19 closed our doors for a while, Larry kept the children learning with daily programmes on Ballito TV. Search for the Laugh Out Larry Show on YouTube to watch the episodes.</p></div>
 {photo("kidz-club-meal", "Young children sharing a meal at Kidz Club", "wide")}
 </div></section>
 """ + cta("Come and join us", f"Questions about Kidz Club? Call or WhatsApp {PHONE_DISPLAY}.", "WhatsApp us", "Hi, I have a question about Sunday Kidz Club.")
 pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Groutville, KwaDukuza | Breakthrough Centre",
-    "Kidz Club meets every Sunday from 8 to 10am at Breakthrough Centre, 170 Old Main Road, Etete, Groutville. Fun, care and encouragement for children. Home of Larry the puppet.",
+    "Looking for something for your children on a Sunday? Kidz Club meets every Sunday from 8 to 10am at Breakthrough Centre, Etete, Groutville. Home of Larry the puppet.",
     kidz, og_image="kidz-club-costumes", body_class="playful",
     extra_ld={"@context": "https://schema.org", "@type": "Event", "name": "Sunday Kidz Club",
               "eventSchedule": {"@type": "Schedule", "byDay": "https://schema.org/Sunday", "startTime": "08:00", "endTime": "10:00",
                                 "repeatFrequency": "P1W", "scheduleTimezone": "Africa/Johannesburg"},
               "location": {"@type": "Place", "name": "Breakthrough Centre", "address": ORG_LD["address"]},
-              "organizer": {"@id": BASE_URL + "#organization"}, "isAccessibleForFree": True})))
+              "organizer": {"@id": BASE_URL + "#organization"}})))
 
 # ---------- Community / social development
-community = page_head("Social development",
-    "Beyond the Academy, Breakthrough Centre runs programmes for local schools, children, young people and families across KwaDukuza and the iLembe District.",
+community = page_head("Community projects",
+    "Beyond the Academy we work alongside local schools, young people and families across KwaDukuza and the iLembe District, through contests, campaigns, training and practical help.",
     ["community-gathering", "community-outreach-crowd", "kidz-club-juice"]) + f"""
 <section class="section"><div class="wrap split top">
 <div class="measure">
 <h2>Investing in local schools</h2>
-<p>The future of our nation depends on the leaders who come out of our schools, so investing in public schools is essential. We run ongoing programmes that bring together educators, parents, officials and other stakeholders in education.</p>
+<p>Tomorrow's leaders are sitting in today's classrooms, so we invest in local public schools. Our programmes bring teachers, parents, officials and everyone with a stake in education around the same table.</p>
 <h2>Potential Unleashed: contests and performances</h2>
-<p>We host ongoing inter-school contests in art, poetry and talent to help young people discover and develop their gifts. The contests give children exposure and build skills that can shape their future, and during the pandemic we kept them going online through social media.</p>
+<p>Our inter-school contests in art, poetry and talent help young people find out what they're good at. Children get a stage, an audience and skills that can shape their future. Even during the pandemic we kept the contests going online.</p>
 <h2>Annual Child Protection Event</h2>
-<p>Each year we host a Child Protection event with local schools and organisations, calling the community to stand together against child abuse, domestic violence and human trafficking. Academy learners lead the Every Child Has a Voice campaign and deliver its messages to the community.</p>
+<p>Every year local schools and organisations join us to stand together against child abuse, domestic violence and human trafficking. Our own Academy learners lead the Every Child Has a Voice campaign and carry its message to the community.</p>
 </div>
 {photo("kidz-club-costumes", "Children in costumes waving South African flags at a community event", "tall")}
 </div></section>
@@ -472,11 +497,18 @@ community = page_head("Social development",
 <li><strong>Christmas outreach:</strong> bringing Christmas cheer to children at a local school.</li></ul></div>
 </div></section>
 """ + cta("Partner with us", "Schools, businesses and organisations work with us on contests, events and relief. Let's talk.", "WhatsApp us", "Hi, I would like to partner with Breakthrough Centre.")
-pages.append(("community.html", page("community.html", "Social development projects in KwaDukuza and iLembe | Breakthrough Centre",
-    "Breakthrough Centre's social development work in KwaDukuza and the iLembe District: school programmes, Potential Unleashed contests, Child Protection event, Jumpstart, food hampers and hot meals.",
+pages.append(("community.html", page("community.html", "Community Projects in KwaDukuza and iLembe | Breakthrough Centre",
+    "School programmes, inter-school contests, a yearly Child Protection event, Jumpstart work readiness, food hampers and hot meals across KwaDukuza and iLembe.",
     community, og_image="community-gathering")))
 
 # ---------- Weddings / marriage officer
+WED_FAQ = faq("Wedding questions", [
+    ("Do you register the marriage with Home Affairs?", "Yes. Registering your marriage at Home Affairs is part of our service, and on the day you receive your marriage certificate and copies of the marriage and witness registers."),
+    ("Can we have a traditional or non-traditional ceremony?", "Either. We work with you to create the ceremony that fits your story."),
+    ("Where can the ceremony take place?", "Couples have married with us on the beach, in halls and at reception venues along the Dolphin Coast. Tell us where you'd like it to be."),
+    ("What documents do we need?", "Certified copies of the bride's, groom's and two witnesses' IDs, three colour photos each, and extra documents if you have a pre-nuptial agreement or one partner is not a South African citizen. The full list is above."),
+    ("How do we book?", f"WhatsApp {PHONE_DISPLAY} to talk about your date and ceremony."),
+])
 gal = ["wedding-canopy", "wedding-vows", "wedding-beach-setup", "wedding-bride-vows", "wedding-beach-guests",
        "wedding-reception-table", "wedding-family", "wedding-cake", "wedding-napkin", "wedding-reception-hall",
        "wedding-cake-family", "wedding-coastal-path"]
@@ -498,11 +530,11 @@ gallery = "".join(
     f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
     f'{pic(g, gal_alt[g], sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g in gal)
 weddings = page_head("Marriage officer",
-    "We create heartfelt, personal wedding ceremonies, traditional or non-traditional, in KwaDukuza and on the Dolphin Coast, and register your marriage at Home Affairs.",
+    "Getting married in KwaDukuza, Ballito or anywhere on the Dolphin Coast? We'll make your ceremony personal and meaningful, traditional or not, and handle the registration at Home Affairs.",
     ["wedding-vows", "wedding-canopy", "wedding-beach-setup"],
     f'<div class="btn-row"><a class="btn btn-whatsapp" href="{wa("Hi, I would like to book the marriage officer.")}" rel="noopener">{WA_ICON}Book your ceremony</a></div>') + f"""
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Celebrate your love story</h2><p class="lead">We work with you to make your day meaningful and memorable, from beach ceremonies to evening receptions.</p></div>
+<div class="section-head"><h2>Your love story, your way</h2><p class="lead">We sit down with you, get to know your story and shape a ceremony that feels like you, whether it's barefoot on the beach or an evening celebration in a hall.</p></div>
 <div class="gallery">{gallery}</div>
 </div></section>
 <dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>
@@ -522,34 +554,34 @@ weddings = page_head("Marriage officer",
 <ul class="checklist"><li>A valid marriage certificate</li><li>A copy of your marriage register</li><li>A copy of your witness register</li></ul></div>
 </div></div></section>
 """ + cta("Planning your wedding?", f"Call or WhatsApp {PHONE_DISPLAY} to talk about your ceremony.", "WhatsApp the marriage officer", "Hi, I would like to book the marriage officer.")
-pages.append(("weddings.html", page("weddings.html", "Marriage officer in KwaDukuza and the Dolphin Coast | Breakthrough Centre",
-    "Heartfelt wedding ceremonies, traditional or non-traditional, with Breakthrough Centre's marriage officer in KwaDukuza, Ballito and the Dolphin Coast. What to bring to register your marriage.",
-    weddings, og_image="wedding-canopy")))
+pages.append(("weddings.html", page("weddings.html", "Marriage Officer in KwaDukuza and Ballito | Breakthrough Centre",
+    "Need a marriage officer near KwaDukuza or Ballito? Personal ceremonies, traditional or non-traditional, plus Home Affairs registration. See what to bring.",
+    weddings + WED_FAQ[0], extra_ld=WED_FAQ[1], og_image="wedding-canopy")))
 
 # ---------- Training
 training = page_head("Training and development",
-    "Workshops, leadership and mentoring programmes, and practical training that equip people to thrive at school, at work and in the community across KwaDukuza and the iLembe District.",
+    "Practical workshops, leadership and mentoring for parents, teachers, young people and community groups across KwaDukuza and the iLembe District.",
     ["computer-class", "preschool-classroom", "graduation-class"]) + f"""
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Equipping people to thrive</h2>
-<p>We carry out our vision through workshops, leadership and mentoring programmes, practical training and personal interaction. Our aim is to train, develop and nurture people with strategies and systems, so they become responsible in their schools, communities, workplaces and society at large.</p>
+<p>Good intentions go further with the right skills. Through workshops, mentoring and one-on-one time, we give people practical tools they can use straight away at school, at work, at home and in their community.</p>
 <h3>What we offer</h3>
 <ul class="checklist"><li>Workshops for educators, parents and community groups</li><li>Leadership and mentoring programmes</li>
 <li>Jumpstart work-readiness training for young people</li><li>Free parent workshops at Breakthrough Centre Academy</li></ul></div>
 {photo("computer-class", "Young people learning computer skills at Breakthrough Centre", "wide")}
 </div></section>
 """ + cta("Book a workshop", f"To arrange training for your school, organisation or group, call or WhatsApp {PHONE_DISPLAY}, or email <a href=\"mailto:{EMAIL}\" style=\"color:#fff\">{EMAIL}</a>.", "WhatsApp us", "Hi, I would like to book a workshop.")
-pages.append(("training.html", page("training.html", "Training, workshops and mentoring in KwaDukuza | Breakthrough Centre",
+pages.append(("training.html", page("training.html", "Workshops and Mentoring in KwaDukuza | Breakthrough Centre",
     "Workshops for educators, parents and community groups, leadership and mentoring programmes and Jumpstart work-readiness training at Breakthrough Centre, Groutville.",
     training, og_image="computer-class")))
 
 # ---------- Prayer
 prayer = page_head("Prayer and counselling",
-    "A safe place to be heard in Groutville. Breakthrough Centre offers a caring space for spiritual growth and emotional healing.",
+    "Going through something hard? You don't have to face it alone. Come and be heard, in a safe and caring place in Groutville.",
     ["children-praying", "heritage-day-circle", "community-gathering"]) + f"""
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Walking with you</h2>
-<p>Through prayer and personal guidance, we walk with individuals and families through life's challenges with faith, hope and resilience.</p>
+<p>Grief, family strain, worry about the future: whatever you're carrying, we'll listen without judging. We pray with you, offer personal guidance and walk with you and your family through the hard seasons, with faith, hope and resilience.</p>
 <p>If you would like prayer, or would like to speak to someone, call or WhatsApp {PHONE_DISPLAY}, or email <a href="mailto:{EMAIL}">{EMAIL}</a>, and we'll arrange a time to meet.</p></div>
 {photo("children-praying", "Children praying together at Breakthrough Centre in Groutville", "wide")}
 </div></section>
@@ -560,7 +592,7 @@ pages.append(("prayer.html", page("prayer.html", "Prayer and counselling in Grou
 
 # ---------- Events
 events = page_head("What's on",
-    "Here's what happens at Breakthrough Centre through the year. Follow us on Facebook for dates and the latest news.",
+    "There's always something happening at the centre. Here's what comes around each year. For exact dates, follow us on Facebook.",
     ["valentines-red-dress", "heritage-day-flag", "graduation-class"]) + f"""
 <section class="section"><div class="wrap">
 <ul class="events">
@@ -574,17 +606,17 @@ events = page_head("What's on",
 <div class="btn-row"><a class="btn btn-ghost" href="{FB_CENTRE}" rel="noopener">Breakthrough Centre on Facebook</a><a class="btn btn-ghost" href="{FB_ACADEMY}" rel="noopener">Academy on Facebook</a></div>
 </div></section>
 """ + cta("Want to be part of an event?", "We welcome volunteers, sponsors and partner schools.", "WhatsApp us", "Hi, I would like to help with an event.")
-pages.append(("events.html", page("events.html", "Events at Breakthrough Centre, Groutville | Kidz Club, graduation and more",
-    "Yearly events at Breakthrough Centre in Etete, Groutville: Sunday Kidz Club, Annual Concert and Graduation, Child Protection event, Potential Unleashed contests and Christmas outreach.",
+pages.append(("events.html", page("events.html", "Events in Groutville: Kidz Club, Graduation and More | Breakthrough Centre",
+    "What's on at Breakthrough Centre, Groutville: Sunday Kidz Club, our Concert and Graduation, the Child Protection event, school contests and Christmas outreach.",
     events, og_image="valentines-red-dress")))
 
 # ---------- Get involved
 involved = page_head("Get involved",
-    "How do you change the world? By touching one little life at a time. For 36 years, volunteers, partners and friends have made Breakthrough Centre's work possible.",
+    "How do you change the world? By touching one little life at a time. Everything we've done in 36 years has happened because ordinary people gave their time, skills and support.",
     ["kidz-club-juice", "heritage-day-circle", "community-outreach-crowd"]) + f"""
 <section class="section"><div class="wrap">
 <div class="ways">
-<div><h2>Volunteer</h2><p>Our volunteers keep every programme, event and project running smoothly. If you have time, skills or a heart to serve children and families, we'd love to hear from you.</p></div>
+<div><h2>Volunteer</h2><p>Volunteers make everything here run, from Sunday mornings to big events. If you have a few hours, a useful skill or simply a heart for children and families, we'd love to meet you.</p></div>
 <div><h2>Partner with us</h2><p>Businesses, schools and organisations partner with us on events, contests, relief work and the Academy. Let's talk about how we can work together.</p></div>
 <div><h2>Give</h2><p>Donations help us care for children and families in our community. Contact the office to find out how to give.</p></div>
 <div><h2>Visit the centre</h2><p>Come and see our work for yourself at 170 Old Main Road, Etete, on the Dolphin Coast. <a href="contact.html">Get directions</a>.</p></div>
@@ -613,8 +645,8 @@ contact = f"""
 </div>
 <div class="wrap"><p>Breakthrough Centre is a registered non-profit organisation: 081-061-NPO.</p></div></section>
 """
-pages.append(("contact.html", page("contact.html", "Contact Breakthrough Centre | 170 Old Main Road, Etete, Groutville",
-    "Contact Breakthrough Centre and Breakthrough Centre Academy: call or WhatsApp 081 775 1488, email bcacademy170@gmail.com, or visit 170 Old Main Road, Etete, Groutville, KwaZulu-Natal.",
+pages.append(("contact.html", page("contact.html", "Contact Us | Breakthrough Centre, Groutville, KwaDukuza",
+    "Call or WhatsApp 081 775 1488, email bcacademy170@gmail.com, or visit us at 170 Old Main Road, Etete, Groutville, between KwaDukuza and Ballito.",
     contact)))
 
 # ---------- 404
