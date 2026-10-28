@@ -361,11 +361,11 @@ about = page_head("Our story",
 {photo("founders-and-exco", "Breakthrough Centre founders Ps Trevor and Jessica Nair with members of the Executive Committee", "tall", "Our founders, Ps Trevor and Jessica Nair, with the Executive Committee")}</div>
 <div><h3>Executive Committee</h3>
 <ul class="people">
-<li><strong>Mr P. Nair</strong>Full-time Manager, Breakthrough Centre</li>
-<li><strong>Mrs S. Nair</strong>Departmental Head, Department of Education</li>
-<li><strong>Mrs A.S. Gwamanda</strong>Senior Administration Clerk, Department of Education</li>
-<li><strong>Mrs V. Govindasamy</strong>Night Manager, Alberlito Hospital</li>
-<li><strong>Ms Tamsyn Jeiel</strong>Projects Manager</li></ul></div>
+<li><strong>Mr P. Nair</strong>Founder. Full-time Manager, Breakthrough Centre</li>
+<li><strong>Mrs S. Nair</strong>Founder. Departmental Head, Department of Education</li>
+<li><strong>Mrs A.S. Gwamanda</strong>Executive Committee member</li>
+<li><strong>Mrs V. Govindasamy</strong>Executive Committee member</li>
+<li><strong>Ms Tamsyn Jeiel</strong>Executive Committee member</li></ul></div>
 </div></section>
 
 <section class="section"><div class="wrap">
