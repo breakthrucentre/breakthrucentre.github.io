@@ -102,8 +102,8 @@ HOME_RAYS = [
          alt="a Breakthrough Centre Academy learner in a graduation cap, class of 2026"),
     dict(a=88, r=760, img="kidz-club-costumes", label="Kidz Club", href="kidz-club.html",
          alt="children in costumes at Kidz Club"),
-    dict(a=72, r=790, img="community-gathering", label="Community", href="community.html",
-         alt="community members gathered for an outreach day"),
+    dict(a=72, r=790, img="child-protection-heroes-2026", label="Community", href="community.html",
+         alt="young superheroes at our Child Protection event"),
     dict(a=56, r=770, img="wedding-vows", label="Weddings", href="weddings.html",
          alt="a couple exchanging vows before our marriage officer"),
     dict(a=40, r=720, img="computer-class", label="Training", href="training.html",
@@ -307,10 +307,10 @@ home = f"""
 <div class="services">
 <article class="service"><div class="photo">{pic("sunshine-craft", "Academy learners making paper suns together at a green table", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="academy.html">Preschool: Breakthrough Centre Academy</a></h3><p>An ECD centre in Groutville since 2005. Your child learns Maths, Science, Languages and Life Skills, and starts reading with our "I can read" programme.</p></article>
-<article class="service"><div class="photo">{pic("kidz-club-juice", "A volunteer pouring juice for children at Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="kidz-club.html">Sunday Kidz Club</a></h3><p>Every Sunday from 8 to 10am. Games, stories, care and a lot of encouragement, with Larry the puppet never far away.</p></article>
-<article class="service"><div class="photo">{pic("community-outreach-crowd", "Hundreds of children at a Breakthrough Centre outreach", sizes="(max-width: 560px) 100vw, 33vw")}</div>
-<h3><a href="community.html">Community projects</a></h3><p>School contests, our yearly Child Protection event, Jumpstart work readiness for young people, food hampers and hot meals.</p></article>
+<article class="service"><div class="photo">{pic("kidz-club-worship", "Children singing and worshipping together at Sunday Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<h3><a href="kidz-club.html">Sunday Kidz Club</a></h3><p>Every Sunday from 8 to 10am. Praise and worship, a Bible story, soccer, games and a lot of encouragement, with Larry the puppet never far away.</p></article>
+<article class="service"><div class="photo">{pic("blanket-outreach", "A volunteer wrapping a blanket around a neighbour during an outreach in Etete", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<h3><a href="community.html">Community projects</a></h3><p>Our yearly Child Protection event, blankets and food parcels, feeding schemes, school shoes, Christmas outreach and Jumpstart work readiness.</p></article>
 <article class="service"><div class="photo">{pic("wedding-beach-setup", "A beach wedding set up on the Dolphin Coast", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="weddings.html">Weddings and marriage officer</a></h3><p>A personal ceremony on the beach, in a hall or wherever you choose, and we register your marriage with Home Affairs.</p></article>
 <article class="service"><div class="photo">{pic("computer-class", "Young people learning computer skills at Breakthrough Centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
@@ -346,6 +346,8 @@ about = page_head("Our story",
 <ol class="timeline">
 <li><span class="year">1990</span>A children's club starts on 10 October in borrowed space at a local school.</li>
 <li><span class="year">2005</span>Breakthrough Centre Academy opens in a small house with just 4 learners.</li>
+<li><span class="year">2012</span>We win 2nd place in the community category of the North Coast Big 5 Service Excellence Awards, and take blankets and food parcels to needy neighbours in Etete.</li>
+<li><span class="year">2013</span>Feeding schemes for hungry children, followed in August 2014 by a gift box distribution for a hall full of children.</li>
 <li><span class="year">2018</span>Members of Parliament visit the centre on 28 March, focusing on early childhood and youth development.</li>
 <li><span class="year">2021</span>We distribute baby formula from Durban to Tugela during the KZN unrest, and are awarded the lease of a brand-new community crèche and pre-school in Shakaskraal.</li>
 <li><span class="year">2025</span>Friends, partners and families celebrate our 35th anniversary together.</li>
@@ -477,25 +479,60 @@ pages.append(("academy.html", page("academy.html",
               "sameAs": [FB_ACADEMY]}, ACADEMY_FAQ[1]])))
 
 # ---------- Kidz Club (playful)
+KC_GAL = [
+    ("kidz-club-worship", "Children singing and worshipping together at Sunday Kidz Club"),
+    ("kidz-club-soccer", "Kidz Club children playing soccer on the field in Etete"),
+    ("kidz-club-easter-meal", "Children enjoying a plate of food at the Kidz Club Easter celebration"),
+    ("kidz-club-cupcakes", "Children receiving cupcakes on Father's Day at Kidz Club"),
+    ("kidz-club-contest-winners", "Kidz Club children holding their prizes after a contest"),
+    ("kidz-club-play", "A little one riding a toy bike at Kidz Club"),
+    ("kidz-club-mothers-day-2023", "Mums and children gathered outside the centre for Mother's Day at Kidz Club, 2023"),
+    ("kidz-club-early-days", "Kidz Club children in caps in front of a colourful mural, from our early years"),
+    ("kidz-club-crowd-2006", "Hundreds of children gathered at a Breakthrough Centre children's event in 2006"),
+]
 kidz = page_head("Kidz Club",
-    "Every Sunday morning from 8 to 10, children from Etete, Groutville and around KwaDukuza come together for fun, friendship and a lot of encouragement.",
-    ["kidz-club-costumes", "kidz-club-juice", "kidz-club-meal"]) + f"""
+    "Every Sunday morning from 8 to 10, children from Etete, Groutville and around KwaDukuza come together for praise, a Bible story, games, friends and a lot of encouragement.",
+    ["kidz-club-worship", "kidz-club-contest-winners", "kidz-club-cupcakes"]) + f"""
 <section class="section"><div class="wrap split">
 <div><p class="big-time">Sundays<br>8 to 10am</p>
-<p class="lead">At Breakthrough Centre, 170 Old Main Road, Etete. All children in our community are welcome.</p>
-<p>This is where Breakthrough Centre began in 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre.</p></div>
+<p class="lead">At Breakthrough Centre, 170 Old Main Road, Etete. All children in our community are welcome, rain or shine.</p>
+<p>This is where Breakthrough Centre began on 10 October 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre, and some of the children who came as toddlers now come back to encourage the next group to stay in school and finish strong.</p></div>
 {photo("kidz-club-sunday", "Children and young people at Sunday Kidz Club in Groutville", "wide")}
 </div></section>
 
+<section class="section tint"><div class="wrap">
+<div class="section-head"><h2>What happens on a Sunday</h2><p class="lead">No two Sundays are the same, but every one is built around faith, fun and life lessons children can carry home.</p></div>
+<div class="ways">
+<div><h3>Praise and worship</h3><p>The highlight of the morning. The children lead the songs, learn new ones in just a couple of sessions, and fill the hall with noise.</p></div>
+<div><h3>A Bible story</h3><p>Daniel in the lions' den, young Joseph and his coat, the prodigal son, Samson, Hannah and more, told in a way little ones remember.</p></div>
+<div><h3>Life lessons</h3><p>Friendship, gratitude, respect, a servant's heart, what Freedom Day and Youth Day mean, and how to stay safe. We've talked about bullying, gender-based violence and child protection too.</p></div>
+<div><h3>Games and play</h3><p>Soccer and netball outside, indigenous games, puzzles, toys and bikes, movie mornings, a robotics session, and the odd waffle day.</p></div>
+<div><h3>Special days</h3><p>Easter, Mother's Day, Father's Day, Women's Day, Heritage Day and birthdays all get celebrated, and Christmas brings a meal, party packs and a gift for every child.</p></div>
+<div><h3>Visitors</h3><p>Guests share with the children: an officer from Umhlali SAPS on substance and child abuse, Metro World Child South Africa on bullying, local churches who serve a meal, and former Kidz Club members.</p></div>
+</div></div></section>
+
+<section class="section"><div class="wrap split">
+{photo("kidz-club-contest-prizes", "Kidz Club children on stage receiving prizes at the My City, My Future contest", "tall")}
+<div class="measure"><h2>My City, My Future</h2>
+<p>At our "My City, My Future" contest, Kidz Club children shared their hopes and dreams for their community. The winner took home a R500 education voucher, the runners-up won hampers, five children received book prizes for their effort, and every child who took part got a pencil case.</p>
+<p>Hearing a new generation speak about their future gives us real hope for South Africa.</p></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>Kidz Club in pictures</h2><p class="lead">From a crowd of hundreds in 2006 to a Sunday morning this year. Tap a photo to see it bigger.</p></div>
+<div class="gallery">{gallery_html(KC_GAL)}</div>
+</div></section>
+{LIGHTBOX}
+
 <section class="section tint"><div class="wrap split">
 <div class="bubble"><h2>Meet Larry!</h2>
-<p>Larry the puppet is Kidz Club's favourite character. When Covid-19 closed our doors for a while, Larry kept the children learning with daily programmes on Ballito TV. Search for the Laugh Out Larry Show on YouTube to watch the episodes.</p></div>
+<p>Larry the puppet is Kidz Club's favourite character, so much so that we call him Laugh Out Larry. He pops in to help teach scripture with plenty of laughter. When Covid-19 closed our doors for a while, Larry kept children learning with daily programmes on Ballito TV. Search for the Laugh Out Larry Show on YouTube to watch the episodes.</p></div>
 {photo("kidz-club-meal", "Young children sharing a meal at Kidz Club", "wide")}
 </div></section>
 """ + cta("Come and join us", f"Questions about Kidz Club? Call or WhatsApp {PHONE_DISPLAY}.", "WhatsApp us", "Hi, I have a question about Sunday Kidz Club.")
 pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Groutville, KwaDukuza | Breakthrough Centre",
     "Looking for something for your children on a Sunday? Kidz Club meets every Sunday from 8 to 10am at Breakthrough Centre, Etete, Groutville. Home of Larry the puppet.",
-    kidz, og_image="kidz-club-costumes", body_class="playful",
+    kidz, og_image="kidz-club-worship", body_class="playful",
     extra_ld={"@context": "https://schema.org", "@type": "Event", "name": "Sunday Kidz Club",
               "eventSchedule": {"@type": "Schedule", "byDay": "https://schema.org/Sunday", "startTime": "08:00", "endTime": "10:00",
                                 "repeatFrequency": "P1W", "scheduleTimezone": "Africa/Johannesburg"},
@@ -503,35 +540,119 @@ pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Grou
               "organizer": {"@id": BASE_URL + "#organization"}})))
 
 # ---------- Community / social development
+CP_GAL = [
+    ("child-protection-day-2026", "Children in superhero costumes fill the hall at our 2026 Child Protection event"),
+    ("child-protection-heroes-2026", "Three young superheroes at the Breakthrough Centre Child Protection event, 2026"),
+    ("child-protection-team-2026", "Volunteers and leaders who ran the 2026 Child Protection event"),
+    ("child-protection-march", "Children, clowns and volunteers marching through Etete for child protection"),
+    ("child-protection-march-placards", "Learners holding placards saying it shouldn't hurt to be a child"),
+    ("child-protection-march-crowd", "A crowd of children marching along the road in Etete against child abuse"),
+]
+HELP_GAL = [
+    ("food-parcel-outreach", "A volunteer handing a food parcel to a woman during an outreach in Etete"),
+    ("outreach-in-the-rain", "Neighbours waiting under umbrellas for blankets and food parcels"),
+    ("gift-box-distribution-2014", "Volunteers handing out treats to children seated on the floor of a hall, 2014"),
+    ("gift-box-hall-2014", "A hall full of children at the gift box distribution in August 2014"),
+    ("feeding-scheme-2013", "Volunteers handing out food to children outside the centre, December 2013"),
+    ("feeding-scheme-children", "Children sitting together on the grass eating a meal from our feeding scheme"),
+    ("school-shoes-lotus-fm", "Learners holding their new school shoes from the Lotus FM partnership"),
+    ("community-meal-bethel", "A volunteer sitting on the ground sharing a meal with Kidz Club children"),
+    ("christmas-gifts-etete", "Children with their Christmas gifts beside the Breakthrough Centre sun and eagle mural"),
+]
+COMM_FAQ = faq("Community questions", [
+    ("Does Breakthrough Centre help families in need in KwaDukuza?", f"Yes. Over the years we've handed out blankets, food parcels, hot meals, school shoes, gift boxes and baby formula to families in Etete and across KwaDukuza. If you know of a family in need, WhatsApp {PHONE_DISPLAY}."),
+    ("When is the Child Protection event?", "We host it every year with local schools and organisations. The date is announced on our Facebook page, and children and parents are welcome."),
+    ("Can my business, school or church partner with you?", f"Please do. Businesses, schools, churches and individuals have sponsored meals, books, sports equipment, school shoes and gifts. WhatsApp {PHONE_DISPLAY} and let's talk."),
+])
 community = page_head("Community projects",
-    "Beyond the Academy we work alongside local schools, young people and families across KwaDukuza and the iLembe District, through contests, campaigns, training and practical help.",
-    ["community-gathering", "community-outreach-crowd", "kidz-club-juice"]) + f"""
-<section class="section"><div class="wrap split top">
+    "For 36 years we've shown up for Etete and the wider KwaDukuza community: marching for children's safety, carrying blankets and food parcels to families in the rain, and filling Christmas with carols and gifts.",
+    ["child-protection-heroes-2026", "blanket-outreach", "christmas-gifts-etete"]) + f"""
+<section class="section"><div class="wrap split">
 <div class="measure">
-<h2>Investing in local schools</h2>
-<p>Tomorrow's leaders are sitting in today's classrooms, so we invest in local public schools. Our programmes bring teachers, parents, officials and everyone with a stake in education around the same table.</p>
-<h2>Potential Unleashed: contests and performances</h2>
-<p>Our inter-school contests in art, poetry and talent help young people find out what they're good at. Children get a stage, an audience and skills that can shape their future. Even during the pandemic we kept the contests going online.</p>
-<h2>Annual Child Protection Event</h2>
-<p>Every year local schools and organisations join us to stand together against child abuse, domestic violence and human trafficking. Our own Academy learners lead the Every Child Has a Voice campaign and carry its message to the community.</p>
+<h2>Child protection is everyone's business</h2>
+<p>Every year we host a Child Protection event with local schools and organisations: a clear call for our communities to stand together against child abuse, domestic violence and human trafficking. Our Academy learners lead the Every Child Has a Voice campaign and carry its message to the community.</p>
+<p>In June 2026 families packed the hall for this year's event, and plenty of our little ones came dressed as their favourite superheroes. Ps Trevor and Jessica Nair's invitation was simple: let communities unite to protect our future leaders.</p>
+<p>In earlier years our learners, volunteers and a few brave clowns marched through the streets of Etete with home-made placards and slogans like "It shouldn't hurt to be a child".</p>
 </div>
-{photo("kidz-club-costumes", "Children in costumes waving South African flags at a community event", "tall")}
+{photo("child-protection-captains-2026", "Two boys dressed as Captain America at the Breakthrough Centre Child Protection event, 2026", "tall")}
 </div></section>
 
-<section class="section olive"><div class="wrap split">
-{photo("community-gathering", "Community members gathered outside Breakthrough Centre for an outreach day", "wide")}
-<div><h2>Jumpstart and relief work</h2>
-<p>The Jumpstart Programme prepares young people for the world of work.</p>
-<ul class="checklist">
-<li><strong>Baby formula distribution:</strong> during the 2021 unrest in KZN, we were entrusted with distributing baby formula from Durban to Tugela, so vulnerable families were cared for.</li>
-<li><strong>Food hampers:</strong> regular distributions to families in need.</li>
-<li><strong>Hot meals:</strong> hot meal distribution in the community.</li>
-<li><strong>Christmas outreach:</strong> bringing Christmas cheer to children at a local school.</li></ul></div>
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>Standing up for children, in pictures</h2><p class="lead">Tap a photo to see it bigger.</p></div>
+<div class="gallery">{gallery_html(CP_GAL)}</div>
 </div></section>
-""" + cta("Partner with us", "Schools, businesses and organisations work with us on contests, events and relief. Let's talk.", "WhatsApp us", "Hi, I would like to partner with Breakthrough Centre.")
-pages.append(("community.html", page("community.html", "Community Projects in KwaDukuza and iLembe | Breakthrough Centre",
-    "School programmes, inter-school contests, a yearly Child Protection event, Jumpstart work readiness, food hampers and hot meals across KwaDukuza and iLembe.",
-    community, og_image="community-gathering")))
+
+<section class="section tint"><div class="wrap split top">
+<div class="measure"><h2>Safety tips for parents and caregivers</h2>
+<p>The danger of trafficking and kidnapping affects every community. We put these tips together for parents in Etete and KwaDukuza. Please share them with other parents, caregivers and schools.</p></div>
+<ul class="checklist">
+<li>Have a trusted person drop off and fetch your child when you can't, and arrange for someone to meet them if they walk part of the way home.</li>
+<li>Encourage children to walk home from school in groups, and to lock gates and doors if they're home alone.</li>
+<li>Agree that you'll never change pick-up plans without telling your child first, so "your mum sent me to fetch you" is never a reason to go with someone.</li>
+<li>Practise what to do if someone grabs them, and teach them emergency numbers.</li>
+<li>Teach children not to accept sweets or treats from strangers.</li>
+<li>If you work, consider an aftercare facility or a library where your child can wait safely.</li>
+<li>Know what your child does online and on devices, and set clear boundaries.</li>
+<li>Teach sons to respect girls and their boundaries, and daughters likewise. Discipline starts at home.</li>
+<li>Name a teacher or trusted adult your child can go to in an emergency, and speak well of police and safety officers so your child will trust them.</li>
+</ul></div></section>
+
+<section class="section"><div class="wrap split">
+{photo("blanket-outreach", "A Breakthrough Centre volunteer wrapping a blanket around a neighbour during a rainy outreach in Etete", "wide")}
+<div><h2>Practical help when it's needed most</h2>
+<ul class="checklist">
+<li><strong>Blankets and food parcels:</strong> in keeping with Isaiah 58:7, our team has carried blankets and food parcels to elderly and needy neighbours in Etete, even in pouring rain.</li>
+<li><strong>Feeding schemes:</strong> meals for hungry children, from our feeding programmes in 2013 to the plates of food shared at Kidz Club today.</li>
+<li><strong>Gift boxes and school shoes:</strong> gift boxes for a hall full of children in August 2014, and new school shoes for learners in partnership with Lotus FM.</li>
+<li><strong>Mums and babies:</strong> diapers for babies, and clothing and linen for their mums.</li>
+<li><strong>Relief in hard times:</strong> hot meals during Covid-19, food hampers for families, and baby formula from Durban to Tugela during the 2021 unrest in KZN.</li>
+<li><strong>Jumpstart:</strong> work-readiness training that prepares young people for their first jobs.</li></ul></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>Outreach through the years</h2><p class="lead">Tap a photo to see it bigger.</p></div>
+<div class="gallery">{gallery_html(HELP_GAL)}</div>
+</div></section>
+{LIGHTBOX}
+
+<section class="section olive"><div class="wrap split">
+<div><h2>Christmas cheer</h2>
+<p>Our team has taken Christmas carols to patients and staff at Alberlito Hospital in Ballito. At Kidz Club, Christmas has meant a chicken breyani lunch, cooldrinks, party packs and a gift for every child, made possible by friends of the centre.</p></div>
+{photo("christmas-carols-alberlito", "The Breakthrough Centre team singing Christmas carols at Alberlito Hospital, Ballito", "wide")}
+</div></section>
+
+<section class="section"><div class="wrap split">
+<div class="measure">
+<h2>Investing in local schools</h2>
+<p>Tomorrow's leaders are sitting in today's classrooms, so we invest in local public schools. Our programmes bring teachers, parents, officials and everyone with a stake in education around the same table. In 2026 Jessica Nair ran parent workshops and spoke at the Boys Talk and Girls Talk sessions at Radha Roopsingh Primary School. <a href="training.html">See our training work</a>.</p>
+<h2>Potential Unleashed: contests and performances</h2>
+<p>Our inter-school contests in art, poetry and talent help young people find out what they're good at. Children get a stage, an audience and skills that can shape their future. Even during the pandemic we kept the contests going online.</p>
+</div>
+{photo("netball-hoops-sasko", "Children playing netball at Breakthrough Centre with hoops donated by Sasko", "tall")}
+</div></section>
+
+<section class="section tint"><div class="wrap split">
+{photo("library-books-donation", "Academy learners reading the library books donated by Prince's Grant Bookclub", "wide")}
+<div><h2>Friends who make it possible</h2>
+<p>None of this happens alone. Thank you to everyone who has stood with us, including:</p>
+<ul class="checklist">
+<li>Sasko, for netball hoop stands and soccer goal posts</li>
+<li>Prince's Grant Bookclub, for library books for the Academy</li>
+<li>Lotus FM, for partnering with us on school shoes</li>
+<li>Bethel Baptist Church, who ministered to our children and served them a meal</li>
+<li>Metro World Child South Africa and Umhlali SAPS, who spoke to our children</li>
+<li>The Friends of the Kidz Club and every family who sponsors meals, treats and gifts</li></ul></div>
+</div></section>
+
+<section class="section"><div class="wrap split">
+<div class="measure"><h2>Recognised for community development</h2>
+<p>On 19 April 2012 Breakthrough Centre won 2nd place in the community category of the North Coast Big 5 Service Excellence Awards. We've also been honoured with 1st place in the KwaDukuza Municipality Mayoral Awards for Community Development, a Nedbank Heroes Award and the Lubners "Inhouse Club" National Heroes Award. <a href="about.html">Read our story</a>.</p></div>
+{photo("big5-award-2012", "North Coast Big 5 Service Excellence Award 2012, 2nd place community category, presented to Breakthrough Centre", "wide")}
+</div></section>
+""" + cta("Partner with us", "Schools, businesses, churches and individuals work with us on outreach, events and relief. Let's talk.", "WhatsApp us", "Hi, I would like to partner with Breakthrough Centre.")
+pages.append(("community.html", page("community.html", "Community Outreach in KwaDukuza and Groutville | Breakthrough Centre",
+    "Child protection events, blankets and food parcels, feeding schemes, school shoes and Christmas outreach in Etete, Groutville and KwaDukuza since 1990.",
+    community + COMM_FAQ[0], extra_ld=COMM_FAQ[1], og_image="child-protection-day-2026")))
 
 # ---------- Weddings / marriage officer
 WED_FAQ = faq("Wedding questions", [
@@ -593,7 +714,7 @@ pages.append(("weddings.html", page("weddings.html", "Marriage Officer in KwaDuk
 # ---------- Training
 training = page_head("Training and development",
     "Practical workshops, leadership and mentoring for parents, teachers, young people and community groups across KwaDukuza and the iLembe District.",
-    ["computer-class", "maths-worksheets", "graduation-2025"]) + f"""
+    ["boys-talk-2026", "school-talk-learners-2026", "computer-class"]) + f"""
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Equipping people to thrive</h2>
 <p>Good intentions go further with the right skills. Through workshops, mentoring and one-on-one time, we give people practical tools they can use straight away at school, at work, at home and in their community.</p>
@@ -602,10 +723,22 @@ training = page_head("Training and development",
 <li>Jumpstart work-readiness training for young people</li><li>Free parent workshops at Breakthrough Centre Academy</li></ul></div>
 {photo("computer-class", "Young people learning computer skills at Breakthrough Centre", "wide")}
 </div></section>
+
+<section class="section tint"><div class="wrap split">
+{photo("boys-talk-2026", "Jessica Nair speaking to learners at the Radha Roopsingh Primary School Boys Talk session, 2026", "tall")}
+<div class="measure"><h2>Out in our schools and communities</h2>
+<p>Our co-founder Jessica Nair spends a lot of time in local schools and churches, sharing what 36 years with children and families have taught us.</p>
+<ul class="checklist">
+<li><strong>Parent workshops:</strong> in 2026 she presented two workshops to parents at Radha Roopsingh Primary School on how to monitor and support their children's learning and build strong reading habits at home.</li>
+<li><strong>Boys Talk and Girls Talk:</strong> on 28 August 2026 she spoke to learners at the school's Boys Talk and Girls Talk sessions.</li>
+<li><strong>Women's conferences:</strong> she was a guest speaker at the Bloom Women's Conference hosted by Sanctuary of Hope on 29 August 2026.</li>
+<li><strong>Children's ministry leaders:</strong> we take our Kidz Club leaders to training days and worship experiences, so the next generation of leaders keeps growing.</li></ul>
+<p>Would you like a workshop or a speaker for your school, church or group? Get in touch.</p></div>
+</div></section>
 """ + cta("Book a workshop", f"To arrange training for your school, organisation or group, call or WhatsApp {PHONE_DISPLAY}, or email <a href=\"mailto:{EMAIL}\" style=\"color:#fff\">{EMAIL}</a>.", "WhatsApp us", "Hi, I would like to book a workshop.")
 pages.append(("training.html", page("training.html", "Workshops and Mentoring in KwaDukuza | Breakthrough Centre",
     "Workshops for educators, parents and community groups, leadership and mentoring programmes and Jumpstart work-readiness training at Breakthrough Centre, Groutville.",
-    training, og_image="computer-class")))
+    training, og_image="boys-talk-2026")))
 
 # ---------- Prayer
 prayer = page_head("Prayer and counselling",
@@ -614,7 +747,8 @@ prayer = page_head("Prayer and counselling",
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Walking with you</h2>
 <p>Grief, family strain, worry about the future: whatever you're carrying, we'll listen without judging. We pray with you, offer personal guidance and walk with you and your family through the hard seasons, with faith, hope and resilience.</p>
-<p>If you would like prayer, or would like to speak to someone, call or WhatsApp {PHONE_DISPLAY}, or email <a href="mailto:{EMAIL}">{EMAIL}</a>, and we'll arrange a time to meet.</p></div>
+<p>If you would like prayer, or would like to speak to someone, call or WhatsApp {PHONE_DISPLAY}, or email <a href="mailto:{EMAIL}">{EMAIL}</a>, and we'll arrange a time to meet.</p>
+<h3>Children who pray</h3><p>Prayer is part of every Sunday at Kidz Club. Our children pray for each other, their families, their teachers, our community and our nation.</p></div>
 {photo("children-praying", "Children praying together at Breakthrough Centre in Groutville", "wide")}
 </div></section>
 """ + cta("Reach out", "Send us a message and we'll arrange a time to meet.", "WhatsApp us", "Hi, I would like to speak to someone for prayer or counselling.")
@@ -625,15 +759,17 @@ pages.append(("prayer.html", page("prayer.html", "Prayer and counselling in Grou
 # ---------- Events
 events = page_head("What's on",
     "There's always something happening at the centre. Here's what comes around each year. For exact dates, follow us on Facebook.",
-    ["graduation-2025", "anniversary-cake-35", "valentines-red-dress"]) + f"""
+    ["child-protection-heroes-2026", "graduation-2025", "anniversary-cake-35"]) + f"""
 <section class="section"><div class="wrap">
 <ul class="events">
 <li><h3>Kidz Club</h3><p>Every Sunday, 8 to 10am.</p></li>
 <li><h3>Annual Concert and Graduation</h3><p>Every Academy learner on stage, with public speaking, storytelling, dance, drama and singing.</p></li>
-<li><h3>Annual Child Protection Event</h3><p>Schools and organisations standing together against child abuse, domestic violence and human trafficking.</p></li>
+<li><h3>Annual Child Protection Event</h3><p>Schools, organisations and families standing together against child abuse, domestic violence and human trafficking. In 2026 the children came dressed as superheroes. <a href="community.html">See the photos</a>.</p></li>
 <li><h3>Potential Unleashed contests</h3><p>Inter-school contests in art, poetry and talent.</p></li>
 <li><h3>Parent meetings and workshops</h3><p>Held every term at the Academy.</p></li>
-<li><h3>Christmas outreach</h3><p>Bringing Christmas cheer to children at a local school.</p></li>
+<li><h3>Christmas outreach</h3><p>Carols at Alberlito Hospital, Christmas cheer for children at a local school, and a Christmas meal and gift for every child at Kidz Club.</p></li>
+<li><h3>Kidz Club special days</h3><p>Easter, Mother's Day, Father's Day, Women's Day and Heritage Day celebrations, plus contests like My City, My Future.</p></li>
+<li><h3>Our anniversary</h3><p>Every 10 October we give thanks for another year since the children's club began in 1990.</p></li>
 </ul>
 <div class="btn-row"><a class="btn btn-ghost" href="{FB_CENTRE}" rel="noopener">Breakthrough Centre on Facebook</a><a class="btn btn-ghost" href="{FB_ACADEMY}" rel="noopener">Academy on Facebook</a></div>
 </div></section>

@@ -29,7 +29,6 @@ SRC = {
     "rocket-counting": B + "2026-07-31 at 17.35.46.jpeg",
     "building-blocks": B + "2026-07-31 at 17.40.45.jpeg",
     "solar-system-project": B + "2026-07-31 at 17.45.42.jpeg",
-    "maths-worksheets": B + "2026-07-31 at 16.21.58.jpeg",
     "graduation-2025": P + "2025 GRAD/WhatsApp Image 2025-11-30 at 21.02.31.jpeg",
     "anniversary-cake-35": P + "35 Anninversary/IMG_0199.JPG",
     "anniversary-cake-cutting": P + "35 Anninversary/IMG_0181.JPG",
