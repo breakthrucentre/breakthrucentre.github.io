@@ -98,8 +98,8 @@ def burst_svg(rays, cx, cy, sun_r, r1, hw, vb, sun_html="", cls="burst", label=T
 
 
 HOME_RAYS = [
-    dict(a=104, r=690, img="graduate-certificate", label="Academy", href="academy.html",
-         alt="a Breakthrough Centre Academy graduate with her certificate and trophy"),
+    dict(a=104, r=690, img="academy-graduate-2026", label="Academy", href="academy.html",
+         alt="a Breakthrough Centre Academy learner in a graduation cap, class of 2026"),
     dict(a=88, r=760, img="kidz-club-costumes", label="Kidz Club", href="kidz-club.html",
          alt="children in costumes at Kidz Club"),
     dict(a=72, r=790, img="community-gathering", label="Community", href="community.html",
@@ -283,7 +283,7 @@ home = f"""
 <p>We're a registered non-profit organisation (081-061-NPO) in Groutville, between KwaDukuza (Stanger) and Ballito, and we serve families right across the iLembe District. What drives us hasn't changed in 36 years: helping people of every age reach their God-given potential.</p>
 <p><a href="about.html">Read our story</a></p>
 </div>
-{photo("graduation-class", "Breakthrough Centre Academy graduates in caps and gowns with their teachers, Groutville")}
+{photo("back-to-school-2026", "Breakthrough Centre Academy learners with their school bags on the first day back in 2026, Groutville")}
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -305,7 +305,7 @@ home = f"""
 <section class="section olive"><div class="wrap">
 <div class="section-head"><h2>How we can help you</h2><p class="lead">A preschool, a Sunday club, community projects, weddings, training and a listening ear, all at one address in Etete.</p></div>
 <div class="services">
-<article class="service"><div class="photo">{pic("preschool-classroom", "Learners at their tables in a Breakthrough Centre Academy classroom", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("sunshine-craft", "Academy learners making paper suns together at a green table", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="academy.html">Preschool: Breakthrough Centre Academy</a></h3><p>An ECD centre in Groutville since 2005. Your child learns Maths, Science, Languages and Life Skills, and starts reading with our "I can read" programme.</p></article>
 <article class="service"><div class="photo">{pic("kidz-club-juice", "A volunteer pouring juice for children at Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="kidz-club.html">Sunday Kidz Club</a></h3><p>Every Sunday from 8 to 10am. Games, stories, care and a lot of encouragement, with Larry the puppet never far away.</p></article>
@@ -334,7 +334,7 @@ pages.append(("index.html", page("index.html",
 # ---------- About
 about = page_head("Our story",
     "Breakthrough Centre began on 10 October 1990 as the first community-based project in Etete, Groutville. Thirty-six years on, it's a busy community centre with a special heart for young children.",
-    ["heritage-day-circle", "graduation-class", "community-gathering"]) + f"""
+    ["heritage-day-circle", "anniversary-cake-cutting", "community-gathering"]) + f"""
 <section class="section"><div class="wrap split top">
 <div class="measure">
 <h2>A positive place to be</h2>
@@ -348,6 +348,7 @@ about = page_head("Our story",
 <li><span class="year">2005</span>Breakthrough Centre Academy opens in a small house with just 4 learners.</li>
 <li><span class="year">2018</span>Members of Parliament visit the centre on 28 March, focusing on early childhood and youth development.</li>
 <li><span class="year">2021</span>We distribute baby formula from Durban to Tugela during the KZN unrest, and are awarded the lease of a brand-new community crèche and pre-school in Shakaskraal.</li>
+<li><span class="year">2025</span>Friends, partners and families celebrate our 35th anniversary together.</li>
 <li><span class="year">2026</span>We celebrate 36 years of God's amazing grace.</li>
 </ol></div>
 </div></section>
@@ -381,11 +382,36 @@ about = page_head("Our story",
 <li>Lubners "Inhouse Club" National Heroes Award</li>
 <li>2nd place, Sugar Rush Big 5, Community category</li>
 <li>Jet Club Icon</li></ul>
-{photo("graduation-class", "Breakthrough Centre Academy graduation with teachers and learners holding certificates", "wide")}</div>
+{photo("anniversary-cake-35", "Breakthrough Centre 35th anniversary cake with the centre's sun logo, 2025", "wide", "Celebrating 35 years, 2025")}</div>
 </div></div></section>
 """ + cta("Come and see our work", "Visit the centre at 170 Old Main Road, Etete, or send us a message.")
 pages.append(("about.html", page("about.html", "Our Story: 36 Years in Groutville | Breakthrough Centre",
     "How a children's club in Etete, Groutville grew into a community centre and preschool. Our story since 1990, our leaders and the awards we've received.", about)))
+
+def gallery_html(items):
+    """items: list of (image name, alt text). Buttons open the page's lightbox."""
+    return "".join(
+        f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
+        f'{pic(g, alt, sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g, alt in items)
+
+
+LIGHTBOX = '<dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>'
+
+ACADEMY_GAL = [
+    ("sunshine-craft", "Learners making paper suns at a green table"),
+    ("water-play", "Learners in Academy T-shirts gathered around a water play pool"),
+    ("parachute-play", "Outdoor parachute play on the grass at Breakthrough Centre Academy"),
+    ("space-art", "Learners making a space collage of planets, stars and rockets"),
+    ("garden-planting", "Learners planting and watering in the Academy vegetable garden"),
+    ("building-blocks", "Learners building patterns with coloured blocks"),
+    ("leaf-art", "Leaf art on a colourful alphabet play mat"),
+    ("finger-painting", "Two learners finger painting with green paint"),
+    ("shape-sorting", "Learners using shape sorters at an outdoor table"),
+    ("outdoor-learning-circle", "Learners sitting in a circle outdoors for a sorting game"),
+    ("solar-system-project", "Learners working on a solar system project"),
+    ("ball-play", "Learners playing with balls at bright red and yellow tables"),
+]
+
 
 # ---------- Academy (playful)
 ACADEMY_FAQ = faq("Questions parents ask", [
@@ -398,7 +424,7 @@ ACADEMY_FAQ = faq("Questions parents ask", [
 ac_msg = "Hi, I would like to find out about places at Breakthrough Centre Academy."
 academy = page_head("Breakthrough Centre Academy",
     "Our preschool and early childhood development (ECD) centre in Etete, Groutville. Families from KwaDukuza, Shakaskraal and along the Dolphin Coast trust us with their little ones from the age of two.",
-    ["graduate-certificate", "heritage-day-flag", "back-to-school"],
+    ["academy-graduate-2026", "back-to-school-learner-2026", "sunshine-craft"],
     f'<div class="btn-row"><a class="btn btn-whatsapp" href="{wa(ac_msg)}" rel="noopener">{WA_ICON}Ask about places</a></div>') + f"""
 <section class="section"><div class="wrap split">
 <div class="measure">
@@ -407,7 +433,7 @@ academy = page_head("Breakthrough Centre Academy",
 <p>Every child follows a structured programme in Maths, Science, Languages and Life Skills. Even our two-year-olds are building their vocabulary and learning the first steps of reading and writing. Along the way we teach good manners, respect for others and healthy eating habits.</p>
 <p>In 2021 we were also awarded the lease of a brand-new community-based crèche and pre-school in Shakaskraal.</p>
 </div>
-{photo("preschool-classroom", "Learners working at colourful tables in a Breakthrough Centre Academy classroom", "tall")}
+{photo("rocket-counting", "Learners matching numbers to rocket pictures in a maths lesson at Breakthrough Centre Academy", "tall")}
 </div></section>
 
 <section class="section tint"><div class="wrap split">
@@ -416,6 +442,12 @@ academy = page_head("Breakthrough Centre Academy",
 <div class="measure"><h2>Reading, speaking and growing in confidence</h2>
 <p>Poor literacy is a national concern. Our Literacy and Language Development programme has become a model for strong results in foundational reading, mathematics and public speaking, and our learners leave with confidence and healthy self-esteem.</p></div>
 </div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>A week at the Academy</h2><p class="lead">Painting, planting, counting rockets and splashing in the water pool: here is what learning looks like for our little ones in 2026. Tap a photo to see it bigger.</p></div>
+<div class="gallery">{gallery_html(ACADEMY_GAL)}</div>
+</div></section>
+{LIGHTBOX}
 
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>Dressed up for Valentine's Day 2026</h2><p class="lead">Our learners love a reason to celebrate, from Heritage Day to the end-of-year function.</p></div>
@@ -432,13 +464,13 @@ academy = page_head("Breakthrough Centre Academy",
 <p>You're part of the team. Every term we hold parent meetings where you can see your child's progress and get to know the teachers, plus free workshops on how to help your child do their best at home.</p>
 <h2>Time to shine</h2>
 <p>Every learner gets a turn on stage at our Annual Concert and Graduation: speaking, storytelling, dancing, acting and singing in front of a proud crowd.</p></div>
-{photo("graduate-certificate", "Academy graduate in cap and gown with her certificate and trophy", "tall")}
+{photo("academy-graduate-2026-red", "Breakthrough Centre Academy learner in a graduation cap holding a scroll, class of 2026", "tall")}
 </div></section>
 """ + cta("Enrol your child", f"We'd love to welcome your family. WhatsApp {PHONE_DISPLAY} to find out about places and registration.", "WhatsApp about places", ac_msg)
 pages.append(("academy.html", page("academy.html",
     "Preschool in Groutville, KwaDukuza | Breakthrough Centre Academy",
     "Looking for a preschool near KwaDukuza, Shakaskraal or Ballito? Our Groutville Academy helps children from age two read, count and speak with confidence.",
-    academy + ACADEMY_FAQ[0], og_image="graduation-class", body_class="playful",
+    academy + ACADEMY_FAQ[0], og_image="back-to-school-2026", body_class="playful",
     extra_ld=[{"@context": "https://schema.org", "@type": "Preschool", "name": "Breakthrough Centre Academy",
               "url": BASE_URL + "academy.html", "telephone": PHONE_INTL, "foundingDate": "2005",
               "address": ORG_LD["address"], "parentOrganization": {"@id": BASE_URL + "#organization"},
@@ -561,7 +593,7 @@ pages.append(("weddings.html", page("weddings.html", "Marriage Officer in KwaDuk
 # ---------- Training
 training = page_head("Training and development",
     "Practical workshops, leadership and mentoring for parents, teachers, young people and community groups across KwaDukuza and the iLembe District.",
-    ["computer-class", "preschool-classroom", "graduation-class"]) + f"""
+    ["computer-class", "maths-worksheets", "graduation-2025"]) + f"""
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Equipping people to thrive</h2>
 <p>Good intentions go further with the right skills. Through workshops, mentoring and one-on-one time, we give people practical tools they can use straight away at school, at work, at home and in their community.</p>
@@ -593,7 +625,7 @@ pages.append(("prayer.html", page("prayer.html", "Prayer and counselling in Grou
 # ---------- Events
 events = page_head("What's on",
     "There's always something happening at the centre. Here's what comes around each year. For exact dates, follow us on Facebook.",
-    ["valentines-red-dress", "heritage-day-flag", "graduation-class"]) + f"""
+    ["graduation-2025", "anniversary-cake-35", "valentines-red-dress"]) + f"""
 <section class="section"><div class="wrap">
 <ul class="events">
 <li><h3>Kidz Club</h3><p>Every Sunday, 8 to 10am.</p></li>
@@ -608,7 +640,7 @@ events = page_head("What's on",
 """ + cta("Want to be part of an event?", "We welcome volunteers, sponsors and partner schools.", "WhatsApp us", "Hi, I would like to help with an event.")
 pages.append(("events.html", page("events.html", "Events in Groutville: Kidz Club, Graduation and More | Breakthrough Centre",
     "What's on at Breakthrough Centre, Groutville: Sunday Kidz Club, our Concert and Graduation, the Child Protection event, school contests and Christmas outreach.",
-    events, og_image="valentines-red-dress")))
+    events, og_image="anniversary-cake-35")))
 
 # ---------- Get involved
 involved = page_head("Get involved",
@@ -631,7 +663,7 @@ contact = f"""
 <section class="page-head"><div class="wrap">
 <div><h1>Contact us</h1><p class="lead">We'd love to hear from you, whether you'd like to enrol your child, volunteer, partner with us or visit the centre.</p>
 <div class="btn-row"><a class="btn btn-whatsapp" href="{wa()}" rel="noopener">{WA_ICON}WhatsApp {PHONE_DISPLAY}</a><a class="btn btn-ghost" href="tel:{PHONE_INTL}">Call {PHONE_DISPLAY}</a></div></div>
-{mini_burst(["heritage-day-circle", "kidz-club-costumes", "wedding-canopy"])}
+{mini_burst(["back-to-school-2026", "kidz-club-costumes", "wedding-canopy"])}
 </div></section>
 <section class="section"><div class="wrap contact-grid">
 <ul class="contact-list">
