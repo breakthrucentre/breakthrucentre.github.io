@@ -357,7 +357,8 @@ about = page_head("Our story",
 
 <section class="section tint"><div class="wrap split top">
 <div><h2>Leadership and governance</h2>
-<p>Breakthrough Centre was founded by Ps. Trevor and Jessica Nair. An Executive Committee steers the organisation, sub-committees run each department and report back to it, and a team of volunteers keeps every programme, event and project running smoothly.</p></div>
+<p>Breakthrough Centre was founded by Ps. Trevor and Jessica Nair. An Executive Committee steers the organisation, sub-committees run each department and report back to it, and a team of volunteers keeps every programme, event and project running smoothly.</p>
+{photo("founders-and-exco", "Breakthrough Centre founders Ps Trevor and Jessica Nair with members of the Executive Committee", "tall", "Our founders, Ps Trevor and Jessica Nair, with the Executive Committee")}</div>
 <div><h3>Executive Committee</h3>
 <ul class="people">
 <li><strong>Mr P. Nair</strong>Full-time Manager, Breakthrough Centre</li>

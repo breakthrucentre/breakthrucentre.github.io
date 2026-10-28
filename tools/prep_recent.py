@@ -32,6 +32,8 @@ SRC = {
     "graduation-2025": P + "2025 GRAD/WhatsApp Image 2025-11-30 at 21.02.31.jpeg",
     "anniversary-cake-35": P + "35 Anninversary/IMG_0199.JPG",
     "anniversary-cake-cutting": P + "35 Anninversary/IMG_0181.JPG",
+    # sent by the owner in chat, 28 Oct 2026
+    "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 
 sizes_path = os.path.join(HERE, "sizes.json")
