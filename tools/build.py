@@ -173,7 +173,7 @@ ORG_LD = {
     "alternateName": "Breakthrough Centre Etete",
     "url": BASE_URL,
     "logo": BASE_URL + "images/logo.png",
-    "image": BASE_URL + "images/og-community-outreach.jpg",
+    "image": BASE_URL + "images/og-welcome-dr-jonathan-david.jpg",
     "description": "Community centre and early childhood development centre in Etete, Groutville, near KwaDukuza and Ballito, KwaZulu-Natal. Registered NPO 081-061-NPO.",
     "foundingDate": "1990-10-10",
     "telephone": PHONE_INTL,
@@ -185,7 +185,7 @@ ORG_LD = {
 }
 
 
-def page(path, title, desc, body, og_image="og-community-outreach.jpg", extra_ld=None, body_class=""):
+def page(path, title, desc, body, og_image="og-welcome-dr-jonathan-david.jpg", extra_ld=None, body_class=""):
     url = BASE_URL + ("" if path == "index.html" else path)
     ld = [ORG_LD] + (extra_ld if isinstance(extra_ld, list) else [extra_ld] if extra_ld else [])
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
@@ -285,6 +285,20 @@ home = f"""
 <p><a href="about.html">Read our story</a></p>
 </div>
 {photo("anniversary-family-35", "The Breakthrough Centre family dressed up for the 35th anniversary celebration in 2025", "wide", "Celebrating 35 years of Breakthrough Centre, 2025")}
+</div></section>
+
+<section class="section"><div class="wrap split">
+{photo("founders-cake", "Ps Trevor and Jessica Nair, founders of Breakthrough Centre, cutting the 35th anniversary cake", "wide", "Our founders, Ps Trevor and Jessica Nair")}
+<div class="measure"><h2>Meet our founders</h2>
+<p>Ps Trevor and Jessica Nair started a children's club in a borrowed classroom in Etete on 10 October 1990, and they've led Breakthrough Centre ever since. Thirty-six years on you'll still find them at Kidz Club on a Sunday, in local schools, and out in the community with a food parcel or a blanket.</p>
+<p>Their vision hasn't changed: changing the world by touching one little life at a time.</p>
+<p><a href="about.html">Meet the Executive Committee</a></p></div>
+</div></section>
+
+<section class="section tint"><div class="wrap split">
+<div class="measure"><h2>A welcome seen in 42 countries</h2>
+<p>When our spiritual parents, Dr Jonathan and Helen David, arrived in South Africa, Breakthrough Centre Academy learners were waiting at the airport in traditional dress, waving the South African flag. The welcome was screened in Malaysia to delegates from 42 countries.</p></div>
+{photo("welcoming-dr-jonathan-david", "Breakthrough Centre Academy learners in traditional dress welcoming Dr Jonathan and Helen David at the airport", "wide")}
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -463,6 +477,13 @@ academy = page_head("Breakthrough Centre Academy",
 <figure class="print">{pic("valentines-balloon", "Academy learner holding an I love you balloon", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Lots of love</figcaption></figure>
 </div></div></section>
 
+<section class="section tint"><div class="wrap split">
+{photo("academy-heritage-day", "Breakthrough Centre Academy learners in traditional dress in front of the Academy wall on Heritage Day", "tall", "Heritage Day at the Academy")}
+<div class="measure"><h2>Proud of who we are</h2>
+<p>On Heritage Day our learners come to school in traditional dress, sing, dance and celebrate the cultures that make South Africa special. Learning to honour where we come from builds confidence and respect for others.</p>
+{photo("academy-with-principal", "A car full of happy Academy learners on an outing with their principal", "wide", "Out and about with our principal")}</div>
+</div></section>
+
 <section class="section olive"><div class="wrap split">
 <div><h2>Parents as partners</h2>
 <p>You're part of the team. Every term we hold parent meetings where you can see your child's progress and get to know the teachers, plus free workshops on how to help your child do their best at home.</p>
@@ -491,6 +512,25 @@ KC_GAL = [
     ("kidz-club-mothers-day-2023", "Mums and children gathered outside the centre for Mother's Day at Kidz Club, 2023"),
     ("kidz-club-early-days", "Kidz Club children in caps in front of a colourful mural, from our early years"),
     ("kidz-club-crowd-2006", "Hundreds of children gathered at a Breakthrough Centre children's event in 2006"),
+    ("kidz-club-heritage-day", "Kidz Club girls in traditional Zulu dress on Heritage Day"),
+    ("kidz-club-madiba-day", "Children lying around a Happy Birthday Madiba banner they made for Mandela Day"),
+    ("kidz-club-smiles", "Big smiles from a group of Kidz Club children"),
+    ("kidz-club-gifts", "Kidz Club children holding up their new colouring books and gifts"),
+    ("kidz-club-reading-mat", "Children sitting on a mat for reading time at Kidz Club"),
+    ("kidz-club-reading-table", "Children working on reading and colouring sheets at Kidz Club"),
+    ("kidz-club-hall", "A hall full of children listening to a Kidz Club lesson"),
+    ("kidz-club-story-on-steps", "A leader sharing a story with little ones on the steps of the centre"),
+    ("kidz-club-outdoor-lesson", "A Kidz Club lesson outdoors on the veranda"),
+    ("kidz-club-praise-outside", "Children singing and praising outside the centre"),
+    ("kidz-club-group-outside", "A big group of Kidz Club children and leaders outside"),
+    ("kidz-club-line-up", "Children lining up for an activity with a Kidz Club leader"),
+    ("kidz-club-foosball", "Children playing foosball at Kidz Club"),
+    ("kidz-club-games-room", "Young people with snooker cues in the Kidz Club games room"),
+    ("kidz-club-toys", "Toddlers playing with toys at Kidz Club"),
+    ("kidz-club-vegetable-garden", "The Kidz Club vegetable garden in 2009"),
+    ("spin-da-flava-visit", "The Spin Da Flava team visiting Kidz Club"),
+    ("larry-with-children", "Larry the puppet with a crowd of excited children"),
+    ("larry-puppet", "Larry the puppet peeping over his puppet stage"),
 ]
 kidz = page_head("Kidz Club",
     "Every Sunday morning from 8 to 10, children from Etete, Groutville and around KwaDukuza come together for praise, a Bible story, games, friends and a lot of encouragement.",
@@ -506,11 +546,11 @@ kidz = page_head("Kidz Club",
 <div class="section-head"><h2>What happens on a Sunday</h2><p class="lead">No two Sundays are the same, but every one is built around faith, fun and life lessons children can carry home.</p></div>
 <div class="ways">
 <div><h3>Praise and worship</h3><p>The highlight of the morning. The children lead the songs, learn new ones in just a couple of sessions, and fill the hall with noise.</p></div>
-<div><h3>A Bible story</h3><p>Daniel in the lions' den, young Joseph and his coat, the prodigal son, Samson, Hannah and more, told in a way little ones remember.</p></div>
+<div><h3>Stories and reading</h3><p>A Bible story every week (Daniel in the lions' den, young Joseph and his coat, the prodigal son, Samson, Hannah and more), plus time with books and worksheets to build reading skills.</p></div>
 <div><h3>Life lessons</h3><p>Friendship, gratitude, respect, a servant's heart, what Freedom Day and Youth Day mean, and how to stay safe. We've talked about bullying, gender-based violence and child protection too.</p></div>
 <div><h3>Games and play</h3><p>Soccer and netball outside, indigenous games, puzzles, toys and bikes, movie mornings, a robotics session, and the odd waffle day.</p></div>
-<div><h3>Special days</h3><p>Easter, Mother's Day, Father's Day, Women's Day, Heritage Day and birthdays all get celebrated, and Christmas brings a meal, party packs and a gift for every child.</p></div>
-<div><h3>Visitors</h3><p>Guests share with the children: an officer from Umhlali SAPS on substance and child abuse, Metro World Child South Africa on bullying, local churches who serve a meal, and former Kidz Club members.</p></div>
+<div><h3>Special days</h3><p>Easter, Mother's Day, Father's Day, Mandela Day, Women's Day, Heritage Day and birthdays all get celebrated, and Christmas brings a meal, party packs and a gift for every child.</p></div>
+<div><h3>Visitors</h3><p>Guests share with the children: an officer from Umhlali SAPS on substance and child abuse, Metro World Child South Africa on bullying, local churches who serve a meal, the Spin Da Flava team, and former Kidz Club members.</p></div>
 </div></div></section>
 
 <section class="section"><div class="wrap split">
@@ -521,7 +561,7 @@ kidz = page_head("Kidz Club",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Kidz Club in pictures</h2><p class="lead">From a crowd of hundreds in 2006 to a Sunday morning this year. Tap a photo to see it bigger.</p></div>
+<div class="section-head"><h2>Kidz Club in pictures</h2><p class="lead">Thirty-six years of Sunday mornings: a garden, games, gifts, Heritage Day, Larry and a lot of happy faces. Tap a photo to see it bigger.</p></div>
 <div class="gallery">{gallery_html(KC_GAL)}</div>
 </div></section>
 {LIGHTBOX}
@@ -529,7 +569,7 @@ kidz = page_head("Kidz Club",
 <section class="section tint"><div class="wrap split">
 <div class="bubble"><h2>Meet Larry!</h2>
 <p>Larry the puppet is Kidz Club's favourite character, so much so that we call him Laugh Out Larry. He pops in to help teach scripture with plenty of laughter. When Covid-19 closed our doors for a while, Larry kept children learning with daily programmes on Ballito TV. Search for the Laugh Out Larry Show on YouTube to watch the episodes.</p></div>
-{photo("kidz-club-meal", "Young children sharing a meal at Kidz Club", "wide")}
+{photo("larry-stage", "Larry the puppet on his stage at Kidz Club", "wide", "Larry the puppet")}
 </div></section>
 """ + cta("Come and join us", f"Questions about Kidz Club? Call or WhatsApp {PHONE_DISPLAY}.", "WhatsApp us", "Hi, I have a question about Sunday Kidz Club.")
 pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Groutville, KwaDukuza | Breakthrough Centre",
@@ -549,6 +589,10 @@ CP_GAL = [
     ("child-protection-march", "Children, clowns and volunteers marching through Etete for child protection"),
     ("child-protection-march-placards", "Learners holding placards saying it shouldn't hurt to be a child"),
     ("child-protection-march-crowd", "A crowd of children marching along the road in Etete against child abuse"),
+    ("child-protection-programme", "Leaders and children performing at the annual Child Protection programme"),
+    ("child-protection-march-flags", "Hundreds of children with flags at a Child Protection March"),
+    ("child-protection-march-superhero", "A superhero joins the Child Protection March on the main road"),
+    ("founders-child-protection", "Founders Ps Trevor and Jessica Nair in costume for the Child Protection March"),
 ]
 HELP_GAL = [
     ("food-parcel-outreach", "A volunteer handing a food parcel to a woman during an outreach in Etete"),
@@ -559,6 +603,22 @@ HELP_GAL = [
     ("feeding-scheme-children", "Children sitting together on the grass eating a meal from our feeding scheme"),
     ("school-shoes-lotus-fm", "Learners holding their new school shoes from the Lotus FM partnership"),
     ("community-meal-bethel", "A volunteer sitting on the ground sharing a meal with Kidz Club children"),
+    ("elderly-distribution", "Volunteers handing out blankets and gifts to elderly neighbours"),
+    ("feeding-and-distribution", "Food parcels loaded on a bakkie for distribution to families"),
+    ("feeding-cooldrinks", "Volunteers serving food and cooldrinks to a line of children"),
+    ("community-handout", "Children holding parcels handed out by Breakthrough Centre volunteers"),
+    ("community-children-field", "Volunteers with a group of children in Etete"),
+    ("hospital-visit-gifts", "A volunteer visiting children in hospital with gifts"),
+    ("hospital-visit-baby", "A volunteer visiting a baby in hospital"),
+    ("founders-mums", "Treating mums to a special celebration at Breakthrough Centre"),
+    ("netball-hoops-sasko", "Children playing netball at Breakthrough Centre with hoops donated by Sasko"),
+    ("girls-health-hygiene-2", "Schoolgirls holding Dream Big and I am Enough signs at the girls' health and hygiene programme"),
+]
+XMAS_GAL = [
+    ("christmas-carols-alberlito-stairs", "The Breakthrough Centre carol singers on the stairs at Alberlito Hospital"),
+    ("christmas-party-stage", "Children with their gifts on stage at the Kidz Club Christmas party"),
+    ("christmas-party-gifts", "A room full of children opening Christmas presents"),
+    ("christmas-shoebox-gifts", "Children opening Christmas shoebox gifts"),
     ("christmas-gifts-etete", "Children with their Christmas gifts beside the Breakthrough Centre sun and eagle mural"),
 ]
 COMM_FAQ = faq("Community questions", [
@@ -607,6 +667,7 @@ community = page_head("Community projects",
 <li><strong>Feeding schemes:</strong> meals for hungry children, from our feeding programmes in 2013 to the plates of food shared at Kidz Club today.</li>
 <li><strong>Gift boxes and school shoes:</strong> gift boxes for a hall full of children in August 2014, and new school shoes for learners in partnership with Lotus FM.</li>
 <li><strong>Mums and babies:</strong> diapers for babies, and clothing and linen for their mums.</li>
+<li><strong>Hospital visits:</strong> visiting sick children and babies in hospital and bringing them gifts.</li>
 <li><strong>Relief in hard times:</strong> hot meals during Covid-19, food hampers for families, and baby formula from Durban to Tugela during the 2021 unrest in KZN.</li>
 <li><strong>Jumpstart:</strong> work-readiness training that prepares young people for their first jobs.</li></ul></div>
 </div></section>
@@ -621,6 +682,13 @@ community = page_head("Community projects",
 <div><h2>Christmas cheer</h2>
 <p>Our team has taken Christmas carols to patients and staff at Alberlito Hospital in Ballito. At Kidz Club, Christmas has meant a chicken breyani lunch, cooldrinks, party packs and a gift for every child, made possible by friends of the centre.</p></div>
 {photo("christmas-carols-alberlito", "The Breakthrough Centre team singing Christmas carols at Alberlito Hospital, Ballito", "wide")}
+</div>
+<div class="wrap" style="margin-top:2rem"><div class="gallery">{gallery_html(XMAS_GAL)}</div></div></section>
+
+<section class="section"><div class="wrap split">
+{photo("girls-health-hygiene", "Schoolgirls with Fearless masks and props at the Breakthrough Centre girls' health and hygiene programme", "wide")}
+<div class="measure"><h2>Girls' health and hygiene</h2>
+<p>Our girls' health and hygiene programme gives schoolgirls the knowledge and confidence to look after themselves, and reminds them of their worth. The signs they held up say it all: Fearless. Dream Big. I am Enough.</p></div>
 </div></section>
 
 <section class="section"><div class="wrap split">
@@ -630,7 +698,7 @@ community = page_head("Community projects",
 <h2>Potential Unleashed: contests and performances</h2>
 <p>Our inter-school contests in art, poetry and talent help young people find out what they're good at. Children get a stage, an audience and skills that can shape their future. Even during the pandemic we kept the contests going online.</p>
 </div>
-{photo("netball-hoops-sasko", "Children playing netball at Breakthrough Centre with hoops donated by Sasko", "tall")}
+{photo("working-with-schools", "High school learners taking part in a Breakthrough Centre programme for local schools", "tall")}
 </div></section>
 
 <section class="section tint"><div class="wrap split">
