@@ -33,6 +33,7 @@ SRC = {
     "anniversary-cake-35": P + "35 Anninversary/IMG_0199.JPG",
     "anniversary-cake-cutting": P + "35 Anninversary/IMG_0181.JPG",
     # sent by the owner in chat, 28 Oct 2026
+    "anniversary-family-35": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/66157780-image.jpg",
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 

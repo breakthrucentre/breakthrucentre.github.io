@@ -173,7 +173,7 @@ ORG_LD = {
     "alternateName": "Breakthrough Centre Etete",
     "url": BASE_URL,
     "logo": BASE_URL + "images/logo.png",
-    "image": BASE_URL + "images/heritage-day-flag-wide-800.jpg",
+    "image": BASE_URL + "images/og-community-outreach.jpg",
     "description": "Community centre and early childhood development centre in Etete, Groutville, near KwaDukuza and Ballito, KwaZulu-Natal. Registered NPO 081-061-NPO.",
     "foundingDate": "1990-10-10",
     "telephone": PHONE_INTL,
@@ -185,7 +185,7 @@ ORG_LD = {
 }
 
 
-def page(path, title, desc, body, og_image="heritage-day-flag-wide", extra_ld=None, body_class=""):
+def page(path, title, desc, body, og_image="og-community-outreach.jpg", extra_ld=None, body_class=""):
     url = BASE_URL + ("" if path == "index.html" else path)
     ld = [ORG_LD] + (extra_ld if isinstance(extra_ld, list) else [extra_ld] if extra_ld else [])
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
@@ -203,7 +203,8 @@ def page(path, title, desc, body, og_image="heritage-day-flag-wide", extra_ld=No
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{BASE_URL}images/{og_image}-800.jpg">
+<meta property="og:image" content="{BASE_URL}images/{og_image if og_image.endswith('.jpg') else og_image + '-800.jpg'}">
+<meta property="og:image:alt" content="Breakthrough Centre in Groutville">
 <meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f6d21f">
@@ -283,7 +284,7 @@ home = f"""
 <p>We're a registered non-profit organisation (081-061-NPO) in Groutville, between KwaDukuza (Stanger) and Ballito, and we serve families right across the iLembe District. What drives us hasn't changed in 36 years: helping people of every age reach their God-given potential.</p>
 <p><a href="about.html">Read our story</a></p>
 </div>
-{photo("back-to-school-2026", "Breakthrough Centre Academy learners with their school bags on the first day back in 2026, Groutville")}
+{photo("anniversary-family-35", "The Breakthrough Centre family dressed up for the 35th anniversary celebration in 2025", "wide", "Celebrating 35 years of Breakthrough Centre, 2025")}
 </div></section>
 
 <section class="section"><div class="wrap">
