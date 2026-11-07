@@ -31,7 +31,6 @@ SRC = {
   "beach-wedding-wagon": FB+"home-08.jpg",
   "computer-class": FB+"home-09.jpg",
   "children-praying": FB+"home-10.jpg",
-  "kidz-club-sunday": FB+"kidz-01.jpg",
   "kidz-club-meal": FB+"kidz-02.jpg",
   "kidz-club-juice": FB+"kidz-03.jpg",
   "wedding-beach-setup": FB+"wedding-01.jpg",

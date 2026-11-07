@@ -694,7 +694,6 @@ KC_GAL = [
     ("partners-kidz-club-balls", "Friends of Kidz Club handing out shiny new balls at the centre door"),
     ("kidz-club-heritage-day", "Our Kidz Club girls in traditional Zulu dress on Heritage Day"),
     ("kidz-club-madiba-day", "Our children around the Happy Birthday Madiba banner they made for Mandela Day"),
-    ("kidz-club-smiles", "Big smiles from some of our Kidz Club children"),
     ("kidz-club-gifts", "Our Kidz Club children holding up their new colouring books and gifts"),
     ("kidz-club-reading-mat", "Reading time on the mat at Kidz Club"),
     ("kidz-club-reading-table", "Our children working through their reading and colouring sheets at Kidz Club"),
@@ -719,7 +718,7 @@ kidz = page_head("Kidz Club",
 <div><p class="big-time">Sundays<br>8 to 10am</p>
 <p class="lead">At Breakthrough Centre, 170 Old Main Road, Etete. All children in our community are welcome, rain or shine.</p>
 <p>This is where Breakthrough Centre began on 10 October 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre, and some of the children who came as toddlers now come back to encourage the next group to stay in school and finish strong. In the early days our girls even learned ballet at Kidz Club, taught by Pam Mills alongside Jessica, outside the little blue tin house.</p></div>
-{photo("kidz-club-sunday", "Our children and young people together at Sunday Kidz Club in Groutville", "wide")}
+{photo("kidz-club-smiles", "Big smiles and waving hands from our children at Sunday Kidz Club in Groutville", "wide")}
 </div></section>
 
 <section class="section tint"><div class="wrap">
