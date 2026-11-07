@@ -378,6 +378,38 @@ def gallery_html(items):
 
 LIGHTBOX = '<dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>'
 
+AWARDS = [
+    # (title, year or detail, story, photo name or None, photo description)
+    ("North Coast Big 5 Service Excellence Award", "2nd place, Community category, 19 April 2012",
+     "Our Sugar Rush Big 5 award, celebrated at home with the certificate in hand.",
+     "big5-award-2012-presentation", "A proud moment at home: holding our North Coast Big 5 Service Excellence Award, 2012"),
+    ("Nedbank Local Heroes Award", "2009",
+     "We put the prize straight back into the children: a soccer machine, a pool table and other resources for the Kidz Club.",
+     "kidz-club-games-room", "What the Nedbank award gave our children: the Kidz Club games room with its pool table"),
+    ("KwaDukuza Municipality Mayoral Awards", "1st place, Community Development category",
+     "Recognised by our own municipality for the difference made in the community.", None, ""),
+    ("In-house Club National Heroes Award", "2006",
+     "A national award for the work that started with a children's club on a hill in Groutville.", None, ""),
+    ("Our story in a national magazine", "Featured nationally",
+     "The Breakthrough Centre story, shared with readers right across South Africa.", None, ""),
+    ("Jet Club Icon", "Recognition",
+     "Honoured as a Jet Club Icon for our work in the community.", None, ""),
+]
+
+def award_badge(label):
+    rays = "".join(f'<rect x="58" y="6" width="4" height="22" rx="2" fill="#f6d21f" transform="rotate({a} 60 60)"/>' for a in range(0, 360, 30))
+    return (f'<svg viewBox="0 0 120 120" role="img" aria-label="{e(label)} award badge" class="badge">{rays}'
+            f'<circle cx="60" cy="60" r="34" fill="#e4661b"/><circle cx="60" cy="60" r="27" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>'
+            f'<path d="M60 42l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8L60 69.1l-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z" fill="#fff"/></svg>')
+
+def award_cards():
+    out = []
+    for title, when, story, img, alt in AWARDS:
+        media = pic(img, alt, sizes="(max-width: 720px) 100vw, 33vw") if img else award_badge(title)
+        out.append(f'<article class="award-card"><div class="award-media{"" if img else " is-badge"}">{media}</div>'
+                   f'<h3>{e(title)}</h3><p class="award-when">{e(when)}</p><p>{e(story)}</p></article>')
+    return "".join(out)
+
 MOMENTS_GAL = [
     ("kidz-club-1990s", "The 1990s: Jessica Nair and the passionate team who started Kidz Club, entertaining a crowd of children on the grass"),
     ("kidz-club-ballet-2009", "2009: our Kidz Club ballet girls in their white dresses outside the little blue tin house"),
@@ -437,15 +469,13 @@ about = page_head("Our story",
 <h3>International guests</h3>
 <p>Academy learners welcomed international speakers Dr Jonathan and Helen David to South Africa. The welcome was screened in Malaysia to delegates from 42 countries.</p>
 </div>
-<div><h3>Awards</h3><ul class="awards">
-<li>1st place, KwaDukuza Municipality Mayoral Awards for Community Development</li>
-<li>Nedbank Local Heroes Award, 2009</li>
-<li>In-house Club National Heroes Award, 2006</li>
-<li>Our story published in a national magazine</li>
-<li>2nd place, Sugar Rush Big 5, Community category</li>
-<li>Jet Club Icon</li></ul>
-{photo("anniversary-cake-35", "Our 35th anniversary cake, topped with the Breakthrough Centre sun, 2025", "wide", "Celebrating 35 years, 2025")}</div>
+<div>{photo("anniversary-cake-35", "Our 35th anniversary cake, topped with the Breakthrough Centre sun, 2025", "wide", "Celebrating 35 years, 2025")}</div>
 </div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>Our awards</h2><p class="lead">Every award belongs to the children, families, volunteers and friends who have walked this road with us.</p></div>
+<div class="award-cards">{award_cards()}</div>
+</div></section>
 
 <section class="section tint"><div class="wrap">
 <div class="section-head"><h2>Moments through the years</h2><p class="lead">A few snapshots from our family album. Tap a photo to see it bigger.</p></div>
