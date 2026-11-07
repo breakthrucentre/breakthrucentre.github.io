@@ -386,3 +386,20 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
 .carousel--single .slide-frame { aspect-ratio: 16 / 9; max-height: 70vh; }
 .carousel--single .slide-cap { text-align: center; font-size: 1.05rem; max-width: 46rem; margin-left: auto; margin-right: auto; }
 .bubble figure { margin-top: 1.25rem; }
+
+/* self-hosted fonts (no visitor data sent to Google) */
+@font-face { font-family: "Baloo 2"; font-weight: 600; font-style: normal; font-display: swap; src: url(fonts/baloo-2-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 700; font-style: normal; font-display: swap; src: url(fonts/baloo-2-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 800; font-style: normal; font-display: swap; src: url(fonts/baloo-2-latin-800-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; font-style: normal; font-display: swap; src: url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; font-style: italic; font-display: swap; src: url(fonts/atkinson-hyperlegible-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 700; font-style: normal; font-display: swap; src: url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 700; font-style: italic; font-display: swap; src: url(fonts/atkinson-hyperlegible-latin-700-italic.woff2) format("woff2"); }
+
+/* map loads only on request */
+.map-placeholder { display: grid; place-content: center; text-align: center; gap: 0.6rem; padding: 1.5rem; }
+.map-placeholder p { margin: 0; }
+
+/* discourage saving photos */
+img { -webkit-user-drag: none; user-select: none; -webkit-touch-callout: none; }
+.privacy-measure { max-width: 46rem; }

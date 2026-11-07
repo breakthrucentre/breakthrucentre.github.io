@@ -159,7 +159,7 @@ def footer():
 <li><a href="{FB_ACADEMY}" rel="noopener">Breakthrough Centre Academy on Facebook</a></li>
 <li><a href="news.html">Our story in the news</a></li><li><a href="events.html">What's on</a></li><li><a href="get-involved.html">Get involved</a></li><li><a href="contact.html">Contact and directions</a></li></ul></div>
 </div>
-<p class="footer-note">© {year} Breakthrough Centre. Touching one little life at a time.</p>
+<p class="footer-note">© {year} Breakthrough Centre. Photos may not be copied or reused without our permission. <a href="privacy.html">Privacy and photos</a>. Touching one little life at a time.</p>
 </div></footer>
 <a class="wa-float" href="{wa()}" rel="noopener">{WA_ICON}<span>WhatsApp us</span></a>
 <script src="assets/site.js" defer></script>"""
@@ -209,9 +209,10 @@ def page(path, title, desc, body, og_image="og-founders-kidz-club-party.jpg", ex
 <meta name="theme-color" content="#f6d21f">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/baloo-2-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="stylesheet" href="assets/style.css">
 {ld_html}
 </head>
@@ -1235,13 +1236,34 @@ contact = f"""
 <li><span class="label">Follow us on Facebook</span><a href="{FB_CENTRE}" rel="noopener">Breakthrough Centre</a><br><a href="{FB_ACADEMY}" rel="noopener">Breakthrough Centre Academy</a></li>
 <li><span class="label">Kidz Club</span>Sundays, 8 to 10am</li>
 </ul>
-<iframe class="map" title="Map showing Breakthrough Centre, 170 Old Main Road, Etete, Groutville" src="{MAP_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map map-placeholder" data-map-src="{MAP_EMBED}"><p>To protect your privacy, the Google map only loads when you ask for it.</p><button type="button" class="btn">Show the map</button><p><a href="{MAPS}" rel="noopener">Or open directions in Google Maps</a></p></div>
 </div>
 <div class="wrap"><p>Breakthrough Centre is a registered non-profit organisation: 081-061-NPO.</p></div></section>
 """
 pages.append(("contact.html", page("contact.html", "Contact Us | Breakthrough Centre, Groutville, KwaDukuza",
     "Call or WhatsApp 081 775 1488, or visit us at 170 Old Main Road, Etete, Groutville, between KwaDukuza and Ballito. Get directions and a map.",
     contact)))
+
+# ---------- Privacy and photos (POPIA)
+privacy = f"""<section class="page-head"><div class="wrap"><div><h1>Privacy and photos</h1>
+<p class="lead">How we look after your information and the photos on this website, in line with South Africa's Protection of Personal Information Act (POPIA).</p></div></div></section>
+<section class="section"><div class="wrap measure">
+<h2>What this website collects</h2>
+<p>Nothing. This website has no forms, no sign-ups, no cookies and no tracking or advertising tools. Our fonts are stored on our own site. The Google map on our contact page only loads if you choose to show it.</p>
+<p>When you tap a WhatsApp or Facebook button, you leave this website and those services' own privacy policies apply. Anything you send us on WhatsApp is used only to reply to you and help you.</p>
+<h2>Photos of our children and families</h2>
+<p>The photos on this site celebrate 36 years of Kidz Club, Breakthrough Centre Academy and our community work. We never publish children's surnames, home addresses or other contact details with their photos.</p>
+<p>We ask parents and guardians for their permission before we share photos of their children, and you can change your mind at any time.</p>
+<h2>Would you like a photo removed?</h2>
+<p>If you, your child or someone in your care appears in a photo on this website and you would like it taken down, please WhatsApp us on {PHONE_DISPLAY} and tell us which page and photo. We will remove it as soon as we can, with no questions asked.</p>
+<h2>Our photos and content</h2>
+<p>The photos and stories on this website belong to Breakthrough Centre, or are shared with permission or with credit to the newspapers and magazines that first published them. Please do not copy, download or reuse them without asking us first.</p>
+<h2>Questions</h2>
+<p>For any question about your personal information, contact our Information Officer at Breakthrough Centre, 170 Old Main Road, Etete, Groutville, or WhatsApp {PHONE_DISPLAY}. You also have the right to contact the Information Regulator of South Africa.</p>
+</div></section>
+"""
+pages.append(("privacy.html", page("privacy.html", "Privacy and Photos | Breakthrough Centre, Groutville",
+    "How Breakthrough Centre protects your privacy and the photos of our children and families, in line with POPIA, and how to ask for a photo to be removed.", privacy)))
 
 # ---------- 404
 page("404.html", "Page not found | Breakthrough Centre", "This page could not be found.",

@@ -9,6 +9,24 @@
     });
   }
 
+  // Discourage saving photos (right-click, drag and long-press). Note: nothing shown on a website can be fully protected.
+  document.addEventListener('contextmenu', function (e) { if (e.target.closest('img, picture, .slide-frame, dialog.lightbox')) e.preventDefault(); });
+  document.addEventListener('dragstart', function (e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
+  document.querySelectorAll('img').forEach(function (i) { i.setAttribute('draggable', 'false'); });
+
+  // The Google map only loads when the visitor asks for it
+  document.querySelectorAll('[data-map-src]').forEach(function (m) {
+    var b = m.querySelector('button');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.className = 'map'; f.src = m.getAttribute('data-map-src'); f.loading = 'lazy';
+      f.title = 'Map showing Breakthrough Centre, 170 Old Main Road, Etete, Groutville';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      m.replaceWith(f);
+    });
+  });
+
   // Moving photo carousels
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var carousels = [];
