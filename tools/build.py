@@ -335,7 +335,7 @@ home = f"""
 <li>Provide a caring, supportive and safe environment for children and youth.</li>
 <li>Run awareness and support programmes that meet present-day challenges.</li>
 <li>Effect lasting change in lifestyles through ongoing training and mentoring.</li></ul></div>
-<div><div class="pillar-photo">{pic("child-protection-team-2026", "Breakthrough Centre volunteers and leaders who serve with honesty, integrity and respect", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<div><div class="pillar-photo">{pic("dr-jonathan-and-helen-david", "Dr Jonathan David and Mum Helen David, spiritual parents of Breakthrough Centre, in prayer", sizes="(max-width: 820px) 100vw, 33vw")}</div>
 <h2>Our values</h2><p>Everyone who serves at Breakthrough Centre commits to:</p>
 <ul class="values"><li>Honesty</li><li>Integrity</li><li>Respect</li><li>Dedication</li><li>Excellence</li><li>Accountability</li><li>Non-discrimination</li></ul></div>
 </div></div></section>
@@ -615,7 +615,6 @@ pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Grou
 CP_GAL = [
     ("child-protection-day-2026", "Children in superhero costumes fill the hall at our 2026 Child Protection event"),
     ("child-protection-heroes-2026", "Three young superheroes at the Breakthrough Centre Child Protection event, 2026"),
-    ("child-protection-team-2026", "Volunteers and leaders who ran the 2026 Child Protection event"),
     ("child-protection-march", "Children, clowns and volunteers marching through Etete for child protection"),
     ("child-protection-march-placards", "Learners holding placards saying it shouldn't hurt to be a child"),
     ("child-protection-march-crowd", "A crowd of children marching along the road in Etete against child abuse"),

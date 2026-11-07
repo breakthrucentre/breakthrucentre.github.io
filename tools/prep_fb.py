@@ -15,7 +15,6 @@ SRC = {
     "child-protection-day-2026": "cp-1-04",
     "child-protection-heroes-2026": "cp-2-00",
     "child-protection-captains-2026": "cp-2-11",
-    "child-protection-team-2026": "cp-3-04",
     "child-protection-march": "alb-childprot-march-09",
     "child-protection-march-placards": "alb-childprot-march-03",
     "child-protection-march-crowd": "alb-childprot-march-08",

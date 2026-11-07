@@ -36,6 +36,7 @@ SRC = {
     "anniversary-family-35": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/66157780-image.jpg",
     "founders-kidz-club-party": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/41a02ea9-image.png",  # sent 7 Nov 2026
     "child-protection-march-flag-wave": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/36ac3586-image.png",  # sent 7 Nov 2026
+    "dr-jonathan-and-helen-david": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/9589a77b-image.png",  # sent 7 Nov 2026
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 
