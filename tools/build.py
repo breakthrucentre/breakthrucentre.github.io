@@ -369,11 +369,24 @@ pages.append(("index.html", page("index.html",
     "Non-profit preschool and community centre in Groutville, near KwaDukuza (Stanger) and Ballito. Our Academy, Sunday Kidz Club and outreach have served families since 1990.",
     home + HOME_FAQ[0], extra_ld=HOME_FAQ[1])))
 
-def gallery_html(items):
-    """items: list of (image name, alt text). Buttons open the page's lightbox."""
-    return "".join(
-        f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
-        f'{pic(g, alt, sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g, alt in items)
+def gallery_html(items, label="Photo gallery"):
+    """items: list of (image name, description). A moving carousel: every frame is the same 4:3 size,
+    the whole photo shows (object-fit: contain) on a blurred fill of itself, and a tap opens the lightbox."""
+    slides = []
+    for n, (g, alt) in enumerate(items, 1):
+        big = 1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800
+        slides.append(
+            f'<li class="slide" aria-label="{n} of {len(items)}">'
+            f'<button type="button" class="slide-frame" data-full="images/{g}-{big}.webp">'
+            f'<span class="slide-bg" aria-hidden="true" style="background-image:url(images/{g}-800.webp)"></span>'
+            f'{pic(g, alt, sizes="(max-width: 600px) 85vw, (max-width: 900px) 50vw, 400px")}</button>'
+            f'<p class="slide-cap" aria-hidden="true">{e(alt)}</p></li>')
+    return (f'<div class="carousel" data-carousel><ul class="carousel-track" aria-label="{e(label)}">{"".join(slides)}</ul>'
+            '<div class="carousel-controls">'
+            '<button type="button" class="cbtn prev" aria-label="Previous photo"><span aria-hidden="true">&#8249;</span></button>'
+            '<button type="button" class="cbtn pause" aria-label="Pause the slideshow"><span aria-hidden="true">&#10074;&#10074;</span></button>'
+            '<button type="button" class="cbtn next" aria-label="Next photo"><span aria-hidden="true">&#8250;</span></button>'
+            '</div></div>')
 
 
 LIGHTBOX = '<dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>'
@@ -478,14 +491,21 @@ about = page_head("Our story",
 </div></section>
 
 <section class="section tint"><div class="wrap">
-<div class="section-head"><h2>Moments through the years</h2><p class="lead">A few snapshots from our family album. Tap a photo to see it bigger.</p></div>
-<div class="gallery">{gallery_html(MOMENTS_GAL)}</div>
+<div class="section-head"><h2>Moments through the years</h2><p class="lead">A few snapshots from our family album. The photos move on their own; tap one to see it bigger.</p></div>
+{gallery_html(MOMENTS_GAL)}
 </div></section>
 {LIGHTBOX}
 """ + cta("Come and see our work", "Visit the centre at 170 Old Main Road, Etete, or send us a message.")
 pages.append(("about.html", page("about.html", "Our Story: 36 Years in Groutville | Breakthrough Centre",
     "How a children's club in Etete, Groutville grew into a community centre and preschool. Our story since 1990, our leaders and the awards we've received.", about)))
 
+VAL_GAL = [
+    ("valentines-boy", "Ready for the party: one of our learners looking smart in white on Valentine's Day 2026"),
+    ("valentines-girl", "Dressed up in red: one of our little ones on Valentine's Day 2026"),
+    ("valentines-red-dress", "Feeling special: all smiles in a red dress and flower crown"),
+    ("valentines-smile", "A big Valentine's Day smile from one of our learners, 2026"),
+    ("valentines-balloon", "Lots of love: one of our learners holding an \"I love you\" balloon"),
+]
 ACADEMY_GAL = [
     ("academy-pretend-kitchen", "Our little chefs in their BCA T-shirts cooking up a storm in the play kitchen"),
     ("academy-shop-role-play", "Playing shop with real price tags: counting and money skills, with big smiles"),
@@ -541,20 +561,14 @@ academy = page_head("Breakthrough Centre Academy",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>A week at the Academy</h2><p class="lead">Cooking, shopping, coding, exploring, painting, planting and splashing in the water pool: this is what learning looks like for our little ones. Tap a photo to see it bigger.</p></div>
-<div class="gallery">{gallery_html(ACADEMY_GAL)}</div>
+<div class="section-head"><h2>A week at the Academy</h2><p class="lead">Cooking, shopping, coding, exploring, painting, planting and splashing in the water pool: this is what learning looks like for our little ones. The photos move on their own; tap one to see it bigger.</p></div>
+{gallery_html(ACADEMY_GAL)}
 </div></section>
 {LIGHTBOX}
 
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>Dressed up for Valentine's Day 2026</h2><p class="lead">Our learners love a reason to celebrate, from Heritage Day to the end-of-year function.</p></div>
-<div class="prints">
-<figure class="print">{pic("valentines-boy", "One of our learners looking smart in white on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Ready for the party</figcaption></figure>
-<figure class="print">{pic("valentines-girl", "One of our little ones dressed in red for Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Dressed up in red</figcaption></figure>
-<figure class="print">{pic("valentines-red-dress", "All smiles in a red dress and flower crown", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Feeling special</figcaption></figure>
-<figure class="print">{pic("valentines-smile", "A big Valentine's Day smile from one of our learners, 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>All smiles</figcaption></figure>
-<figure class="print">{pic("valentines-balloon", "Lots of love: one of our learners holding an \"I love you\" balloon", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Lots of love</figcaption></figure>
-</div></div></section>
+{gallery_html(VAL_GAL, "Valentine's Day 2026")}</div></div></section>
 
 <section class="section tint"><div class="wrap split">
 {photo("academy-heritage-day", "Our Academy learners in their traditional dress on Heritage Day", "tall", "Heritage Day at the Academy")}
@@ -645,8 +659,8 @@ kidz = page_head("Kidz Club",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Kidz Club in pictures</h2><p class="lead">Thirty-six years of Sunday mornings: a garden, games, gifts, Heritage Day, Larry and a lot of happy faces. Tap a photo to see it bigger.</p></div>
-<div class="gallery">{gallery_html(KC_GAL)}</div>
+<div class="section-head"><h2>Kidz Club in pictures</h2><p class="lead">Thirty-six years of Sunday mornings: a garden, games, gifts, Heritage Day, Larry and a lot of happy faces. The photos move on their own; tap one to see it bigger.</p></div>
+{gallery_html(KC_GAL)}
 </div></section>
 {LIGHTBOX}
 
@@ -742,8 +756,8 @@ community = page_head("Community projects",
 <cite>Breakthrough Centre</cite></blockquote></div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Standing up for children, in pictures</h2><p class="lead">Tap a photo to see it bigger.</p></div>
-<div class="gallery">{gallery_html(CP_GAL)}</div>
+<div class="section-head"><h2>Standing up for children, in pictures</h2><p class="lead">The photos move on their own; tap one to see it bigger.</p></div>
+{gallery_html(CP_GAL)}
 </div></section>
 
 <section class="section tint"><div class="wrap split top">
@@ -775,8 +789,8 @@ community = page_head("Community projects",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Outreach through the years</h2><p class="lead">Tap a photo to see it bigger.</p></div>
-<div class="gallery">{gallery_html(HELP_GAL)}</div>
+<div class="section-head"><h2>Outreach through the years</h2><p class="lead">The photos move on their own; tap one to see it bigger.</p></div>
+{gallery_html(HELP_GAL)}
 </div></section>
 {LIGHTBOX}
 
@@ -785,7 +799,7 @@ community = page_head("Community projects",
 <p>Our team has taken Christmas carols to patients and staff at Alberlito Hospital in Ballito. The highlight of our calendar is the annual Kidz Club Christmas party, where every child receives a gift and a sumptuous treat, made possible by friends of the centre.</p></div>
 {photo("christmas-carols-alberlito", "Our team singing Christmas carols for patients and staff at Alberlito Hospital, Ballito", "wide")}
 </div>
-<div class="wrap" style="margin-top:2rem"><div class="gallery">{gallery_html(XMAS_GAL)}</div></div></section>
+<div class="wrap" style="margin-top:2rem">{gallery_html(XMAS_GAL)}</div></section>
 
 <section class="section"><div class="wrap split">
 {photo("girls-health-hygiene", "Our girls with their Fearless masks at the health, hygiene and etiquette programme", "wide")}
@@ -803,7 +817,7 @@ community = page_head("Community projects",
 </div>
 {photo("working-with-schools", "Learners from our local high schools taking part in one of our programmes", "tall")}
 </div>
-<div class="wrap" style="margin-top:2rem"><div class="gallery">{gallery_html(SCHOOLS_GAL)}</div></div></section>
+<div class="wrap" style="margin-top:2rem">{gallery_html(SCHOOLS_GAL)}</div></section>
 
 <section class="section tint"><div class="wrap split">
 {photo("library-books-donation", "Our Academy learners diving into the library books donated by Prince's Grant Bookclub", "wide")}
@@ -817,7 +831,7 @@ community = page_head("Community projects",
 <li>Metro World Child South Africa and Umhlali SAPS, who spoke to our children</li>
 <li>The Friends of the Kidz Club and every family who sponsors meals, treats and gifts</li></ul></div>
 </div>
-<div class="wrap" style="margin-top:2rem"><h3>People who work with us</h3><div class="gallery">{gallery_html(PARTNERS_GAL)}</div></div></section>
+<div class="wrap" style="margin-top:2rem"><h3>People who work with us</h3>{gallery_html(PARTNERS_GAL)}</div></section>
 
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Recognised for community development</h2>
@@ -854,16 +868,14 @@ gal_alt = {
     "wedding-cake-family": "The newlyweds cutting the cake with family close by",
     "wedding-coastal-path": "The coastal path down to a beach wedding",
 }
-gallery = "".join(
-    f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
-    f'{pic(g, gal_alt[g], sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g in gal)
+gallery = gallery_html([(g, gal_alt[g]) for g in gal], "Weddings by our marriage officer")
 weddings = page_head("Marriage officer",
     "Getting married in KwaDukuza, Ballito or anywhere on the Dolphin Coast? We'll make your ceremony personal and meaningful, traditional or not, and handle the registration at Home Affairs.",
     ["wedding-vows", "wedding-canopy", "wedding-beach-setup"],
     f'<div class="btn-row"><a class="btn btn-whatsapp" href="{wa("Hi, I would like to book the marriage officer.")}" rel="noopener">{WA_ICON}Book your ceremony</a></div>') + f"""
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>Your love story, your way</h2><p class="lead">We sit down with you, get to know your story and shape a ceremony that feels like you, whether it's barefoot on the beach or an evening celebration in a hall.</p></div>
-<div class="gallery">{gallery}</div>
+{gallery}
 </div></section>
 <dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>
 
