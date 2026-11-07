@@ -380,3 +380,4 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
 .small-print { font-size: 0.9rem; opacity: 0.8; max-width: 62rem; }
 @media (max-width: 760px) { .news-grid { grid-template-columns: 1fr; } }
 .measure figure { margin-top: 1.5rem; } .measure .photo.tall { max-width: 26rem; }
+.photo.pano { aspect-ratio: 2048 / 974; }

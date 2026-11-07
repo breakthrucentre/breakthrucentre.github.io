@@ -620,6 +620,11 @@ academy = page_head("Breakthrough Centre Academy",
 {photo("academy-graduate-2026-red", "One of our Class of 2026 graduates, cap on and scroll in hand", "tall")}
 </div></section>
 
+<section class="section tint"><div class="wrap">
+<div class="section-head"><h2>Our Grade R graduates of 2022</h2><p class="lead">Caps on, certificates and trophies in hand, and so much to be proud of. Every one of these little graduates left us ready for big school.</p></div>
+{photo("bca-grade-r-graduates-2022", "Our proud Grade R graduates of 2022 in their caps and gowns, holding their certificates and trophies, with Ps Trevor, Jessica and their teachers", "pano", "Breakthrough Centre Academy Grade R graduates, 2022")}
+</div></section>
+
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>From our archive</h2><p class="lead">Our preschool started out as Daddy's Daycare and Pre-school in the little blue tin house. Here are a few moments from the years since. <a href="news.html">Read our story in the news</a>.</p></div>
 {gallery_html(ACADEMY_ARCHIVE_GAL, "Academy archive")}

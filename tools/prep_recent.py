@@ -64,6 +64,7 @@ SRC = {
     "academy-coding-grids": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/e0717732-image.jpg",  # BCA activities, sent 7 Nov 2026
     "academy-leaf-magnifier": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/c9cb0944-image.jpg",  # BCA activities, sent 7 Nov 2026
     "i-can-read-parent-workshop": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/5c8820d9-image.png",  # sent 7 Nov 2026
+    "bca-grade-r-graduates-2022": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/d88803cb-image.png",  # sent 7 Nov 2026 (white strip at top trimmed)
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 
