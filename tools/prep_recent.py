@@ -42,6 +42,27 @@ SRC = {
     "child-protection-superhero-dance": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/0caf81bf-image.jpg",  # sent 7 Nov 2026
     "child-protection-saps": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/21a34afd-image.jpg",  # sent 7 Nov 2026
     "child-protection-paramedics": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/1fbf5a98-image.jpg",  # sent 7 Nov 2026
+    "lotus-fm-jessica": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/2b7132a6-image.jpg",  # sent 7 Nov 2026
+    "lotus-fm-trevor": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/609d3782-image.jpg",  # sent 7 Nov 2026
+    "partners-gift-bags-academy": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/29f5dc39-image.jpg",  # sent 7 Nov 2026
+    "partners-kidz-club-balls": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/5e7bbb41-image.jpg",  # sent 7 Nov 2026
+    "kidz-club-1990s": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/78bfd992-image.jpg",  # sent 7 Nov 2026
+    "pam-mills-kidz-club": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/bd0e779e-image.jpg",  # sent 7 Nov 2026
+    "distribution-trevor-parcels": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/af151cba-image.jpg",  # sent 7 Nov 2026
+    "national-planning-ps-raj": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/67c141ec-image.jpg",  # sent 7 Nov 2026
+    "schools-event-folders": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/2761dc44-image.jpg",  # sent 7 Nov 2026
+    "inter-school-competition-winners": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/519db333-image.jpg",  # sent 7 Nov 2026
+    "partners-speak-out-school": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/07041157-image.jpg",  # sent 7 Nov 2026
+    "kidz-club-ballet-2009": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/53c0f6d8-image.jpg",  # sent 7 Nov 2026
+    "bca-concert-2019-fairies": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/0f530ea8-image.jpg",  # sent 7 Nov 2026
+    "meeting-community-leaders": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/0a8ceaef-image.jpg",  # sent 7 Nov 2026
+    "academy-pretend-kitchen": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/b15de8bd-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-colouring-worksheets": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/d614021f-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-shop-role-play": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/66d45a70-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-nature-binoculars": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/ecaa92b0-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-pattern-building": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/d21427a4-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-coding-grids": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/e0717732-image.jpg",  # BCA activities, sent 7 Nov 2026
+    "academy-leaf-magnifier": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/c9cb0944-image.jpg",  # BCA activities, sent 7 Nov 2026
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 

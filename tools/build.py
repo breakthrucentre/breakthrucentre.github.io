@@ -99,17 +99,17 @@ def burst_svg(rays, cx, cy, sun_r, r1, hw, vb, sun_html="", cls="burst", label=T
 
 HOME_RAYS = [
     dict(a=104, r=690, img="academy-graduate-2026", label="Academy", href="academy.html",
-         alt="a Breakthrough Centre Academy learner in a graduation cap, class of 2026"),
+         alt="one of our Class of 2026 Academy graduates in her cap"),
     dict(a=88, r=760, img="kidz-club-costumes", label="Kidz Club", href="kidz-club.html",
-         alt="children in costumes at Kidz Club"),
+         alt="our children dressed up at Kidz Club"),
     dict(a=72, r=790, img="child-protection-heroes-2026", label="Community", href="community.html",
-         alt="young superheroes at our Child Protection event"),
+         alt="our young superheroes at the Child Protection event"),
     dict(a=56, r=770, img="wedding-vows", label="Weddings", href="weddings.html",
-         alt="a couple exchanging vows before our marriage officer"),
+         alt="a couple saying their vows before our marriage officer"),
     dict(a=40, r=720, img="computer-class", label="Training", href="training.html",
-         alt="young people learning computer skills"),
+         alt="our young people learning computer skills"),
     dict(a=24, r=650, img="children-praying", label="Prayer", href="prayer.html",
-         alt="children praying together"),
+         alt="our children praying together"),
 ]
 
 
@@ -285,7 +285,7 @@ home = f"""
 <p>We're a registered non-profit organisation (081-061-NPO) in Groutville, between KwaDukuza (Stanger) and Ballito, and we serve families right across the iLembe District. What drives us hasn't changed in 36 years: helping people of every age reach their God-given potential.</p>
 <p><a href="about.html">Read our story</a></p>
 </div>
-{photo("anniversary-family-35", "The Breakthrough Centre family dressed up for the 35th anniversary celebration in 2025", "wide", "Celebrating 35 years of Breakthrough Centre, 2025")}
+{photo("anniversary-family-35", "Our Breakthrough Centre family, all dressed up to celebrate 35 years together in 2025", "wide", "Celebrating 35 years of Breakthrough Centre, 2025")}
 </div></section>
 
 <section class="section"><div class="wrap split top">
@@ -298,24 +298,24 @@ home = f"""
 <p class="signoff">With much love,<br><strong>Ps. Trevor and Jessica Nair</strong></p>
 <p><a href="about.html">Meet the Executive Committee</a></p></div>
 <div class="stack">
-{photo("founders-cake", "Ps Trevor and Jessica Nair, founders of Breakthrough Centre, cutting the 35th anniversary cake", "wide", "Our founders, Ps Trevor and Jessica Nair")}
-{photo("founders-mums", "The mothers of founders Ps Trevor and Jessica Nair at a Breakthrough Centre celebration", "wide", "The mothers of our founders")}
+{photo("founders-cake", "Ps Trevor and Jessica cutting the cake at our 35th anniversary, 35 years after Kidz Club began", "wide", "Our founders, Ps Trevor and Jessica Nair")}
+{photo("founders-mums", "Ps Trevor and Jessica's mums, who stood with them from the very beginning", "wide", "The mothers of our founders")}
 </div>
 </div></section>
 
 <section class="section tint"><div class="wrap split">
 <div class="measure"><h2>A welcome seen in 42 countries</h2>
 <p>When our spiritual parents, Dr Jonathan and Helen David, arrived in South Africa, Breakthrough Centre Academy learners were waiting at the airport in traditional dress, waving the South African flag. The welcome was screened in Malaysia to delegates from 42 countries.</p></div>
-{photo("welcoming-dr-jonathan-david", "Breakthrough Centre Academy learners in traditional dress welcoming Dr Jonathan and Helen David at the airport", "wide")}
+{photo("welcoming-dr-jonathan-david", "Our Academy learners in traditional dress, waving flags as they welcome Dr Jonathan and Mum Helen at the airport", "wide")}
 </div></section>
 
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>Highlights of our year</h2></div>
 <div class="split top">
-<div>{photo("christmas-party-stage", "Children with their gifts on stage at the annual Kidz Club Christmas party", "wide")}
+<div>{photo("christmas-party-stage", "Our Kidz Club children on stage with their Christmas gifts and Santa hats", "wide")}
 <h3>The annual Kidz Club Christmas party</h3>
 <p>The highlight of the Breakthrough Centre calendar. There is nothing more rewarding than putting a smile on the face of a child, and our annual Kidz Club party ensures that every child receives a gift for Christmas and a sumptuous treat.</p></div>
-<div>{photo("child-protection-march-flags", "Hundreds of children marching together at the annual Child Protection Event", "wide")}
+<div>{photo("child-protection-march-flags", "Hundreds of our children and their families marching together at the annual Child Protection Event", "wide")}
 <h3>The annual Child Protection Event</h3>
 <p>The town comes to a standstill as little ones join together with strategic people to make a clarion call declaring an end to child abuse, upholding child protection as one community. The theme "Every child a superhero" sees every child dress up as their favourite superhero, march through the town and speak out against child abuse.</p>
 <p>Would you like to partner with us in this exciting event? <a href="{wa('Hi, I would like to partner with Breakthrough Centre on the Child Protection Event.')}" rel="noopener">Contact us for more information</a>.</p></div>
@@ -323,19 +323,19 @@ home = f"""
 
 <section class="section tint"><div class="wrap">
 <div class="pillars">
-<div><div class="pillar-photo">{pic("child-protection-march-flag-wave", "Waving the South African flag at the Child Protection March: building a transformed city together", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<div><div class="pillar-photo">{pic("child-protection-march-flag-wave", "Waving our flag at the Child Protection March: building a transformed city, one little life at a time", sizes="(max-width: 820px) 100vw, 33vw")}</div>
 <h2>Our vision</h2><ul>
 <li>A transformed city, empowered communities and an educated next generation.</li>
 <li>Young people trained, nurtured and developed to be responsible in their schools, communities and workplaces.</li>
 <li>"A new breed without greed": a generation living with righteousness and integrity.</li>
 <li>A strategic response to poverty, crime, social ills and challenges.</li></ul></div>
-<div><div class="pillar-photo">{pic("founders-kidz-club-party", "Ps Trevor and Jessica Nair with hundreds of children at a Kidz Club party", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<div><div class="pillar-photo">{pic("founders-kidz-club-party", "Ps Trevor and Jessica in matching yellow, surrounded by hundreds of our Kidz Club children at a party", sizes="(max-width: 820px) 100vw, 33vw")}</div>
 <h2>Our mission</h2><ul>
 <li>Reduce the effects of crime and poverty through empowerment, social development and life skills.</li>
 <li>Provide a caring, supportive and safe environment for children and youth.</li>
 <li>Run awareness and support programmes that meet present-day challenges.</li>
 <li>Effect lasting change in lifestyles through ongoing training and mentoring.</li></ul></div>
-<div><div class="pillar-photo">{pic("dr-jonathan-and-helen-david", "Dr Jonathan David and Mum Helen David, spiritual parents of Breakthrough Centre, in prayer", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<div><div class="pillar-photo">{pic("dr-jonathan-and-helen-david", "Our spiritual parents, Dr Jonathan David and Mum Helen, in prayer", sizes="(max-width: 820px) 100vw, 33vw")}</div>
 <h2>Our values</h2><p>Everyone who serves at Breakthrough Centre commits to:</p>
 <ul class="values"><li>Honesty</li><li>Integrity</li><li>Respect</li><li>Dedication</li><li>Excellence</li><li>Accountability</li><li>Non-discrimination</li></ul></div>
 </div></div></section>
@@ -343,17 +343,17 @@ home = f"""
 <section class="section olive"><div class="wrap">
 <div class="section-head"><h2>How we can help you</h2><p class="lead">A preschool, a Sunday club, community projects, weddings, training and a listening ear, all at one address in Etete.</p></div>
 <div class="services">
-<article class="service"><div class="photo">{pic("back-to-school-2026", "Breakthrough Centre Academy learners with their school bags in front of a colourful mural, 2026", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("back-to-school-2026", "Our Academy learners, school bags on and ready for the first day back in 2026", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="academy.html">Preschool: Breakthrough Centre Academy</a></h3><p>In raising a company of young men and women who would develop into outstanding leaders, the concept of Breakthrough Centre Academy came into being. We also saw the need to keep our little ones in a safe environment where they would thrive, receiving quality education.</p></article>
-<article class="service"><div class="photo">{pic("kidz-club-foosball", "Children playing on the soccer machine at Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("kidz-club-foosball", "The all-time favourite: our children crowded around the soccer machine at Kidz Club", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="kidz-club.html">Sunday Kidz Club</a></h3><p>The most exciting place to be on a Sunday morning, from 8 to 10am. Arts and crafts, sport, Monopoly, Scrabble, the all-time favourite soccer machine and plenty of other games, with Larry the puppet popping in.</p></article>
-<article class="service"><div class="photo">{pic("blanket-outreach", "A volunteer wrapping a blanket around a neighbour during an outreach in Etete", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("blanket-outreach", "Wrapping a warm blanket around one of our neighbours in Etete", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="community.html">Community projects</a></h3><p>From poverty alleviation programmes to education and empowerment: the annual Child Protection Event, feeding, blankets and food parcels, hygiene packs and Christmas outreach.</p></article>
-<article class="service"><div class="photo">{pic("wedding-beach-setup", "A beach wedding set up on the Dolphin Coast", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("wedding-beach-setup", "A beach wedding ready and waiting on the Dolphin Coast", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="weddings.html">Weddings and marriage officer</a></h3><p>A personal ceremony on the beach, in a hall or wherever you choose, and we register your marriage with Home Affairs.</p></article>
-<article class="service"><div class="photo">{pic("computer-class", "Young people learning computer skills at Breakthrough Centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("computer-class", "Our young people learning computer skills at the centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="training.html">Workshops and training</a></h3><p>Practical workshops, leadership and mentoring for parents, teachers, young people and community groups.</p></article>
-<article class="service"><div class="photo">{pic("children-praying", "Children praying together at Breakthrough Centre", sizes="(max-width: 560px) 100vw, 33vw")}</div>
+<article class="service"><div class="photo">{pic("children-praying", "Our children with their heads bowed, praying together", sizes="(max-width: 560px) 100vw, 33vw")}</div>
 <h3><a href="prayer.html">Prayer and counselling</a></h3><p>Going through something hard? Talk to someone who will listen, pray with you and walk with you.</p></article>
 </div></div></section>
 
@@ -361,13 +361,31 @@ home = f"""
 <div><p class="motto">How do you change the world?</p>
 <p>By touching one little life at a time. Give an hour, share a skill, partner with us or simply come and visit. There's a place for you here.</p>
 <div class="btn-row"><a class="btn btn-whatsapp" href="{wa('Hi Breakthrough Centre, I would like to get involved.')}" rel="noopener">{WA_ICON}WhatsApp us</a><a class="btn btn-ghost" style="color:#fff;border-color:#fff" href="get-involved.html">Ways to help</a></div></div>
-{photo("heritage-day-flag", "Academy learners in traditional dress around a South African flag on Heritage Day", "wide")}
+{photo("heritage-day-flag", "Our Academy learners proudly wearing traditional dress around the flag on Heritage Day", "wide")}
 </div></section>
 """
 pages.append(("index.html", page("index.html",
     "Preschool and Community Centre in Groutville | Breakthrough Centre",
     "Non-profit preschool and community centre in Groutville, near KwaDukuza (Stanger) and Ballito. Our Academy, Sunday Kidz Club and outreach have served families since 1990.",
     home + HOME_FAQ[0], extra_ld=HOME_FAQ[1])))
+
+def gallery_html(items):
+    """items: list of (image name, alt text). Buttons open the page's lightbox."""
+    return "".join(
+        f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
+        f'{pic(g, alt, sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g, alt in items)
+
+
+LIGHTBOX = '<dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>'
+
+MOMENTS_GAL = [
+    ("kidz-club-1990s", "The 1990s: Jessica Nair and the passionate team who started Kidz Club, entertaining a crowd of children on the grass"),
+    ("kidz-club-ballet-2009", "2009: our Kidz Club ballet girls in their white dresses outside the little blue tin house"),
+    ("pam-mills-kidz-club", "Pam Mills, who taught ballet at Kidz Club alongside Jessica, with a hall full of our children"),
+    ("national-planning-ps-raj", "Ps Raj with Ps Trevor and Jessica Nair at a national planning workshop"),
+    ("meeting-community-leaders", "Sitting around the table with important leaders from our community"),
+    ("founders-kidz-club-party", "Ps Trevor and Jessica in matching yellow, surrounded by hundreds of children at a Kidz Club party"),
+]
 
 # ---------- About
 about = page_head("Our story",
@@ -398,7 +416,7 @@ about = page_head("Our story",
 <section class="section tint"><div class="wrap split top">
 <div><h2>Leadership and governance</h2>
 <p>Breakthrough Centre was founded by Ps. Trevor and Jessica Nair. An Executive Committee steers the organisation, sub-committees run each department and report back to it, and a team of volunteers keeps every programme, event and project running smoothly.</p>
-{photo("founders-and-exco", "Breakthrough Centre founders Ps Trevor and Jessica Nair with members of the Executive Committee", "tall", "Our founders, Ps Trevor and Jessica Nair, with the Executive Committee")}</div>
+{photo("founders-and-exco", "Ps Trevor and Jessica with our Executive Committee, the team who keep everything running", "tall", "Our founders, Ps Trevor and Jessica Nair, with the Executive Committee")}</div>
 <div><h3>Executive Committee</h3>
 <ul class="people">
 <li><strong>Mr P. Nair</strong>Founder. Full-time Manager, Breakthrough Centre</li>
@@ -426,34 +444,38 @@ about = page_head("Our story",
 <li>Our story published in a national magazine</li>
 <li>2nd place, Sugar Rush Big 5, Community category</li>
 <li>Jet Club Icon</li></ul>
-{photo("anniversary-cake-35", "Breakthrough Centre 35th anniversary cake with the centre's sun logo, 2025", "wide", "Celebrating 35 years, 2025")}</div>
+{photo("anniversary-cake-35", "Our 35th anniversary cake, topped with the Breakthrough Centre sun, 2025", "wide", "Celebrating 35 years, 2025")}</div>
 </div></div></section>
+
+<section class="section tint"><div class="wrap">
+<div class="section-head"><h2>Moments through the years</h2><p class="lead">A few snapshots from our family album. Tap a photo to see it bigger.</p></div>
+<div class="gallery">{gallery_html(MOMENTS_GAL)}</div>
+</div></section>
+{LIGHTBOX}
 """ + cta("Come and see our work", "Visit the centre at 170 Old Main Road, Etete, or send us a message.")
 pages.append(("about.html", page("about.html", "Our Story: 36 Years in Groutville | Breakthrough Centre",
     "How a children's club in Etete, Groutville grew into a community centre and preschool. Our story since 1990, our leaders and the awards we've received.", about)))
 
-def gallery_html(items):
-    """items: list of (image name, alt text). Buttons open the page's lightbox."""
-    return "".join(
-        f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
-        f'{pic(g, alt, sizes="(max-width: 600px) 100vw, 33vw")}</button>' for g, alt in items)
-
-
-LIGHTBOX = '<dialog class="lightbox"><button class="close" type="button">Close</button><img src="" alt=""><p></p></dialog>'
-
 ACADEMY_GAL = [
-    ("sunshine-craft", "Learners making paper suns at a green table"),
-    ("water-play", "Learners in Academy T-shirts gathered around a water play pool"),
-    ("parachute-play", "Outdoor parachute play on the grass at Breakthrough Centre Academy"),
-    ("space-art", "Learners making a space collage of planets, stars and rockets"),
-    ("garden-planting", "Learners planting and watering in the Academy vegetable garden"),
-    ("building-blocks", "Learners building patterns with coloured blocks"),
-    ("leaf-art", "Leaf art on a colourful alphabet play mat"),
-    ("finger-painting", "Two learners finger painting with green paint"),
-    ("shape-sorting", "Learners using shape sorters at an outdoor table"),
-    ("outdoor-learning-circle", "Learners sitting in a circle outdoors for a sorting game"),
-    ("solar-system-project", "Learners working on a solar system project"),
-    ("ball-play", "Learners playing with balls at bright red and yellow tables"),
+    ("academy-pretend-kitchen", "Our little chefs in their BCA T-shirts cooking up a storm in the play kitchen"),
+    ("academy-shop-role-play", "Playing shop with real price tags: counting and money skills, with big smiles"),
+    ("academy-nature-binoculars", "Explorers with home-made binoculars, spotting the animals and leaves on the nature table"),
+    ("academy-leaf-magnifier", "A careful look at a leaf through the magnifying glass"),
+    ("academy-coding-grids", "Coding without a computer: drawing arrows to guide each picture across the grid"),
+    ("academy-pattern-building", "Building long rainbow rows and pegboard patterns, one colour at a time"),
+    ("academy-colouring-worksheets", "Heads down and colouring in, with a pot full of kokis between friends"),
+    ("sunshine-craft", "Our little ones making paper suns, just like the one in our logo"),
+    ("water-play", "Splash time: our learners in their BCA T-shirts around the water play pool"),
+    ("parachute-play", "Everyone holding on for parachute play on the grass"),
+    ("space-art", "Our young astronauts making a space collage of planets, stars and rockets"),
+    ("garden-planting", "Little gardeners planting and watering in our Academy vegetable garden"),
+    ("building-blocks", "Building colourful block patterns together"),
+    ("leaf-art", "Leaf art laid out on our alphabet play mat"),
+    ("finger-painting", "Two of our learners happily getting their hands green with finger paint"),
+    ("shape-sorting", "Sorting shapes at the outdoor table"),
+    ("outdoor-learning-circle", "Our learners in a circle outside for a sorting game"),
+    ("solar-system-project", "Our learners hard at work on their solar system project"),
+    ("ball-play", "Ball games at our bright red and yellow tables"),
 ]
 
 
@@ -477,7 +499,7 @@ academy = page_head("Breakthrough Centre Academy",
 <p>Every child follows a structured programme in Maths, Science, Languages and Life Skills. Even our two-year-olds are building their vocabulary and learning the first steps of reading and writing. Along the way we teach good manners, respect for others and healthy eating habits.</p>
 <p>In 2021 we were also awarded the lease of a brand-new community-based crèche and pre-school in Shakaskraal.</p>
 </div>
-{photo("rocket-counting", "Learners matching numbers to rocket pictures in a maths lesson at Breakthrough Centre Academy", "tall")}
+{photo("rocket-counting", "Our learners counting rockets and matching the numbers in maths", "tall")}
 </div></section>
 
 <section class="section tint"><div class="wrap split">
@@ -489,7 +511,7 @@ academy = page_head("Breakthrough Centre Academy",
 </div></section>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>A week at the Academy</h2><p class="lead">Painting, planting, counting rockets and splashing in the water pool: here is what learning looks like for our little ones in 2026. Tap a photo to see it bigger.</p></div>
+<div class="section-head"><h2>A week at the Academy</h2><p class="lead">Cooking, shopping, coding, exploring, painting, planting and splashing in the water pool: this is what learning looks like for our little ones. Tap a photo to see it bigger.</p></div>
 <div class="gallery">{gallery_html(ACADEMY_GAL)}</div>
 </div></section>
 {LIGHTBOX}
@@ -497,26 +519,27 @@ academy = page_head("Breakthrough Centre Academy",
 <section class="section"><div class="wrap">
 <div class="section-head"><h2>Dressed up for Valentine's Day 2026</h2><p class="lead">Our learners love a reason to celebrate, from Heritage Day to the end-of-year function.</p></div>
 <div class="prints">
-<figure class="print">{pic("valentines-boy", "Academy learner in a white shirt on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Ready for the party</figcaption></figure>
-<figure class="print">{pic("valentines-girl", "Academy learner dressed in red on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Dressed up in red</figcaption></figure>
-<figure class="print">{pic("valentines-red-dress", "Smiling Academy learner in a red dress and flower crown", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Feeling special</figcaption></figure>
-<figure class="print">{pic("valentines-smile", "Happy Academy learner smiling on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>All smiles</figcaption></figure>
-<figure class="print">{pic("valentines-balloon", "Academy learner holding an I love you balloon", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Lots of love</figcaption></figure>
+<figure class="print">{pic("valentines-boy", "One of our learners looking smart in white on Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Ready for the party</figcaption></figure>
+<figure class="print">{pic("valentines-girl", "One of our little ones dressed in red for Valentine's Day 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Dressed up in red</figcaption></figure>
+<figure class="print">{pic("valentines-red-dress", "All smiles in a red dress and flower crown", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Feeling special</figcaption></figure>
+<figure class="print">{pic("valentines-smile", "A big Valentine's Day smile from one of our learners, 2026", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>All smiles</figcaption></figure>
+<figure class="print">{pic("valentines-balloon", "Lots of love: one of our learners holding an \"I love you\" balloon", sizes="(max-width: 820px) 50vw, 20vw")}<figcaption>Lots of love</figcaption></figure>
 </div></div></section>
 
 <section class="section tint"><div class="wrap split">
-{photo("academy-heritage-day", "Breakthrough Centre Academy learners in traditional dress in front of the Academy wall on Heritage Day", "tall", "Heritage Day at the Academy")}
+{photo("academy-heritage-day", "Our Academy learners in their traditional dress on Heritage Day", "tall", "Heritage Day at the Academy")}
 <div class="measure"><h2>Proud of who we are</h2>
 <p>On Heritage Day our learners come to school in traditional dress, sing, dance and celebrate the cultures that make South Africa special. Learning to honour where we come from builds confidence and respect for others.</p>
-{photo("academy-with-principal", "A car full of happy Academy learners on an outing with their principal", "wide", "Out and about with our principal")}</div>
+{photo("academy-with-principal", "A car full of happy faces: our learners on an outing with their principal", "wide", "Out and about with our principal")}</div>
 </div></section>
 
 <section class="section olive"><div class="wrap split">
 <div><h2>Parents as partners</h2>
 <p>You're part of the team. Every term we hold parent meetings where you can see your child's progress and get to know the teachers, plus free workshops on how to help your child do their best at home.</p>
 <h2>Time to shine</h2>
-<p>Every learner gets a turn on stage at our Annual Concert and Graduation: speaking, storytelling, dancing, acting and singing in front of a proud crowd.</p></div>
-{photo("academy-graduate-2026-red", "Breakthrough Centre Academy learner in a graduation cap holding a scroll, class of 2026", "tall")}
+<p>Every learner gets a turn on stage at our Annual Concert and Graduation: speaking, storytelling, dancing, acting and singing in front of a proud crowd.</p>
+{photo("bca-concert-2019-fairies", "Our little fairies and a very serious young prince on stage at the BCA concert, 2019", "wide", "Our little fairies at the BCA concert, 2019")}</div>
+{photo("academy-graduate-2026-red", "One of our Class of 2026 graduates, cap on and scroll in hand", "tall")}
 </div></section>
 """ + cta("Enrol your child", f"We'd love to welcome your family. WhatsApp {PHONE_DISPLAY} to find out about places and registration.", "WhatsApp about places", ac_msg)
 pages.append(("academy.html", page("academy.html",
@@ -530,34 +553,36 @@ pages.append(("academy.html", page("academy.html",
 
 # ---------- Kidz Club (playful)
 KC_GAL = [
-    ("kidz-club-worship", "Children singing and worshipping together at Sunday Kidz Club"),
-    ("kidz-club-soccer", "Kidz Club children playing soccer on the field in Etete"),
-    ("kidz-club-easter-meal", "Children enjoying a plate of food at the Kidz Club Easter celebration"),
-    ("kidz-club-cupcakes", "Children receiving cupcakes on Father's Day at Kidz Club"),
-    ("kidz-club-contest-winners", "Kidz Club children holding their prizes after a contest"),
-    ("kidz-club-play", "A little one riding a toy bike at Kidz Club"),
-    ("kidz-club-mothers-day-2023", "Mums and children gathered outside the centre for Mother's Day at Kidz Club, 2023"),
-    ("kidz-club-early-days", "Kidz Club children in caps in front of a colourful mural, from our early years"),
-    ("kidz-club-crowd-2006", "Hundreds of children gathered at a Breakthrough Centre children's event in 2006"),
-    ("kidz-club-heritage-day", "Kidz Club girls in traditional Zulu dress on Heritage Day"),
-    ("kidz-club-madiba-day", "Children lying around a Happy Birthday Madiba banner they made for Mandela Day"),
-    ("kidz-club-smiles", "Big smiles from a group of Kidz Club children"),
-    ("kidz-club-gifts", "Kidz Club children holding up their new colouring books and gifts"),
-    ("kidz-club-reading-mat", "Children sitting on a mat for reading time at Kidz Club"),
-    ("kidz-club-reading-table", "Children working on reading and colouring sheets at Kidz Club"),
-    ("kidz-club-hall", "A hall full of children listening to a Kidz Club lesson"),
-    ("kidz-club-story-on-steps", "A leader sharing a story with little ones on the steps of the centre"),
-    ("kidz-club-outdoor-lesson", "A Kidz Club lesson outdoors on the veranda"),
-    ("kidz-club-praise-outside", "Children singing and praising outside the centre"),
-    ("kidz-club-group-outside", "A big group of Kidz Club children and leaders outside"),
-    ("kidz-club-line-up", "Children lining up for an activity with a Kidz Club leader"),
-    ("kidz-club-foosball", "Children playing foosball at Kidz Club"),
-    ("kidz-club-games-room", "Young people with snooker cues in the Kidz Club games room"),
-    ("kidz-club-toys", "Toddlers playing with toys at Kidz Club"),
-    ("kidz-club-vegetable-garden", "The Kidz Club vegetable garden in 2009"),
-    ("spin-da-flava-visit", "The Spin Da Flava team visiting Kidz Club"),
-    ("larry-with-children", "Larry the puppet with a crowd of excited children"),
-    ("larry-puppet", "Larry the puppet peeping over his puppet stage"),
+    ("kidz-club-worship", "Our children singing their hearts out in praise and worship at Sunday Kidz Club"),
+    ("kidz-club-soccer", "Our Kidz Club children kicking a ball around on the field in Etete"),
+    ("kidz-club-easter-meal", "Our children tucking into a plate of food at the Kidz Club Easter celebration"),
+    ("kidz-club-cupcakes", "Cupcakes all round on Father's Day at Kidz Club"),
+    ("kidz-club-contest-winners", "Proud Kidz Club children showing off their contest prizes"),
+    ("kidz-club-play", "One of our little ones zooming around on a toy bike"),
+    ("kidz-club-mothers-day-2023", "Our mums and children outside the centre for Mother's Day at Kidz Club, 2023"),
+    ("kidz-club-early-days", "Our Kidz Club children in their caps in front of a mural, from our early years"),
+    ("kidz-club-crowd-2006", "Hundreds of children gathered with us for a children's event in 2006"),
+    ("kidz-club-ballet-2009", "2009: our ballet girls in white outside the little blue tin house"),
+    ("partners-kidz-club-balls", "Friends of Kidz Club handing out shiny new balls at the centre door"),
+    ("kidz-club-heritage-day", "Our Kidz Club girls in traditional Zulu dress on Heritage Day"),
+    ("kidz-club-madiba-day", "Our children around the Happy Birthday Madiba banner they made for Mandela Day"),
+    ("kidz-club-smiles", "Big smiles from some of our Kidz Club children"),
+    ("kidz-club-gifts", "Our Kidz Club children holding up their new colouring books and gifts"),
+    ("kidz-club-reading-mat", "Reading time on the mat at Kidz Club"),
+    ("kidz-club-reading-table", "Our children working through their reading and colouring sheets at Kidz Club"),
+    ("kidz-club-hall", "A hall full of our children listening to the Kidz Club lesson"),
+    ("kidz-club-story-on-steps", "Story time with our little ones on the steps of the centre"),
+    ("kidz-club-outdoor-lesson", "A Kidz Club lesson out on the veranda"),
+    ("kidz-club-praise-outside", "Our children singing and praising outside the centre"),
+    ("kidz-club-group-outside", "Our Kidz Club family, children and leaders together outside"),
+    ("kidz-club-line-up", "Lining up with one of our Kidz Club leaders for the next activity"),
+    ("kidz-club-foosball", "Our children around the soccer machine at Kidz Club"),
+    ("kidz-club-games-room", "Our young people in the Kidz Club games room, with the pool table the Nedbank award bought"),
+    ("kidz-club-toys", "Our toddlers busy with toys at Kidz Club"),
+    ("kidz-club-vegetable-garden", "Our Kidz Club vegetable garden in 2009"),
+    ("spin-da-flava-visit", "The Spin Da Flava team on a visit to our Kidz Club"),
+    ("larry-with-children", "Larry the puppet with a crowd of very excited children"),
+    ("larry-puppet", "Larry peeping over his puppet stage"),
 ]
 kidz = page_head("Kidz Club",
     "Every Sunday morning from 8 to 10, children from Etete, Groutville and around KwaDukuza come together for praise, a Bible story, games, friends and a lot of encouragement.",
@@ -565,8 +590,8 @@ kidz = page_head("Kidz Club",
 <section class="section"><div class="wrap split">
 <div><p class="big-time">Sundays<br>8 to 10am</p>
 <p class="lead">At Breakthrough Centre, 170 Old Main Road, Etete. All children in our community are welcome, rain or shine.</p>
-<p>This is where Breakthrough Centre began on 10 October 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre, and some of the children who came as toddlers now come back to encourage the next group to stay in school and finish strong.</p></div>
-{photo("kidz-club-sunday", "Children and young people at Sunday Kidz Club in Groutville", "wide")}
+<p>This is where Breakthrough Centre began on 10 October 1990: a children's club that gave young people somewhere good to be. Thirty-six years later, Sunday mornings are still the heartbeat of the centre, and some of the children who came as toddlers now come back to encourage the next group to stay in school and finish strong. In the early days our girls even learned ballet at Kidz Club, taught by Pam Mills alongside Jessica, outside the little blue tin house.</p></div>
+{photo("kidz-club-sunday", "Our children and young people together at Sunday Kidz Club in Groutville", "wide")}
 </div></section>
 
 <section class="section tint"><div class="wrap">
@@ -583,7 +608,7 @@ kidz = page_head("Kidz Club",
 </div></div></section>
 
 <section class="section"><div class="wrap split">
-{photo("kidz-club-contest-prizes", "Kidz Club children on stage receiving prizes at the My City, My Future contest", "tall")}
+{photo("kidz-club-contest-prizes", "Our Kidz Club children on stage collecting their prizes at the My City, My Future contest", "tall")}
 <div class="measure"><h2>My City, My Future</h2>
 <p>At our "My City, My Future" contest, Kidz Club children shared their hopes and dreams for their community. The winner took home a R500 education voucher, the runners-up won hampers, five children received book prizes for their effort, and every child who took part got a pencil case.</p>
 <p>Hearing a new generation speak about their future gives us real hope for South Africa.</p></div>
@@ -599,7 +624,7 @@ kidz = page_head("Kidz Club",
 <div class="bubble"><h2>Meet Larry!</h2>
 <p>Larry the puppet appears occasionally to give the children a good moral lesson, while making lots of mistakes himself in a very hilarious manner. We call him Laugh Out Larry.</p>
 <p>During the pandemic Larry found himself in the Ballito Television studio, presenting daily kids' programmes to children in their homes. You can catch the Laugh Out Larry Show on YouTube.</p></div>
-{photo("larry-stage", "Larry the puppet on his stage at Kidz Club", "wide", "Larry the puppet")}
+{photo("larry-stage", "Larry the puppet on his stage, ready to make the children laugh", "wide", "Larry the puppet")}
 </div></section>
 """ + cta("Come and join us", f"Questions about Kidz Club? Call or WhatsApp {PHONE_DISPLAY}.", "WhatsApp us", "Hi, I have a question about Sunday Kidz Club.")
 pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Groutville, KwaDukuza | Breakthrough Centre",
@@ -613,44 +638,57 @@ pages.append(("kidz-club.html", page("kidz-club.html", "Sunday Kidz Club in Grou
 
 # ---------- Community / social development
 CP_GAL = [
-    ("child-protection-day-2026", "Children in superhero costumes fill the hall at our 2026 Child Protection event"),
-    ("child-protection-heroes-2026", "Three young superheroes at the Breakthrough Centre Child Protection event, 2026"),
-    ("child-protection-march", "Children, clowns and volunteers marching through Etete for child protection"),
-    ("child-protection-march-placards", "Learners holding placards saying it shouldn't hurt to be a child"),
-    ("child-protection-march-crowd", "A crowd of children marching along the road in Etete against child abuse"),
-    ("child-protection-programme", "Leaders and children performing at the annual Child Protection programme"),
-    ("child-protection-march-flags", "Hundreds of children with flags at a Child Protection March"),
+    ("child-protection-day-2026", "A hall full of our little superheroes at the 2026 Child Protection event"),
+    ("child-protection-heroes-2026", "Three of our young superheroes at the 2026 Child Protection event"),
+    ("child-protection-march", "Our children, volunteers and a few brave clowns marching through Etete for child protection"),
+    ("child-protection-march-placards", "Our learners holding up their placards: it shouldn't hurt to be a child"),
+    ("child-protection-march-crowd", "Our children marching along the road in Etete, speaking out against child abuse"),
+    ("child-protection-programme", "Our leaders and children performing at the annual Child Protection programme"),
+    ("child-protection-march-flags", "Hundreds of our children with flags at the Child Protection March"),
     ("child-protection-little-marcher", "Our littlest marcher leading the way with her own hand-drawn poster, while the clowns and the crowd follow behind"),
     ("child-protection-superhero-dance", "Our little superheroes dancing in the street with South African flags while the town stops to watch"),
     ("child-protection-saps", "Our friends from SAPS came out to march with us, and so did a very happy turtle"),
     ("child-protection-paramedics", "Paramedics and emergency workers stood shoulder to shoulder with our children and their posters"),
-    ("child-protection-march-superhero", "A superhero joins the Child Protection March on the main road"),
-    ("founders-child-protection", "Founders Ps Trevor and Jessica Nair in costume for the Child Protection March"),
+    ("child-protection-march-superhero", "Even a superhero joined our Child Protection March on the main road"),
+    ("founders-child-protection", "Ps Trevor and Jessica in their superhero costumes for the Child Protection March"),
 ]
 HELP_GAL = [
-    ("food-parcel-outreach", "A volunteer handing a food parcel to a woman during an outreach in Etete"),
-    ("outreach-in-the-rain", "Neighbours waiting under umbrellas for blankets and food parcels"),
-    ("gift-box-hall-2014", "A hall full of children at the gift box distribution in August 2014"),
-    ("feeding-scheme-2013", "Volunteers handing out food to children outside the centre, December 2013"),
-    ("feeding-scheme-children", "Children sitting together on the grass eating a meal from our feeding scheme"),
-    ("school-shoes-lotus-fm", "Learners holding their new school shoes from the Lotus FM partnership"),
-    ("community-meal-bethel", "A volunteer sitting on the ground sharing a meal with Kidz Club children"),
-    ("elderly-distribution", "Volunteers handing out blankets and gifts to elderly neighbours"),
-    ("feeding-and-distribution", "Food parcels loaded on a bakkie for distribution to families"),
-    ("feeding-cooldrinks", "Volunteers serving food and cooldrinks to a line of children"),
-    ("community-handout", "Children holding parcels handed out by Breakthrough Centre volunteers"),
-    ("community-children-field", "Volunteers with a group of children in Etete"),
-    ("hospital-visit-gifts", "A volunteer visiting children in hospital with gifts"),
-    ("hospital-visit-baby", "A volunteer visiting a baby in hospital"),
-    ("netball-hoops-sasko", "Children playing netball at Breakthrough Centre with hoops donated by Sasko"),
-    ("girls-health-hygiene-2", "Schoolgirls holding Dream Big and I am Enough signs at the girls' health and hygiene programme"),
+    ("food-parcel-outreach", "Handing a food parcel to one of our neighbours during an outreach in Etete"),
+    ("outreach-in-the-rain", "Our neighbours waiting under umbrellas for blankets and food parcels"),
+    ("gift-box-hall-2014", "A hall full of children at our gift box distribution, August 2014"),
+    ("feeding-scheme-2013", "Our volunteers handing out food to children outside the centre, December 2013"),
+    ("feeding-scheme-children", "Children sharing a meal together on the grass, from our feeding scheme"),
+    ("lotus-fm-jessica", "Jessica on air with Lotus FM, telling listeners about our school shoe distribution"),
+    ("lotus-fm-trevor", "Ps Trevor in the Lotus FM studio for the school shoe distribution"),
+    ("distribution-trevor-parcels", "Ps Trevor handing out parcels to mums and grannies at one of our distributions"),
+    ("school-shoes-lotus-fm", "Learners proudly holding their new school shoes from our Lotus FM partnership"),
+    ("community-meal-bethel", "Sitting down on the ground to share a meal with our Kidz Club children"),
+    ("elderly-distribution", "Our team handing out blankets and gifts to our elderly neighbours"),
+    ("feeding-and-distribution", "A bakkie loaded with food parcels, ready to go out to families"),
+    ("feeding-cooldrinks", "Our volunteers serving food and cooldrinks to a line of hungry children"),
+    ("community-handout", "Children holding the parcels our volunteers handed out"),
+    ("community-children-field", "Our volunteers with a group of children in Etete"),
+    ("hospital-visit-gifts", "Visiting children in hospital with gifts to brighten their day"),
+    ("hospital-visit-baby", "Visiting a little one in hospital"),
+    ("netball-hoops-sasko", "Our girls playing netball with the hoops donated by Sasko"),
+    ("girls-health-hygiene-2", "Our girls holding up their signs: Dream Big, I am Enough"),
 ]
 XMAS_GAL = [
-    ("christmas-carols-alberlito-stairs", "The Breakthrough Centre carol singers on the stairs at Alberlito Hospital"),
-    ("christmas-party-stage", "Children with their gifts on stage at the Kidz Club Christmas party"),
-    ("christmas-party-gifts", "A room full of children opening Christmas presents"),
-    ("christmas-shoebox-gifts", "Children opening Christmas shoebox gifts"),
-    ("christmas-gifts-etete", "Children with their Christmas gifts beside the Breakthrough Centre sun and eagle mural"),
+    ("christmas-carols-alberlito-stairs", "Our carol singers on the stairs at Alberlito Hospital"),
+    ("christmas-party-stage", "Our Kidz Club children on stage with their Christmas gifts"),
+    ("christmas-party-gifts", "A room full of our children opening their Christmas presents"),
+    ("christmas-shoebox-gifts", "The joy of opening a Christmas shoebox gift"),
+    ("christmas-gifts-etete", "Our children with their Christmas gifts beside the sun and eagle mural"),
+]
+SCHOOLS_GAL = [
+    ("schools-event-folders", "Learners from our partner schools at Breakthrough Centre, each holding a new folder, with the friends who made the day happen"),
+    ("inter-school-competition-winners", "Proud winners of an inter-school competition at Breakthrough Centre, holding their certificates and trophies"),
+    ("partners-speak-out-school", "Friends who work with us, at a school event calling for an end to violence"),
+]
+PARTNERS_GAL = [
+    ("partners-gift-bags-academy", "Friends of the centre bringing gift bags for our Academy children, one of our past projects"),
+    ("partners-kidz-club-balls", "Friends handing out new balls to our Kidz Club children"),
+    ("partners-speak-out-school", "Friends who work with us, ready to speak out at a school event"),
 ]
 COMM_FAQ = faq("Community questions", [
     ("Does Breakthrough Centre help families in need in KwaDukuza?", f"Yes. Over the years we've handed out blankets, food parcels, hot meals, school shoes, gift boxes and baby formula to families in Etete and across KwaDukuza. If you know of a family in need, WhatsApp {PHONE_DISPLAY}."),
@@ -667,7 +705,7 @@ community = page_head("Community projects",
 <p>Would you like to partner with us in this exciting event? <a href="{wa('Hi, I would like to partner with Breakthrough Centre on the Child Protection Event.')}" rel="noopener">Contact us for more information</a>.</p>
 <p>In earlier years our learners, volunteers and a few brave clowns marched through the streets of Etete with home-made placards and slogans like "It shouldn't hurt to be a child".</p>
 </div>
-{photo("child-protection-captains-2026", "Two boys dressed as Captain America at the Breakthrough Centre Child Protection event, 2026", "tall")}
+{photo("child-protection-captains-2026", "Two little Captain Americas ready to stand up for children at our 2026 Child Protection event", "tall")}
 </div>
 <div class="wrap"><blockquote class="pullquote">
 <p>Many times our hearts are broken when we hear of cases of child abuse that could have been avoided if more preventative measures had been in place. This is one of the reasons Breakthrough Centre focuses on prevention to eradicate this evil in society: empowering parents to detect unsafe environments and decisions. Our children are surrounded by unsafe environments, but we can teach them how to protect themselves, how to speak out against abuse, and how to guard themselves and their friends when there is danger. One of our slogans, "Every child has a voice", inspires children in the area of public speaking. We as guardians of this city have a responsibility to amplify this voice.</p>
@@ -694,12 +732,12 @@ community = page_head("Community projects",
 </ul></div></section>
 
 <section class="section"><div class="wrap split">
-{photo("blanket-outreach", "A Breakthrough Centre volunteer wrapping a blanket around a neighbour during a rainy outreach in Etete", "wide")}
+{photo("blanket-outreach", "Wrapping a warm blanket around one of our neighbours on a rainy outreach day in Etete", "wide")}
 <div><h2>Practical help when it's needed most</h2>
 <ul class="checklist">
 <li><strong>Blankets and food parcels:</strong> in keeping with Isaiah 58:7, our team has carried blankets and food parcels to elderly and needy neighbours in Etete, even in pouring rain.</li>
 <li><strong>Feeding schemes:</strong> meals for hungry children, from our feeding programmes in 2013 to the plates of food shared at Kidz Club today.</li>
-<li><strong>Gift boxes and school shoes:</strong> gift boxes for a hall full of children in August 2014, and new school shoes for learners in partnership with Lotus FM.</li>
+<li><strong>Gift boxes and school shoes:</strong> gift boxes for a hall full of children in August 2014, and new school shoes for learners in partnership with Lotus FM, where Jessica and Ps Trevor went on air to share the story.</li>
 <li><strong>Mums and babies:</strong> diapers for babies, and clothing and linen for their mums.</li>
 <li><strong>Hospital visits:</strong> visiting sick children and babies in hospital and bringing them gifts.</li>
 <li><strong>Relief in hard times:</strong> hot meals during Covid-19, food hampers for families, and baby formula from Durban to Tugela during the 2021 unrest in KZN.</li>
@@ -715,12 +753,12 @@ community = page_head("Community projects",
 <section class="section olive"><div class="wrap split">
 <div><h2>Christmas cheer</h2>
 <p>Our team has taken Christmas carols to patients and staff at Alberlito Hospital in Ballito. The highlight of our calendar is the annual Kidz Club Christmas party, where every child receives a gift and a sumptuous treat, made possible by friends of the centre.</p></div>
-{photo("christmas-carols-alberlito", "The Breakthrough Centre team singing Christmas carols at Alberlito Hospital, Ballito", "wide")}
+{photo("christmas-carols-alberlito", "Our team singing Christmas carols for patients and staff at Alberlito Hospital, Ballito", "wide")}
 </div>
 <div class="wrap" style="margin-top:2rem"><div class="gallery">{gallery_html(XMAS_GAL)}</div></div></section>
 
 <section class="section"><div class="wrap split">
-{photo("girls-health-hygiene", "Schoolgirls with Fearless masks and props at the Breakthrough Centre girls' health and hygiene programme", "wide")}
+{photo("girls-health-hygiene", "Our girls with their Fearless masks at the health, hygiene and etiquette programme", "wide")}
 <div class="measure"><h2>Health, hygiene and etiquette</h2>
 <p>Breakthrough Centre hosts girl and boy empowerment programmes, providing young people with hygiene packs while teaching them about health, hygiene and etiquette.</p>
 <p>Preparing young people for their future careers starts now. So in whatever we teach, we train them for life.</p></div>
@@ -733,11 +771,12 @@ community = page_head("Community projects",
 <h2>Potential Unleashed: contests and performances</h2>
 <p>Our inter-school contests in art, poetry and talent help young people find out what they're good at. Children get a stage, an audience and skills that can shape their future. Even during the pandemic we kept the contests going online.</p>
 </div>
-{photo("working-with-schools", "High school learners taking part in a Breakthrough Centre programme for local schools", "tall")}
-</div></section>
+{photo("working-with-schools", "Learners from our local high schools taking part in one of our programmes", "tall")}
+</div>
+<div class="wrap" style="margin-top:2rem"><div class="gallery">{gallery_html(SCHOOLS_GAL)}</div></div></section>
 
 <section class="section tint"><div class="wrap split">
-{photo("library-books-donation", "Academy learners reading the library books donated by Prince's Grant Bookclub", "wide")}
+{photo("library-books-donation", "Our Academy learners diving into the library books donated by Prince's Grant Bookclub", "wide")}
 <div><h2>Friends who make it possible: our sponsors</h2>
 <p>None of this happens alone. Thank you to everyone who has stood with us, including:</p>
 <ul class="checklist">
@@ -747,7 +786,8 @@ community = page_head("Community projects",
 <li>Bethel Baptist Church, who ministered to our children and served them a meal</li>
 <li>Metro World Child South Africa and Umhlali SAPS, who spoke to our children</li>
 <li>The Friends of the Kidz Club and every family who sponsors meals, treats and gifts</li></ul></div>
-</div></section>
+</div>
+<div class="wrap" style="margin-top:2rem"><h3>People who work with us</h3><div class="gallery">{gallery_html(PARTNERS_GAL)}</div></div></section>
 
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Recognised for community development</h2>
@@ -771,18 +811,18 @@ gal = ["wedding-canopy", "wedding-vows", "wedding-beach-setup", "wedding-bride-v
        "wedding-reception-table", "wedding-family", "wedding-cake", "wedding-napkin", "wedding-reception-hall",
        "wedding-cake-family", "wedding-coastal-path"]
 gal_alt = {
-    "wedding-canopy": "Couple at an evening wedding ceremony under a floral canopy",
-    "wedding-vows": "Bride and groom exchanging vows before the Breakthrough Centre marriage officer",
-    "wedding-beach-setup": "Beach wedding set up with white chairs and a decorated arch overlooking the sea",
-    "wedding-bride-vows": "Bride saying her vows at a ceremony led by our marriage officer",
-    "wedding-beach-guests": "Guests seated at a beach wedding on the Dolphin Coast",
-    "wedding-reception-table": "Wedding reception table decorated with flowers and fairy lights",
-    "wedding-family": "Couple and family at a wedding ceremony",
-    "wedding-cake": "Bride and groom cutting their wedding cake",
-    "wedding-napkin": "Mr and Mrs wedding napkin with a gold spoon",
-    "wedding-reception-hall": "Wedding reception hall with purple lighting",
-    "wedding-cake-family": "Newlyweds cutting the cake with family",
-    "wedding-coastal-path": "Coastal path leading down to a beach wedding venue",
+    "wedding-canopy": "A couple saying \"I do\" under a floral canopy at an evening ceremony",
+    "wedding-vows": "A bride and groom exchanging vows before our marriage officer",
+    "wedding-beach-setup": "White chairs and a decorated arch waiting for the couple, overlooking the sea",
+    "wedding-bride-vows": "A bride saying her vows at a ceremony led by our marriage officer",
+    "wedding-beach-guests": "Family and friends gathered for a beach wedding on the Dolphin Coast",
+    "wedding-reception-table": "A reception table dressed with flowers and fairy lights",
+    "wedding-family": "A happy couple surrounded by family on their big day",
+    "wedding-cake": "The newlyweds cutting their wedding cake",
+    "wedding-napkin": "Mr and Mrs: a little detail from the reception table",
+    "wedding-reception-hall": "A reception hall glowing in purple light",
+    "wedding-cake-family": "The newlyweds cutting the cake with family close by",
+    "wedding-coastal-path": "The coastal path down to a beach wedding",
 }
 gallery = "".join(
     f'<button type="button" data-full="images/{g}-{1600 if os.path.exists(os.path.join(SITE, "images", g + "-1600.webp")) else 800}.webp">'
@@ -826,11 +866,11 @@ training = page_head("Training and development",
 <h3>What we offer</h3>
 <ul class="checklist"><li>Workshops for educators, parents and community groups</li><li>Leadership and mentoring programmes</li>
 <li>Jumpstart work-readiness training for young people</li><li>Free parent workshops at Breakthrough Centre Academy</li></ul></div>
-{photo("computer-class", "Young people learning computer skills at Breakthrough Centre", "wide")}
+{photo("computer-class", "Our young people learning computer skills at the centre", "wide")}
 </div></section>
 
 <section class="section tint"><div class="wrap split">
-{photo("boys-talk-2026", "Jessica Nair speaking to learners at the Radha Roopsingh Primary School Boys Talk session, 2026", "tall")}
+{photo("boys-talk-2026", "Jessica speaking to the boys at Radha Roopsingh Primary's Boys Talk, 2026", "tall")}
 <div class="measure"><h2>Out in our schools and communities</h2>
 <p>Our co-founder Jessica Nair spends a lot of time in local schools and churches, sharing what 36 years with children and families have taught us.</p>
 <ul class="checklist">
@@ -854,7 +894,7 @@ prayer = page_head("Prayer and counselling",
 <p>Grief, family strain, worry about the future: whatever you're carrying, we'll listen without judging. We pray with you, offer personal guidance and walk with you and your family through the hard seasons, with faith, hope and resilience.</p>
 <p>If you would like prayer, or would like to speak to someone, call or WhatsApp {PHONE_DISPLAY} and we'll arrange a time to meet.</p>
 <h3>Children who pray</h3><p>Prayer is part of every Sunday at Kidz Club. Our children pray for each other, their families, their teachers, our community and our nation.</p></div>
-{photo("children-praying", "Children praying together at Breakthrough Centre in Groutville", "wide")}
+{photo("children-praying", "Our children with their heads bowed, praying together in Groutville", "wide")}
 </div></section>
 """ + cta("Reach out", "Send us a message and we'll arrange a time to meet.", "WhatsApp us", "Hi, I would like to speak to someone for prayer or counselling.")
 pages.append(("prayer.html", page("prayer.html", "Prayer and counselling in Groutville | Breakthrough Centre",
