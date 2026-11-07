@@ -381,3 +381,8 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
 @media (max-width: 760px) { .news-grid { grid-template-columns: 1fr; } }
 .measure figure { margin-top: 1.5rem; } .measure .photo.tall { max-width: 26rem; }
 .photo.pano { aspect-ratio: 2048 / 974; }
+/* journey: one big slide at a time */
+.carousel--single .slide { flex-basis: 100%; }
+.carousel--single .slide-frame { aspect-ratio: 16 / 9; max-height: 70vh; }
+.carousel--single .slide-cap { text-align: center; font-size: 1.05rem; max-width: 46rem; margin-left: auto; margin-right: auto; }
+.bubble figure { margin-top: 1.25rem; }

@@ -369,7 +369,7 @@ pages.append(("index.html", page("index.html",
     "Non-profit preschool and community centre in Groutville, near KwaDukuza (Stanger) and Ballito. Our Academy, Sunday Kidz Club and outreach have served families since 1990.",
     home + HOME_FAQ[0], extra_ld=HOME_FAQ[1])))
 
-def gallery_html(items, label="Photo gallery"):
+def gallery_html(items, label="Photo gallery", cls=""):
     """items: list of (image name, description). A moving carousel: every frame is the same 4:3 size,
     the whole photo shows (object-fit: contain) on a blurred fill of itself, and a tap opens the lightbox."""
     slides = []
@@ -381,7 +381,7 @@ def gallery_html(items, label="Photo gallery"):
             f'<span class="slide-bg" aria-hidden="true" style="background-image:url(images/{g}-800.webp)"></span>'
             f'{pic(g, alt, sizes="(max-width: 600px) 85vw, (max-width: 900px) 50vw, 400px")}</button>'
             f'<p class="slide-cap" aria-hidden="true">{e(alt)}</p></li>')
-    return (f'<div class="carousel" data-carousel><ul class="carousel-track" aria-label="{e(label)}">{"".join(slides)}</ul>'
+    return (f'<div class="carousel{" " + cls if cls else ""}" data-carousel><ul class="carousel-track" aria-label="{e(label)}">{"".join(slides)}</ul>'
             '<div class="carousel-controls">'
             '<button type="button" class="cbtn prev" aria-label="Previous photo"><span aria-hidden="true">&#8249;</span></button>'
             '<button type="button" class="cbtn pause" aria-label="Pause the slideshow"><span aria-hidden="true">&#10074;&#10074;</span></button>'
@@ -400,7 +400,8 @@ AWARDS = [
      "We put the prize straight back into the children: in 2009 it bought a soccer machine, a pool table and other resources for the Kidz Club.",
      "sb-news-2008-nedbank-cheque", "Ps Trevor and Jessica with the Nedbank cheque and some of our preschool children, 2008"),
     ("KwaDukuza Municipality Mayoral Awards", "1st place, Community Development category",
-     "Recognised by our own municipality for the difference made in the community.", None, ""),
+     "Recognised by our own municipality for the difference made in the community. Jessica received the award at the KwaDukuza Mayoral Awards celebration.",
+     "mayoral-awards-clipping", "Newspaper page from the KwaDukuza Mayoral Awards celebration, with Jessica among the Community Development winners"),
     ("Lubners INHOUSE Club National Heroes Award", "R10 000, March 2006",
      "Chosen from entries across South Africa, after a Radha Roopsingh Primary teacher nominated Ps Trevor and Jessica as \"national heroes\".",
      "sb-news-2006-heroes-cheque", "Ps Trevor and Jessica receiving the INHOUSE Club Heroes Award cheque, 2006"),
@@ -424,6 +425,21 @@ def award_cards():
         out.append(f'<article class="award-card"><div class="award-media{"" if img else " is-badge"}">{media}</div>'
                    f'<h3>{e(title)}</h3><p class="award-when">{e(when)}</p><p>{e(story)}</p></article>')
     return "".join(out)
+
+JOURNEY = [
+    ("journey-01-10-october-1990", "10 October 1990: a day that would alter the trajectory of this community. Our first Kidz Club children and an outdoor show with clowns"),
+    ("journey-02-birth-of-kidz-club", "The birth of the Kidz Club: children gathering on the field, with puppet shows and clowns"),
+    ("journey-03-memorable-childhood", "Creating a memorable childhood: a field full of our Kidz Club children and their soccer ball"),
+    ("journey-04-keep-hope-alive", "In the midst of adversity, keep hope alive: neighbours waving with the food parcels we handed out"),
+    ("journey-05-house-home-to-many-2005", "2005: the little blue house becomes a home to many, with church in the garden and Ps Trevor dedicating a little one"),
+    ("journey-06-creche-4-learners", "Our crèche and preschool started with an enrolment of just 4 learners, with a jungle gym beside the blue house"),
+    ("journey-07-marquee-2006", "2006: from the blue house into a marquee"),
+    ("journey-08-structure-2007", "2007: from the marquee into a structure"),
+    ("journey-09-laying-blocks", "Ps Trevor laying the blocks for our new building, one at a time"),
+    ("journey-10-foundations", "The foundations going down, with friends lending a hand"),
+    ("journey-11-structure-into-building", "From the structure into a building: our new centre taking shape, block by block"),
+    ("journey-12-spiritual-parents-2009", "2009: Ps Trevor and Jessica with our spiritual parents, Dr Jonathan and Ps Helen David"),
+]
 
 MOMENTS_GAL = [
     ("sb-early-outdoor-assembly", "An early Kidz Club gathering outdoors, with rows and rows of children"),
@@ -468,9 +484,9 @@ about = page_head("Our story",
 <li><span class="year">1999</span>Jessica and Ps Trevor take over Kidz Club again, and our story appears in the newspaper for the first time.</li>
 <li><span class="year">2001</span>1,500 children come to the Kidz Club Christmas party, and a second branch opens in Shakaskraal.</li>
 <li><span class="year">2002</span>Kidz Club is registered as a non-profit organisation, the KC Community Centre.</li>
-<li><span class="year">2005</span>Breakthrough Centre Academy opens in a small house with just 4 learners.</li>
-<li><span class="year">2006</span>Ps Trevor and Jessica win the Lubners INHOUSE Club National Heroes Award, and our little blue tin house is featured in INHOUSE magazine.</li>
-<li><span class="year">2007</span>Pam Mills starts ballet classes for our girls, and more than 500 children come to the Christmas party.</li>
+<li><span class="year">2005</span>The little blue house becomes a home to many, and our crèche and preschool (today Breakthrough Centre Academy) opens with just 4 learners.</li>
+<li><span class="year">2006</span>Ps Trevor and Jessica win the Lubners INHOUSE Club National Heroes Award, and our little blue tin house is featured in INHOUSE magazine. We grow out of the blue house and into a marquee.</li>
+<li><span class="year">2007</span>The marquee becomes a more solid structure, Pam Mills starts ballet classes for our girls, and more than 500 children come to the Christmas party.</li>
 <li><span class="year">2008</span>Our first Youth Day rally launches the Youth Club, and we win the Nedbank Local Heroes Award.</li>
 <li><span class="year">2009</span>The Nedbank prize buys a soccer machine, a pool table, table tennis and games for the Kidz Club, and we open a youth help desk.</li>
 <li><span class="year">2012</span>We win 2nd place in the community category of the North Coast Big 5 Service Excellence Awards, and take blankets and food parcels to needy neighbours in Etete.</li>
@@ -480,6 +496,11 @@ about = page_head("Our story",
 <li><span class="year">2025</span>Friends, partners and families celebrate our 35th anniversary together.</li>
 <li><span class="year">2026</span>We celebrate 36 years of God's amazing grace.</li>
 </ol></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>Our journey, from a little blue house</h2><p class="lead">From children gathering on a field in 1990, to the blue tin house, a marquee, a structure and finally a building of our own. Use the arrows or swipe to walk through our story.</p></div>
+{gallery_html(JOURNEY, "Our journey since 1990", "carousel--single")}
 </div></section>
 
 <section class="section tint"><div class="wrap split top">
@@ -531,6 +552,7 @@ VAL_GAL = [
     ("valentines-balloon", "Lots of love: one of our learners holding an \"I love you\" balloon"),
 ]
 ACADEMY_ARCHIVE_GAL = [
+    ("journey-06-creche-4-learners", "Where it all began: our crèche and preschool started with just 4 learners"),
     ("sb-academy-opening-mural", "The mural from our Daddy's Daycare and Pre-school days"),
     ("sb-academy-opening-ribbon", "Cutting the ribbon at the official opening of Breakthrough Centre Academy"),
     ("sb-news-2007-grade-r-graduation", "Teacher Eunice Thabede with her Grade R graduates, 2007 (North Coast Courier)"),
@@ -588,7 +610,8 @@ academy = page_head("Breakthrough Centre Academy",
 <section class="section tint"><div class="wrap split">
 <div class="bubble"><h2>"I can read"</h2>
 <p>Many children pass through life not having mastered the art of reading, and the consequences reach far beyond the classroom. <em>I can read</em> takes a practical, hands-on approach to teaching reading with the South African child in mind.</p>
-<p>The manual forms part of the curriculum at Breakthrough Centre Academy, and learners as young as 3 have developed sound literacy foundations through this programme. Local schools and parents also attend our workshops on helping children apply foundational patterns in reading.</p></div>
+<p>The manual forms part of the curriculum at Breakthrough Centre Academy, and learners as young as 3 have developed sound literacy foundations through this programme. Local schools and parents also attend our workshops on helping children apply foundational patterns in reading.</p>
+{photo("i-can-read-learner", "One of our little readers hard at work on her I can read sheet, surrounded by her favourite books", "tall", "Little readers, big imaginations")}</div>
 <div class="measure"><h2>Reading, speaking and growing in confidence</h2>
 <p>Poor literacy is a national concern. Our Literacy and Language Development programme has become a model for strong results in foundational reading, mathematics and public speaking, and our learners leave with confidence and healthy self-esteem.</p>
 {photo("i-can-read-parent-workshop", "Jessica presenting an I can read workshop to parents, helping them build strong reading habits at home", "tall", "Jessica sharing I can read with our parents")}</div>
@@ -641,6 +664,8 @@ pages.append(("academy.html", page("academy.html",
 
 # ---------- Kidz Club (playful)
 KC_GAL = [
+    ("journey-03-memorable-childhood", "Creating a memorable childhood: a field full of our Kidz Club children"),
+    ("journey-02-birth-of-kidz-club", "The birth of the Kidz Club in 1990"),
     ("sb-kidz-club-early-outdoor-show", "Clowns and leaders putting on a show for a crowd of children in the early years"),
     ("sb-kidz-club-early-hall", "A hall packed with happy Kidz Club children in the early days"),
     ("sb-kidz-club-early-group-outside", "A big Kidz Club group outside the centre"),
@@ -755,6 +780,7 @@ CP_GAL = [
     ("founders-child-protection", "Ps Trevor and Jessica in their superhero costumes for the Child Protection March"),
 ]
 HELP_GAL = [
+    ("journey-04-keep-hope-alive", "In the midst of adversity, keep hope alive: neighbours waving with their food parcels"),
     ("sb-food-distribution-collage", "Kidz Club food distribution: Ps Trevor and Jessica with families and a car full of food"),
     ("sb-clothes-distribution-early", "Handing out clothes to children at the centre"),
     ("sb-outreach-hospital-children", "Visiting children in hospital"),

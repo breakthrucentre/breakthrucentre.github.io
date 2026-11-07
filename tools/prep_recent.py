@@ -65,6 +65,20 @@ SRC = {
     "academy-leaf-magnifier": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/c9cb0944-image.jpg",  # BCA activities, sent 7 Nov 2026
     "i-can-read-parent-workshop": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/5c8820d9-image.png",  # sent 7 Nov 2026
     "bca-grade-r-graduates-2022": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/d88803cb-image.png",  # sent 7 Nov 2026 (white strip at top trimmed)
+    "journey-01-10-october-1990": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/a4959be5-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-02-birth-of-kidz-club": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/2bf7b293-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-03-memorable-childhood": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/af60fb0e-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-04-keep-hope-alive": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/e35b3178-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-05-house-home-to-many-2005": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/59388ec3-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-06-creche-4-learners": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/54cbe229-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-07-marquee-2006": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/5dd52d4e-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-08-structure-2007": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/4ee176cd-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-09-laying-blocks": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/3a1d193c-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-10-foundations": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cc6a56e6-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-11-structure-into-building": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/f2781455-image.png",  # journey slides, sent 7 Nov 2026
+    "journey-12-spiritual-parents-2009": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/a801c7b6-image.png",  # journey slides, sent 7 Nov 2026
+    "mayoral-awards-clipping": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/066b9cdf-image.png",  # right part of the awards slide
+    "i-can-read-learner": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/2518bd8b-image.png",  # sent 7 Nov 2026
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 
