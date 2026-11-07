@@ -624,7 +624,6 @@ CP_GAL = [
 HELP_GAL = [
     ("food-parcel-outreach", "A volunteer handing a food parcel to a woman during an outreach in Etete"),
     ("outreach-in-the-rain", "Neighbours waiting under umbrellas for blankets and food parcels"),
-    ("gift-box-distribution-2014", "Volunteers handing out treats to children seated on the floor of a hall, 2014"),
     ("gift-box-hall-2014", "A hall full of children at the gift box distribution in August 2014"),
     ("feeding-scheme-2013", "Volunteers handing out food to children outside the centre, December 2013"),
     ("feeding-scheme-children", "Children sitting together on the grass eating a meal from our feeding scheme"),

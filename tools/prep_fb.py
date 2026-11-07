@@ -23,7 +23,6 @@ SRC = {
     "blanket-outreach": "alb-isaiah58-outreach-09",
     "food-parcel-outreach": "alb-isaiah58-outreach-04",
     "outreach-in-the-rain": "alb-isaiah58-outreach-01",
-    "gift-box-distribution-2014": "alb-gift-boxes-2014-07",
     "gift-box-hall-2014": "alb-gift-boxes-2014-02",
     "feeding-scheme-2013": "alb-feeding-robena-03",
     "feeding-scheme-children": "alb-feeding-discipleship-04",
