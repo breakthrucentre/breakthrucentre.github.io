@@ -330,3 +330,5 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
 .pullquote cite { display: block; margin-top: 1rem; font-style: normal; font-family: var(--display); font-weight: 700; color: var(--sun); }
 @media (max-width: 560px) { .pullquote { padding: 1.25rem 1.25rem; border-left-width: 6px; } }
 .split > div > figure + h3 { margin-top: 1.25rem; }
+.pillar-photo { margin: -1rem 0 1.25rem; border-radius: 0 0 1rem 1rem; overflow: hidden; aspect-ratio: 4 / 3; background: var(--sun); }
+.pillar-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }

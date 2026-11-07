@@ -70,8 +70,5 @@ for name, fn in SRC.items():
             r.save(os.path.join(OUT, f"{name}-{w}.jpg"), quality=80, optimize=True, progressive=True)
 json.dump(sizes, open(sizes_path, "w"), indent=0)
 
-# link preview image (1200x630 is ideal; this photo is 720 wide, so 720x378)
-im = ImageOps.exif_transpose(Image.open(io.BytesIO(z.read("website/" + SRC["welcoming-dr-jonathan-david"])))).convert("RGB")
-W, H = im.size; th = round(W * 630 / 1200); top = (H - th) // 2
-im.crop((0, top, W, top + th)).save(os.path.join(OUT, "og-welcome-dr-jonathan-david.jpg"), quality=86, optimize=True, progressive=True)
+# The site-wide link preview is now og-founders-kidz-club-party.jpg (owner, 7 Nov 2026), made in prep_recent.py notes.
 print(len(SRC), "owner photos added")

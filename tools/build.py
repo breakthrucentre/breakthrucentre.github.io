@@ -173,7 +173,7 @@ ORG_LD = {
     "alternateName": "Breakthrough Centre Etete",
     "url": BASE_URL,
     "logo": BASE_URL + "images/logo.png",
-    "image": BASE_URL + "images/og-welcome-dr-jonathan-david.jpg",
+    "image": BASE_URL + "images/og-founders-kidz-club-party.jpg",
     "description": "Community centre and early childhood development centre in Etete, Groutville, near KwaDukuza and Ballito, KwaZulu-Natal. Registered NPO 081-061-NPO.",
     "foundingDate": "1990-10-10",
     "telephone": PHONE_INTL,
@@ -184,7 +184,7 @@ ORG_LD = {
 }
 
 
-def page(path, title, desc, body, og_image="og-welcome-dr-jonathan-david.jpg", extra_ld=None, body_class=""):
+def page(path, title, desc, body, og_image="og-founders-kidz-club-party.jpg", extra_ld=None, body_class=""):
     url = BASE_URL + ("" if path == "index.html" else path)
     ld = [ORG_LD] + (extra_ld if isinstance(extra_ld, list) else [extra_ld] if extra_ld else [])
     ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
@@ -203,7 +203,7 @@ def page(path, title, desc, body, og_image="og-welcome-dr-jonathan-david.jpg", e
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{BASE_URL}images/{og_image if og_image.endswith('.jpg') else og_image + '-800.jpg'}">
-<meta property="og:image:alt" content="Breakthrough Centre in Groutville">
+<meta property="og:image:alt" content="{'Ps Trevor and Jessica Nair with children at a Breakthrough Centre Kidz Club party' if og_image == 'og-founders-kidz-club-party.jpg' else 'Breakthrough Centre in Groutville'}">
 <meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f6d21f">
@@ -323,17 +323,20 @@ home = f"""
 
 <section class="section tint"><div class="wrap">
 <div class="pillars">
-<div><h2>Our vision</h2><ul>
+<div><div class="pillar-photo">{pic("child-protection-march-flag-wave", "Waving the South African flag at the Child Protection March: building a transformed city together", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<h2>Our vision</h2><ul>
 <li>A transformed city, empowered communities and an educated next generation.</li>
 <li>Young people trained, nurtured and developed to be responsible in their schools, communities and workplaces.</li>
 <li>"A new breed without greed": a generation living with righteousness and integrity.</li>
 <li>A strategic response to poverty, crime, social ills and challenges.</li></ul></div>
-<div><h2>Our mission</h2><ul>
+<div><div class="pillar-photo">{pic("founders-kidz-club-party", "Ps Trevor and Jessica Nair with hundreds of children at a Kidz Club party", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<h2>Our mission</h2><ul>
 <li>Reduce the effects of crime and poverty through empowerment, social development and life skills.</li>
 <li>Provide a caring, supportive and safe environment for children and youth.</li>
 <li>Run awareness and support programmes that meet present-day challenges.</li>
 <li>Effect lasting change in lifestyles through ongoing training and mentoring.</li></ul></div>
-<div><h2>Our values</h2><p>Everyone who serves at Breakthrough Centre commits to:</p>
+<div><div class="pillar-photo">{pic("child-protection-team-2026", "Breakthrough Centre volunteers and leaders who serve with honesty, integrity and respect", sizes="(max-width: 820px) 100vw, 33vw")}</div>
+<h2>Our values</h2><p>Everyone who serves at Breakthrough Centre commits to:</p>
 <ul class="values"><li>Honesty</li><li>Integrity</li><li>Respect</li><li>Dedication</li><li>Excellence</li><li>Accountability</li><li>Non-discrimination</li></ul></div>
 </div></div></section>
 
