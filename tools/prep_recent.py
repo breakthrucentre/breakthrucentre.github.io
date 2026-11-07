@@ -37,6 +37,11 @@ SRC = {
     "founders-kidz-club-party": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/41a02ea9-image.png",  # sent 7 Nov 2026
     "child-protection-march-flag-wave": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/36ac3586-image.png",  # sent 7 Nov 2026
     "dr-jonathan-and-helen-david": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/9589a77b-image.png",  # sent 7 Nov 2026
+    "big5-award-2012-presentation": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/48e4b8a4-image.jpg",  # sent 7 Nov 2026 (rotate 90)
+    "child-protection-little-marcher": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/0b17b5ac-image.jpg",  # sent 7 Nov 2026
+    "child-protection-superhero-dance": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/0caf81bf-image.jpg",  # sent 7 Nov 2026
+    "child-protection-saps": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/21a34afd-image.jpg",  # sent 7 Nov 2026
+    "child-protection-paramedics": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/1fbf5a98-image.jpg",  # sent 7 Nov 2026
     "founders-and-exco": "/mnt/user-data/attachments/bbefee32-b007-5e8f-8388-b57898708902/cf834791-image.jpg",
 }
 

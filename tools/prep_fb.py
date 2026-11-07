@@ -31,7 +31,6 @@ SRC = {
     "community-meal-bethel": "kc-bethel-00",
     "netball-hoops-sasko": "sasko-00",
     "library-books-donation": "bookclub-01",
-    "big5-award-2012": "alb-big5-awards-03",
     "kidz-club-crowd-2006": "anniv-34-06",
     # Training and talks
     "boys-talk-2026": "jn-school-talk-05",
@@ -47,7 +46,7 @@ SRC = {
     "kidz-club-cupcakes": "kc-fathersday-03",
     "kidz-club-play": "kc-friendship-00",
 }
-ROTATE = {"big5-award-2012": 90}  # stored sideways on Facebook
+ROTATE = {}  # stored sideways on Facebook
 
 sizes_path = os.path.join(HERE, "sizes.json")
 sizes = json.load(open(sizes_path))

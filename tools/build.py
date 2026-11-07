@@ -620,6 +620,10 @@ CP_GAL = [
     ("child-protection-march-crowd", "A crowd of children marching along the road in Etete against child abuse"),
     ("child-protection-programme", "Leaders and children performing at the annual Child Protection programme"),
     ("child-protection-march-flags", "Hundreds of children with flags at a Child Protection March"),
+    ("child-protection-little-marcher", "Our littlest marcher leading the way with her own hand-drawn poster, while the clowns and the crowd follow behind"),
+    ("child-protection-superhero-dance", "Our little superheroes dancing in the street with South African flags while the town stops to watch"),
+    ("child-protection-saps", "Our friends from SAPS came out to march with us, and so did a very happy turtle"),
+    ("child-protection-paramedics", "Paramedics and emergency workers stood shoulder to shoulder with our children and their posters"),
     ("child-protection-march-superhero", "A superhero joins the Child Protection March on the main road"),
     ("founders-child-protection", "Founders Ps Trevor and Jessica Nair in costume for the Child Protection March"),
 ]
@@ -748,7 +752,7 @@ community = page_head("Community projects",
 <section class="section"><div class="wrap split">
 <div class="measure"><h2>Recognised for community development</h2>
 <p>On 19 April 2012 Breakthrough Centre won 2nd place in the community category of the North Coast Big 5 Service Excellence Awards. We've also been honoured with 1st place in the KwaDukuza Municipality Mayoral Awards (Community Development category), the Nedbank Local Heroes Award (2009) and the In-house Club National Heroes Award (2006). <a href="about.html">Read our story</a>.</p></div>
-{photo("big5-award-2012", "North Coast Big 5 Service Excellence Award 2012, 2nd place community category, presented to Breakthrough Centre", "wide")}
+{photo("big5-award-2012-presentation", "A proud moment at home: holding our North Coast Big 5 Service Excellence Award, 2nd place in the community category, 2012", "tall", "A proud moment: our Big 5 award, 2012")}
 </div></section>
 """ + cta("Partner with us", "Schools, businesses, churches and individuals work with us on outreach, events and relief. Let's talk.", "WhatsApp us", "Hi, I would like to partner with Breakthrough Centre.")
 pages.append(("community.html", page("community.html", "Community Outreach in KwaDukuza and Groutville | Breakthrough Centre",
