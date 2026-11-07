@@ -157,7 +157,7 @@ def footer():
 <div><h2>Find us</h2><ul>
 <li><a href="{FB_CENTRE}" rel="noopener">Breakthrough Centre on Facebook</a></li>
 <li><a href="{FB_ACADEMY}" rel="noopener">Breakthrough Centre Academy on Facebook</a></li>
-<li><a href="events.html">What's on</a></li><li><a href="get-involved.html">Get involved</a></li><li><a href="contact.html">Contact and directions</a></li></ul></div>
+<li><a href="news.html">Our story in the news</a></li><li><a href="events.html">What's on</a></li><li><a href="get-involved.html">Get involved</a></li><li><a href="contact.html">Contact and directions</a></li></ul></div>
 </div>
 <p class="footer-note">© {year} Breakthrough Centre. Touching one little life at a time.</p>
 </div></footer>
@@ -396,15 +396,17 @@ AWARDS = [
     ("North Coast Big 5 Service Excellence Award", "2nd place, Community category, 19 April 2012",
      "Our Sugar Rush Big 5 award, celebrated at home with the certificate in hand.",
      "big5-award-2012-presentation", "A proud moment at home: holding our North Coast Big 5 Service Excellence Award, 2012"),
-    ("Nedbank Local Heroes Award", "2009",
-     "We put the prize straight back into the children: a soccer machine, a pool table and other resources for the Kidz Club.",
-     "kidz-club-games-room", "What the Nedbank award gave our children: the Kidz Club games room with its pool table"),
+    ("Nedbank Local Heroes Award", "R10 000, August 2008",
+     "We put the prize straight back into the children: in 2009 it bought a soccer machine, a pool table and other resources for the Kidz Club.",
+     "sb-news-2008-nedbank-cheque", "Ps Trevor and Jessica with the Nedbank cheque and some of our preschool children, 2008"),
     ("KwaDukuza Municipality Mayoral Awards", "1st place, Community Development category",
      "Recognised by our own municipality for the difference made in the community.", None, ""),
-    ("In-house Club National Heroes Award", "2006",
-     "A national award for the work that started with a children's club on a hill in Groutville.", None, ""),
-    ("Our story in a national magazine", "Featured nationally",
-     "The Breakthrough Centre story, shared with readers right across South Africa.", None, ""),
+    ("Lubners INHOUSE Club National Heroes Award", "R10 000, March 2006",
+     "Chosen from entries across South Africa, after a Radha Roopsingh Primary teacher nominated Ps Trevor and Jessica as \"national heroes\".",
+     "sb-news-2006-heroes-cheque", "Ps Trevor and Jessica receiving the INHOUSE Club Heroes Award cheque, 2006"),
+    ("Our story in a national magazine", "INHOUSE Club magazine, 2006",
+     "\"Lighting up Etete\" told readers across South Africa about the little blue tin house and the work being done there.",
+     "sb-news-2006-lighting-up-etete", "Our little blue tin house in INHOUSE magazine's \"Lighting up Etete\" feature, 2006"),
     ("Jet Club Icon", "Recognition",
      "Honoured as a Jet Club Icon for our work in the community.", None, ""),
 ]
@@ -424,6 +426,20 @@ def award_cards():
     return "".join(out)
 
 MOMENTS_GAL = [
+    ("sb-early-outdoor-assembly", "An early Kidz Club gathering outdoors, with rows and rows of children"),
+    ("sb-outreach-early-gathering", "Ps Trevor with children at one of our early outreach visits"),
+    ("sb-kidz-club-1990-field", "1990: Kidz Club was formed on 10 October 1990, and the children gathered on the field in Etete"),
+    ("sb-clown-1990", "One of our very first Kidz Club clowns, in polka dots and a red wig"),
+    ("sb-kidz-club-1990-group", "Some of our first Kidz Club children, from the early 1990s"),
+    ("sb-kidz-club-1990-puppet-show", "An early outdoor puppet show and clown performance, with balloons and home-made signs"),
+    ("sb-clowns-early-team", "Our clown team in full face paint, ready to entertain the children"),
+    ("sb-outreach-johannesburg-camp", "Taking Kidz Club to children in a squatter camp in Johannesburg"),
+    ("sb-tin-house-2009", "The little blue tin house on the hill in Etete where it all began"),
+    ("sb-news-2006-thank-you-kids", "Our preschool children saying THANK YOU inside the tin house, 2006"),
+    ("sb-academy-opening-mural", "The mural at Daddy's Daycare and Pre-school, ready for the official opening of Breakthrough Centre Academy"),
+    ("sb-academy-opening-ribbon", "Cutting the ribbon at the official opening of Breakthrough Centre Academy"),
+    ("sb-academy-opening-guests", "Smiling guests at the official opening of Breakthrough Centre Academy"),
+    ("sb-news-2007-trevor-40th", "Ps Trevor with Jessica, Taldon and Tamsyn at his surprise 40th birthday party at the centre, 2007"),
     ("kidz-club-1990s", "The 1990s: Jessica Nair and the passionate team who started Kidz Club, entertaining a crowd of children on the grass"),
     ("kidz-club-ballet-2009", "2009: our Kidz Club ballet girls in their white dresses outside the little blue tin house"),
     ("pam-mills-kidz-club", "Pam Mills, who taught ballet at Kidz Club alongside Jessica, with a hall full of our children"),
@@ -440,15 +456,23 @@ about = page_head("Our story",
 <div class="measure">
 <h2>A positive place to be</h2>
 <p>We started with one simple idea: children and young people need a good place to be, away from the problems on the streets around them. Give them that, plus people who believe in them, and they can rise above hard circumstances.</p>
-<p>On 10 October 1990 children of the community began to gather at the Kidz Club in front of a little blue house on a hill in Groutville. The children kept coming and the club grew significantly, into the community centre we have today, open to people of every age and background.</p>
+<p>On 10 October 1990 children of the community began to gather at the Kidz Club in front of a little blue house on a hill in Groutville. Jessica had grown up in that house, and there was very little for young people to do in Etete, so she started a Christian Kidz Club in her mother's garden on Saturday afternoons, with puppets, clowns, songs, games and a lesson.</p>
+<p>When Jessica married Ps Trevor in 1994 they moved away for a while, and her sister Shavera kept the club going. In 1999 they came back and took it over again. By then 80 to 90 children were meeting every Saturday at the Radha Roopsingh School, and by 2002 it was up to 250. That year the club was registered as a non-profit organisation, the KC (Kidz Club) Community Centre, and Jessica's mother donated the little blue tin house to be used as the community centre.</p>
+<p>That three-roomed tin house became a crèche, a preschool, a community centre and a church, used by about 200 young people every week. The preschool, first called Daddy's Daycare and Pre-school, became Breakthrough Centre Academy. The children kept coming and the club kept growing into the Breakthrough Centre we have today, open to people of every age and background. <a href="news.html">Read our story in the news</a>.</p>
 </div>
 <div>
 <h2>Milestones</h2>
 <ol class="timeline">
 <li><span class="year">1990</span>Our story starts in a little blue house on a hill, where children gather for the first Kidz Club on 10 October.</li>
+<li><span class="year">1994</span>Jessica marries Ps Trevor. While they are away, her sister Shavera keeps Kidz Club going.</li>
+<li><span class="year">1999</span>Jessica and Ps Trevor take over Kidz Club again, and our story appears in the newspaper for the first time.</li>
+<li><span class="year">2001</span>1,500 children come to the Kidz Club Christmas party, and a second branch opens in Shakaskraal.</li>
+<li><span class="year">2002</span>Kidz Club is registered as a non-profit organisation, the KC Community Centre.</li>
 <li><span class="year">2005</span>Breakthrough Centre Academy opens in a small house with just 4 learners.</li>
-<li><span class="year">2006</span>We receive the In-house Club National Heroes Award.</li>
-<li><span class="year">2009</span>We win the Nedbank Local Heroes Award, and use it to buy a soccer machine, a pool table and other resources for the Kidz Club.</li>
+<li><span class="year">2006</span>Ps Trevor and Jessica win the Lubners INHOUSE Club National Heroes Award, and our little blue tin house is featured in INHOUSE magazine.</li>
+<li><span class="year">2007</span>Pam Mills starts ballet classes for our girls, and more than 500 children come to the Christmas party.</li>
+<li><span class="year">2008</span>Our first Youth Day rally launches the Youth Club, and we win the Nedbank Local Heroes Award.</li>
+<li><span class="year">2009</span>The Nedbank prize buys a soccer machine, a pool table, table tennis and games for the Kidz Club, and we open a youth help desk.</li>
 <li><span class="year">2012</span>We win 2nd place in the community category of the North Coast Big 5 Service Excellence Awards, and take blankets and food parcels to needy neighbours in Etete.</li>
 <li><span class="year">2013</span>Feeding schemes for hungry children, followed in August 2014 by a gift box distribution for a hall full of children.</li>
 <li><span class="year">2018</span>Members of Parliament visit the centre on 28 March, focusing on early childhood and youth development.</li>
@@ -506,6 +530,15 @@ VAL_GAL = [
     ("valentines-smile", "A big Valentine's Day smile from one of our learners, 2026"),
     ("valentines-balloon", "Lots of love: one of our learners holding an \"I love you\" balloon"),
 ]
+ACADEMY_ARCHIVE_GAL = [
+    ("sb-academy-opening-mural", "The mural from our Daddy's Daycare and Pre-school days"),
+    ("sb-academy-opening-ribbon", "Cutting the ribbon at the official opening of Breakthrough Centre Academy"),
+    ("sb-news-2007-grade-r-graduation", "Teacher Eunice Thabede with her Grade R graduates, 2007 (North Coast Courier)"),
+    ("sb-news-2007-sports-day", "Tug-of-war at our preschool sports day, 2007 (North Coast Courier)"),
+    ("sb-concert-2012", "Our little performers on stage at the 2012 concert"),
+    ("sb-back-to-school-hampers-bca", "Ps Trevor with two of our graduates and their back-to-school hampers"),
+    ("sb-news-2014-graduation", "Our Grade R class of 2014 with their certificates and trophies"),
+]
 ACADEMY_GAL = [
     ("academy-pretend-kitchen", "Our little chefs in their BCA T-shirts cooking up a storm in the play kitchen"),
     ("academy-shop-role-play", "Playing shop with real price tags: counting and money skills, with big smiles"),
@@ -557,7 +590,8 @@ academy = page_head("Breakthrough Centre Academy",
 <p>Many children pass through life not having mastered the art of reading, and the consequences reach far beyond the classroom. <em>I can read</em> takes a practical, hands-on approach to teaching reading with the South African child in mind.</p>
 <p>The manual forms part of the curriculum at Breakthrough Centre Academy, and learners as young as 3 have developed sound literacy foundations through this programme. Local schools and parents also attend our workshops on helping children apply foundational patterns in reading.</p></div>
 <div class="measure"><h2>Reading, speaking and growing in confidence</h2>
-<p>Poor literacy is a national concern. Our Literacy and Language Development programme has become a model for strong results in foundational reading, mathematics and public speaking, and our learners leave with confidence and healthy self-esteem.</p></div>
+<p>Poor literacy is a national concern. Our Literacy and Language Development programme has become a model for strong results in foundational reading, mathematics and public speaking, and our learners leave with confidence and healthy self-esteem.</p>
+{photo("i-can-read-parent-workshop", "Jessica presenting an I can read workshop to parents, helping them build strong reading habits at home", "tall", "Jessica sharing I can read with our parents")}</div>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -585,6 +619,11 @@ academy = page_head("Breakthrough Centre Academy",
 {photo("bca-concert-2019-fairies", "Our little fairies and a very serious young prince on stage at the BCA concert, 2019", "wide", "Our little fairies at the BCA concert, 2019")}</div>
 {photo("academy-graduate-2026-red", "One of our Class of 2026 graduates, cap on and scroll in hand", "tall")}
 </div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-head"><h2>From our archive</h2><p class="lead">Our preschool started out as Daddy's Daycare and Pre-school in the little blue tin house. Here are a few moments from the years since. <a href="news.html">Read our story in the news</a>.</p></div>
+{gallery_html(ACADEMY_ARCHIVE_GAL, "Academy archive")}
+</div></section>
 """ + cta("Enrol your child", f"We'd love to welcome your family. WhatsApp {PHONE_DISPLAY} to find out about places and registration.", "WhatsApp about places", ac_msg)
 pages.append(("academy.html", page("academy.html",
     "Preschool in Groutville, KwaDukuza | Breakthrough Centre Academy",
@@ -597,6 +636,20 @@ pages.append(("academy.html", page("academy.html",
 
 # ---------- Kidz Club (playful)
 KC_GAL = [
+    ("sb-kidz-club-early-outdoor-show", "Clowns and leaders putting on a show for a crowd of children in the early years"),
+    ("sb-kidz-club-early-hall", "A hall packed with happy Kidz Club children in the early days"),
+    ("sb-kidz-club-early-group-outside", "A big Kidz Club group outside the centre"),
+    ("sb-siza-water-puppet-booth", "Our puppet theatre and play equipment, sponsored by Siza Water"),
+    ("sb-outreach-shakaskraal-clown", "A clown leading games for children in Shakaskraal"),
+    ("sb-movie-day-kidz-club", "Movie day at Kidz Club, with a room full of excited children"),
+    ("sb-fun-and-games-early", "Fun and games on the grass in the early days of Kidz Club"),
+    ("sb-puppets-early", "Our puppets popping up over the puppet theatre"),
+    ("sb-christmas-1999-gifts", "Our children holding up their Christmas presents, 1999"),
+    ("sb-kidz-club-banner-march", "Kidz Club on the march with our big painted banner"),
+    ("sb-training-future-leaders", "Training future leaders at Kidz Club"),
+    ("sb-news-2007-ballerinas", "Our first ballerinas in their striped outfits with teacher Pam Mills, 2007 (North Coast Courier)"),
+    ("sb-news-2008-youth-day-ballet", "Our little ballerinas dancing at the 2008 Youth Day talent show (North Coast Courier)"),
+    ("sb-news-waffles-day", "Waffle day: Ps Trevor serving waffles, ice cream and syrup to our Kidz Club (newspaper clipping)"),
     ("kidz-club-worship", "Our children singing their hearts out in praise and worship at Sunday Kidz Club"),
     ("kidz-club-soccer", "Our Kidz Club children kicking a ball around on the field in Etete"),
     ("kidz-club-easter-meal", "Our children tucking into a plate of food at the Kidz Club Easter celebration"),
@@ -697,6 +750,13 @@ CP_GAL = [
     ("founders-child-protection", "Ps Trevor and Jessica in their superhero costumes for the Child Protection March"),
 ]
 HELP_GAL = [
+    ("sb-food-distribution-collage", "Kidz Club food distribution: Ps Trevor and Jessica with families and a car full of food"),
+    ("sb-clothes-distribution-early", "Handing out clothes to children at the centre"),
+    ("sb-outreach-hospital-children", "Visiting children in hospital"),
+    ("sb-outreach-shakaskraal", "Outreach to children in Shakaskraal"),
+    ("sb-gift-of-givers-children", "Hundreds of children waiting on the grass when Gift of the Givers visited Breakthrough Centre"),
+    ("sb-gift-of-givers-jessica", "Jessica handing out toiletries during the Gift of the Givers visit"),
+    ("sb-gift-of-givers-queue", "Our community queuing outside the centre for the Gift of the Givers distribution"),
     ("food-parcel-outreach", "Handing a food parcel to one of our neighbours during an outreach in Etete"),
     ("outreach-in-the-rain", "Our neighbours waiting under umbrellas for blankets and food parcels"),
     ("gift-box-hall-2014", "A hall full of children at our gift box distribution, August 2014"),
@@ -718,6 +778,16 @@ HELP_GAL = [
     ("girls-health-hygiene-2", "Our girls holding up their signs: Dream Big, I am Enough"),
 ]
 XMAS_GAL = [
+    ("sb-christmas-2000-show", "Christmas 2000: the show in full swing for a crowd of children"),
+    ("sb-christmas-2001-games", "Christmas 2001: party games with the clowns"),
+    ("sb-christmas-2000-900-kids", "Christmas 2000: about 900 children at our Kidz Club party"),
+    ("sb-clown-christmas-2000", "A clown welcoming the children at the 2000 Christmas party"),
+    ("sb-christmas-2001-crowd", "Christmas 2001: 1,500 children lined up on the field"),
+    ("sb-christmas-2002-collage", "Christmas 2002: cooking for 1,500 children with our many volunteers"),
+    ("sb-christmas-2003-etete", "Christmas 2003 in Etete: dancing and party packs"),
+    ("sb-christmas-2003-shakashead", "Christmas 2003 in Shakashead, one of three parties that year"),
+    ("sb-christmas-2007-team", "Our 2007 Christmas party team with Spin the Flava"),
+    ("sb-christmas-2007-spin-da-flava", "Spin the Flava handing out treats at our 2007 Christmas party"),
     ("christmas-carols-alberlito-stairs", "Our carol singers on the stairs at Alberlito Hospital"),
     ("christmas-party-stage", "Our Kidz Club children on stage with their Christmas gifts"),
     ("christmas-party-gifts", "A room full of our children opening their Christmas presents"),
@@ -733,6 +803,14 @@ PARTNERS_GAL = [
     ("partners-gift-bags-academy", "Friends of the centre bringing gift bags for our Academy children, one of our past projects"),
     ("partners-kidz-club-balls", "Friends handing out new balls to our Kidz Club children"),
     ("partners-speak-out-school", "Friends who work with us, ready to speak out at a school event"),
+]
+YOUTH_GAL = [
+    ("sb-youth-camp-river", "Pure joy: our young people splashing in the river on youth camp"),
+    ("sb-youth-camp-group", "Our girls together at youth camp"),
+    ("sb-youth-camp-obstacle", "Helping each other over the log wall at youth camp"),
+    ("sb-news-2008-youth-day-winners", "Winners of our first Youth Day talent contest with Jessica, 2008 (North Coast Courier)"),
+    ("sb-youth-day-2008-crowd", "Young people lining up at our 2008 Youth Day rally"),
+    ("sb-news-sewing-classes", "Learning to sew at our free sewing classes (newspaper clipping)"),
 ]
 COMM_FAQ = faq("Community questions", [
     ("Does Breakthrough Centre help families in need in KwaDukuza?", f"Yes. Over the years we've handed out blankets, food parcels, hot meals, school shoes, gift boxes and baby formula to families in Etete and across KwaDukuza. If you know of a family in need, WhatsApp {PHONE_DISPLAY}."),
@@ -818,6 +896,14 @@ community = page_head("Community projects",
 {photo("working-with-schools", "Learners from our local high schools taking part in one of our programmes", "tall")}
 </div>
 <div class="wrap" style="margin-top:2rem">{gallery_html(SCHOOLS_GAL)}</div></section>
+
+<section class="section"><div class="wrap split">
+<div class="measure"><h2>Our young people</h2>
+<p>In 2008 our first Youth Day rally brought together about 170 young people for raps, art, modelling, poetry, singing and dancing, and we launched our Youth Club for 12 to 21-year-olds. Since then our youth have been on camps where they climb, splash in the river and make friends for life, and a youth help desk gives teenagers somewhere to turn with problems like drugs, abuse, pregnancy and peer pressure.</p>
+<h2>Skills for life</h2>
+<p>Our free sewing classes gave women from Etete a three-month course and a chance to earn, on machines donated by Siza Water. Over the years the centre has also offered computer classes, homework help, literacy and skills training, and HIV/AIDS and abuse awareness.</p></div>
+{gallery_html(YOUTH_GAL, "Our young people")}
+</div></section>
 
 <section class="section tint"><div class="wrap split">
 {photo("library-books-donation", "Our Academy learners diving into the library books donated by Prince's Grant Bookclub", "wide")}
@@ -964,6 +1050,129 @@ events = page_head("What's on",
 pages.append(("events.html", page("events.html", "Events in Groutville: Kidz Club, Graduation and More | Breakthrough Centre",
     "What's on at Breakthrough Centre, Groutville: Sunday Kidz Club, our Concert and Graduation, the Child Protection event, school contests and Christmas outreach.",
     events, og_image="anniversary-cake-35")))
+
+# ---------- In the news (owner's scrapbook, 7 Nov 2026)
+def framed(img, alt):
+    big = 1600 if os.path.exists(os.path.join(SITE, "images", img + "-1600.webp")) else 800
+    return (f'<button type="button" class="slide-frame" data-full="images/{img}-{big}.webp">'
+            f'<span class="slide-bg" aria-hidden="true" style="background-image:url(images/{img}-800.webp)"></span>'
+            f'{pic(img, alt, sizes="(max-width: 760px) 100vw, 50vw")}</button>')
+
+NEWS = [
+  ("The early years", [
+    ("1999", "Our first newspaper story", "Fresh air and fun keeps kids away from crime", "sb-news-1999-jessica-kids",
+     "Jessica with some of our Kidz Club children in 1999",
+     "Our very first media coverage. Every Saturday from 2 to 4pm, 80 to 90 children met at the Radha Roopsingh School for praise and worship, games, puppetry, clowning, drama and a lesson. Jessica had started the club to keep local children away from crime and drugs, and Ps Trevor had just begun music classes, teaching the children to sing and play guitar. To buy Christmas gifts, the two of them sold children's books and stationery, and did clowning and puppet shows at birthday parties.",
+     "Race is not an issue for us."),
+    ("2000", "From our scrapbook", "Etete Millennium Party", "sb-news-2000-millennium-party",
+     "Our Kidz Club children spelling out WELCOME at the Etete Millennium Party",
+     "Etete welcomed the new millennium with a party, and the children's message to everyone who came was simply: WELCOME.", None),
+    ("30 November 2001", "The North Coast Courier", "The magic of Christmas", "sb-news-2001-magic-of-christmas",
+     "Hundreds of happy children with our clowns at the 2001 Kidz Club Christmas party",
+     "1,500 children came to our Christmas party, up from 900 the year before. Every child received a gift, donated by the parents of Umhlali Primary, and a hot meal, donated by Quick Plumbers in Shakaskraal. The club had 200 full-time members and had just opened a second branch in Shakaskraal, and the Umhlali police helped bring those children to Etete so that everyone could join in.", None),
+    ("2002", "Our fight against crime and poverty", "Kids Club shines a little light", "sb-news-2002-shines-a-little-light",
+     "Some of the hundreds of children from Etete and surrounding areas who came to Kidz Club in 2002",
+     "Between 100 and 250 children, from toddlers to 18-year-olds, were coming every Saturday to sing, play and learn. We ran a feeding programme twice a month with help from our church and local businesses, and children who had been with us for five years or more had become assistants, teaching the little ones about abuse and other issues.", None),
+    ("2005", "Christmas party 2005", "Santa visits Etete", "sb-news-2005-santa-visits-etete",
+     "Kidz Club children with the toys and food hampers handed out at the 2005 Christmas party",
+     "Over 1,300 children and 200 parents came to our Christmas party at Radha Roopsingh Primary. The children went home with toys and party packs, and parents received food hampers of rice, flour, beans and dhall.",
+     "In the past 15 years, we have seen many children grow into successful people."),
+  ]),
+  ("Heroes, ballet and a growing centre", [
+    ("31 March 2006", "The North Coast Courier", "Shakaskraal couple win national heroes awards", "sb-news-2006-heroes-cheque",
+     "Ps Trevor and Jessica receiving the R10 000 INHOUSE Club Heroes Award cheque, 2006",
+     "Radha Roopsingh Primary teacher Simi Persad nominated Ps Trevor and Jessica as \"national heroes\", and they won the Lubners INHOUSE Club Heroes Award, chosen from entries across South Africa. The R10 000 prize went towards building the centre.", None),
+    ("2006", "INHOUSE Club magazine", "Lighting up Etete", "sb-news-2006-lighting-up-etete",
+     "The little blue tin house in Etete, featured in INHOUSE magazine in 2006",
+     "Our story in a national magazine. It told how Jessica started Kidz Club in the garden of the home she grew up in, and how the little blue tin house had become a preschool, crèche, community centre and church used by about 200 young people every week. Jessica's mother donated the house to be used as a community centre.",
+     "The charm of the little, blue corrugated iron house"),
+    ("22 June 2007", "The North Coast Courier", "\"Never give up your dreams\"", "sb-news-2007-nair-family",
+     "Ps Trevor and Jessica with their children Taldon and Tamsyn, 2007",
+     "A profile of Jessica: mother, wife, schoolteacher, counsellor and co-founder. She started Kidz Club on 10 October 1990. After she married Ps Trevor in 1994 they moved away, and her sister Shavera kept the club going until they came back in 1999 and took it over again. In 2002 the club was registered as a non-profit organisation.",
+     "Dreams are not born without sacrifice, dedication and commitment."),
+    ("5 October 2007", "The North Coast Courier", "Surprise celebration for community centre founder", "sb-news-2007-trevor-40th",
+     "Ps Trevor with Jessica, Taldon and Tamsyn at his surprise 40th birthday party",
+     "The children and our church family threw Ps Trevor a surprise 40th birthday party at the centre, with drums, dancers and speeches about how he and the centre had changed their lives.", None),
+    ("19 October 2007", "The North Coast Courier", "Ballerinas in the making", "sb-news-2007-ballerinas",
+     "Our Kidz Club ballet girls showing off a ballet step with their teacher, Pam Mills",
+     "Ten little girls from Etete were learning ballet, thanks to Pam Mills of Ballito. Pam began by teaching line dancing, asked the girls one afternoon if they would like to learn ballet, and they never looked back.", None),
+    ("30 November 2007", "The North Coast Courier", "Happy faces this Christmas", "sb-news-2007-spin-da-flava-kids",
+     "Spin the Flava and our team with children at the 2007 Christmas party",
+     "More than 500 children came to our Christmas party at Radha Roopsingh Primary. Christian group Spin the Flava entertained them, and everyone had breyani for lunch.", None),
+    ("21 December 2007", "The North Coast Courier", "Day care creche and graduation", "sb-news-2007-grade-r-graduation",
+     "Teacher Eunice Thabede with her Grade R graduates, 2007",
+     "Our preschool, then called Daddy's Day Care and Creche, held its Grade R graduation and a sports day with a tug-of-war. Teacher Eunice Thabede stood proudly with her graduates.", None),
+    ("4 July 2008", "The North Coast Courier", "Youth day talent show", "sb-news-2008-youth-day-winners",
+     "Winners of the 2008 Youth Day talent contest with Jessica",
+     "Our first Youth Day rally drew about 170 young people, who showed off raps, art, modelling, poetry, singing and dancing. We used the day to launch our Youth Club for 12 to 21-year-olds, meeting every Saturday.", None),
+    ("1 August 2008", "North Coast Times", "Caught in the spirit of the Kidz Club", None, None,
+     "Thiasha Naidoo, then a Grade 10 learner from Shakaskraal, volunteered at Kidz Club for her community project. Today she is Dr Thiasha Naidoo.", None),
+    ("5 September 2008", "Stanger Weekly", "Community centre wins Heroes award", "sb-news-2008-nedbank-cheque",
+     "Ps Trevor and Jessica with Nedbank's cheque and some of our preschool children, 2008",
+     "We won R10 000 in the Nedbank Heroes competition, our second award for community work. The cheque was handed over at the centre by the Nedbank Ballito manager. The money was for sports equipment and indoor games, with the rest going to our building fund.", None),
+    ("2009", "From our scrapbook", "Giving the kids a chance", "sb-news-2009-giving-kids-chance",
+     "Etete youth with the pool table and soccer machine bought with the Nedbank award",
+     "With the Nedbank prize we bought table tennis, a pool table, a table-top soccer machine, board games and soccer balls. We also opened a youth help desk for young people facing issues such as teenage pregnancy, drugs, abuse and peer pressure.",
+     "Children in the area can still do what they love but in a controlled environment"),
+  ]),
+  ("Christmas, sponsors and empowerment", [
+    ("", "From our scrapbook", "Kidz Club Christmas fun in Nkobongo", "sb-news-nkobongo-christmas",
+     "Children in Nkobongo with their Christmas presents from Kidz Club",
+     "More than 900 children in Nkobongo received early Christmas presents at the Nkobongo community hall, after a party in Etete for over 1,500 children earlier that December.", None),
+    ("", "From our scrapbook", "Kidz Club Christmas Party", "sb-news-standard-bank-toys",
+     "Standard Bank's John Lynch handing over toys to Ps Trevor and Jessica for the Christmas party",
+     "KwaDukuza Standard Bank branch manager John Lynch handed over toys for our annual Christmas party at Radha Roopsingh School.", None),
+    ("", "Stanger Weekly", "Festive food hampers", "sb-news-festive-hampers",
+     "Families with the food hampers they received from the centre at Christmas",
+     "Disadvantaged families were treated to a meal, clothes and a food hamper on Christmas Day, so that they could enjoy the festive season too.", None),
+    ("", "From our scrapbook", "Ho ho ho", "sb-news-ho-ho-ho",
+     "Kidz Club children showing off their Christmas gifts",
+     "Over 300 children from disadvantaged homes came to our annual Christmas party, with face painting (Spiderman was the favourite), a puppet show about preventing child abuse, dancing and games.",
+     "We want every child to experience the joy Christmas brings."),
+    ("", "From our scrapbook", "Free sewing classes offered", "sb-news-sewing-classes",
+     "A student at her sewing machine during our free sewing classes",
+     "Women from Etete took a free three-month sewing course at the centre every day. Siza Water donated five sewing machines, an overlocker and two irons, and Stanger Waste Centre sponsored the material. Teacher Timna Tweedie ran the classes.", None),
+    ("", "From our scrapbook", "Waffles, ice-cream and syrup", "sb-news-waffles-day",
+     "Ps Trevor, syrup in hand, serving waffles to our Kidz Club children",
+     "Many of our children had never had a waffle, so our volunteers made waffles with ice cream and syrup for the whole Kidz Club.", None),
+    ("", "From our scrapbook", "Ballerinas perform for local clubs", "sb-news-ballerinas-wednesday-club",
+     "Our ballerinas with members of the Wednesday Club who sponsored their classes",
+     "Our ballet girls put on a performance for the Wednesday Club and the Sugarland Book Club, who sponsor their classes. By then Pam Mills had been teaching ballet as a volunteer for three years.", None),
+    ("", "From our scrapbook", "Usha struts her stuff", None, None,
+     "Mrs India South Africa contestant Usha Hemraj chose our community centre as her charity, and the proceeds of her dinner and dance at the Durban City Hall came to the centre.", None),
+  ]),
+  ("Breakthrough Centre and the Academy", [
+    ("21 March", "From our scrapbook", "Human Rights Day celebrated in writing", "sb-news-human-rights-day",
+     "Finalists and winners of our Human Rights Day art and poetry contest",
+     "Eight local schools came to Breakthrough Centre for our Human Rights Day art and poetry writing contest: Groutville High, Sizani Combined Primary, Tinley Manor Primary, Radha Roopsingh Primary, Shakaskraal Primary, Shakaskraal Secondary, Nonhlevu Secondary and Shakaskraal S.A. Primary. Highway Radio's Phindile Phewa and artist Shavera Sayed judged.", None),
+    ("29 November 2014", "From our scrapbook", "Talent in torrents", "sb-news-2014-graduation",
+     "The Breakthrough Centre Academy Grade R class of 2014 with their certificates",
+     "At the Breakthrough Centre Academy Concert and Graduation, learners from 2 to 6 years old performed dances, sketches, songs and recitals. Our Grade R class of 2014 graduated in style.", None),
+  ]),
+]
+
+def news_cards(items):
+    out = []
+    for when, paper, head, img, alt, story, quote in items:
+        meta = " · ".join(x for x in (paper, when) if x)
+        q = f'<blockquote class="news-quote">"{e(quote)}"</blockquote>' if quote else ""
+        media = f'<div class="news-media">{framed(img, alt)}</div>' if img else ""
+        out.append(f'<article class="news-card{"" if img else " no-photo"}">{media}<div class="news-body">'
+                   f'<p class="news-meta">{e(meta)}</p><h3>{e(head)}</h3><p>{e(story)}</p>{q}</div></article>')
+    return "".join(out)
+
+news = page_head("Our story in the news",
+    "Thirty-six years of newspaper clippings, magazine pages and photos from our scrapbook. Each one tells part of the story of a little Kidz Club that grew into Breakthrough Centre.",
+    ["sb-news-2006-lighting-up-etete", "sb-kidz-club-1990-field", "sb-news-2001-magic-of-christmas"]) + "".join(
+    f'''<section class="section{" tint" if i % 2 else ""}"><div class="wrap">
+<div class="section-head"><h2>{e(title)}</h2></div>
+<div class="news-grid">{news_cards(items)}</div></div></section>''' for i, (title, items) in enumerate(NEWS)) + f"""
+<section class="section"><div class="wrap"><p class="small-print">Newspaper headlines and photos are from the North Coast Courier, Stanger Weekly, North Coast Times and INHOUSE Club magazine, kept in our scrapbook. The stories above are our own short summaries. Tap a photo to see it bigger.</p></div></section>
+{{LIGHTBOX}}
+""".replace("{LIGHTBOX}", LIGHTBOX) + cta("Be part of the next chapter", "Thirty-six years on, there is still so much to do. Volunteer, partner with us or simply come and visit.", "WhatsApp us", "Hi, I read your story and would like to get involved.")
+pages.append(("news.html", page("news.html", "Our Story in the News: Kidz Club and Breakthrough Centre since 1990",
+    "Newspaper and magazine stories about Kidz Club and Breakthrough Centre in Etete, Groutville since 1999: Christmas parties for 1,500 children, national heroes awards and more.",
+    news, og_image="sb-news-2006-lighting-up-etete")))
 
 # ---------- Get involved
 involved = page_head("Get involved",

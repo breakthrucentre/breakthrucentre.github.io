@@ -367,3 +367,16 @@ dialog.lightbox .close { position: fixed; top: 1rem; right: 1rem; font: 700 1rem
 @media (max-width: 900px) { .slide { flex-basis: calc((100% - 1rem) / 2); } }
 @media (max-width: 600px) { .slide { flex-basis: 85%; } }
 @media (prefers-reduced-motion: reduce) { .carousel-track { scroll-behavior: auto; } }
+
+/* in the news */
+.news-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2rem); }
+.news-card { background: #fff; border-radius: 1.25rem; overflow: hidden; box-shadow: 0 6px 24px rgba(29,35,88,.08); display: flex; flex-direction: column; }
+.news-media .slide-frame { border-radius: 0; }
+.news-body { padding: 1.25rem 1.4rem 1.5rem; }
+.news-meta { font-family: var(--display); font-weight: 700; color: var(--ember-deep); margin: 0 0 0.25rem; font-size: 0.95rem; }
+.news-body h3 { margin: 0 0 0.6rem; }
+.news-quote { margin: 0.8rem 0 0; padding-left: 0.9rem; border-left: 4px solid var(--sun); font-style: italic; color: var(--dusk); }
+.news-card.no-photo { border-top: 8px solid var(--sun); }
+.small-print { font-size: 0.9rem; opacity: 0.8; max-width: 62rem; }
+@media (max-width: 760px) { .news-grid { grid-template-columns: 1fr; } }
+.measure figure { margin-top: 1.5rem; } .measure .photo.tall { max-width: 26rem; }
